@@ -1,0 +1,1 @@
+# gedik_yatirim
