@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
+		9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F52C5B64AA0008355E /* ContentView.swift */; };
+		9FC5E2F82C5B64AC0008355E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F72C5B64AC0008355E /* Assets.xcassets */; };
+		9FC5E2FB2C5B64AC0008355E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC5E2FA2C5B64AC0008355E /* Preview Assets.xcassets */; };
+		9FC5E3032C5B6D740008355E /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3022C5B6D740008355E /* Splash.swift */; };
+		9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3052C5B851C0008355E /* AppColors.swift */; };
+		9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3072C5B9A580008355E /* Walktrougth.swift */; };
+		9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E30B2C5BA9B90008355E /* gedik_text.swift */; };
+		9FC5E30E2C5BADAD0008355E /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E30D2C5BADAD0008355E /* PageControl.swift */; };
+		9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E32E2C5CB4D40008355E /* SignUp-1.swift */; };
+		9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3302C5CF2CB0008355E /* Button.swift */; };
+		9FC5E3332C5D035B0008355E /* WelcomeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3322C5D035B0008355E /* WelcomeBack.swift */; };
+		9FC5E3352C5D0C510008355E /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3342C5D0C510008355E /* Webview.swift */; };
+		9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */; };
+		9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_yatirimApp.swift; sourceTree = "<group>"; };
+		9FC5E2F52C5B64AA0008355E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9FC5E2F72C5B64AC0008355E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FC5E2FA2C5B64AC0008355E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FC5E3022C5B6D740008355E /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		9FC5E3052C5B851C0008355E /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		9FC5E3072C5B9A580008355E /* Walktrougth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walktrougth.swift; sourceTree = "<group>"; };
+		9FC5E30B2C5BA9B90008355E /* gedik_text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_text.swift; sourceTree = "<group>"; };
+		9FC5E30D2C5BADAD0008355E /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		9FC5E32E2C5CB4D40008355E /* SignUp-1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-1.swift"; sourceTree = "<group>"; };
+		9FC5E3302C5CF2CB0008355E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		9FC5E3322C5D035B0008355E /* WelcomeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBack.swift; sourceTree = "<group>"; };
+		9FC5E3342C5D0C510008355E /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
+		9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_2.swift; sourceTree = "<group>"; };
+		9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_textField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FC5E2ED2C5B64AA0008355E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FC5E2E72C5B64AA0008355E = {
+			isa = PBXGroup;
+			children = (
+				9FC5E2F22C5B64AA0008355E /* gedik_yatirim */,
+				9FC5E2F12C5B64AA0008355E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FC5E2F12C5B64AA0008355E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FC5E2F22C5B64AA0008355E /* gedik_yatirim */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5E3012C5B69CA0008355E /* Views */,
+				9FC5E3042C5B850C0008355E /* Utils */,
+				9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */,
+				9FC5E2F52C5B64AA0008355E /* ContentView.swift */,
+				9FC5E2F72C5B64AC0008355E /* Assets.xcassets */,
+				9FC5E2F92C5B64AC0008355E /* Preview Content */,
+			);
+			path = gedik_yatirim;
+			sourceTree = "<group>";
+		};
+		9FC5E2F92C5B64AC0008355E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5E2FA2C5B64AC0008355E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FC5E3012C5B69CA0008355E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5E32B2C5CB2A40008355E /* OnBoarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9FC5E3042C5B850C0008355E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5E3052C5B851C0008355E /* AppColors.swift */,
+				9FC5E30B2C5BA9B90008355E /* gedik_text.swift */,
+				9FC5E30D2C5BADAD0008355E /* PageControl.swift */,
+				9FC5E3302C5CF2CB0008355E /* Button.swift */,
+				9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9FC5E32B2C5CB2A40008355E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				9FC5E3022C5B6D740008355E /* Splash.swift */,
+				9FC5E32E2C5CB4D40008355E /* SignUp-1.swift */,
+				9FC5E3072C5B9A580008355E /* Walktrougth.swift */,
+				9FC5E3322C5D035B0008355E /* WelcomeBack.swift */,
+				9FC5E3342C5D0C510008355E /* Webview.swift */,
+				9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FC5E2EF2C5B64AA0008355E /* gedik_yatirim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC5E2FE2C5B64AC0008355E /* Build configuration list for PBXNativeTarget "gedik_yatirim" */;
+			buildPhases = (
+				9FC5E2EC2C5B64AA0008355E /* Sources */,
+				9FC5E2ED2C5B64AA0008355E /* Frameworks */,
+				9FC5E2EE2C5B64AA0008355E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gedik_yatirim;
+			productName = gedik_yatirim;
+			productReference = 9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FC5E2E82C5B64AA0008355E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					9FC5E2EF2C5B64AA0008355E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 9FC5E2EB2C5B64AA0008355E /* Build configuration list for PBXProject "gedik_yatirim" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FC5E2E72C5B64AA0008355E;
+			productRefGroup = 9FC5E2F12C5B64AA0008355E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FC5E2EF2C5B64AA0008355E /* gedik_yatirim */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FC5E2EE2C5B64AA0008355E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC5E2FB2C5B64AC0008355E /* Preview Assets.xcassets in Resources */,
+				9FC5E2F82C5B64AC0008355E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FC5E2EC2C5B64AA0008355E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */,
+				9FC5E3332C5D035B0008355E /* WelcomeBack.swift in Sources */,
+				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
+				9FC5E30E2C5BADAD0008355E /* PageControl.swift in Sources */,
+				9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */,
+				9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */,
+				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,
+				9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */,
+				9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */,
+				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
+				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
+				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
+				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9FC5E2FC2C5B64AC0008355E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FC5E2FD2C5B64AC0008355E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FC5E2FF2C5B64AC0008355E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gedik_yatirim/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hasankilic.gedik-yatirim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FC5E3002C5B64AC0008355E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"gedik_yatirim/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hasankilic.gedik-yatirim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FC5E2EB2C5B64AA0008355E /* Build configuration list for PBXProject "gedik_yatirim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC5E2FC2C5B64AC0008355E /* Debug */,
+				9FC5E2FD2C5B64AC0008355E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC5E2FE2C5B64AC0008355E /* Build configuration list for PBXNativeTarget "gedik_yatirim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC5E2FF2C5B64AC0008355E /* Debug */,
+				9FC5E3002C5B64AC0008355E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FC5E2E82C5B64AA0008355E /* Project object */;
+}
