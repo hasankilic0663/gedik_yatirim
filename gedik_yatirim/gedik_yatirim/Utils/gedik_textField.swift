@@ -14,6 +14,7 @@ struct textFieldTitle : ViewModifier {
             .font(Font.custom("Plus Jakarta Sans", size: 12))
             .foregroundColor(Constants.LabelColorTertiary)
             .frame(maxWidth: .infinity, alignment: .topLeading)
+            
     }
 }
 
@@ -45,3 +46,38 @@ struct textFieldSmallBox : ViewModifier {
             )
     }
 }
+
+struct textFieldBox : ViewModifier {
+    var isFocused = LogIn() // Odak durumunu izlemek için
+        
+    func body(content : Content) -> some View {
+        content
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
+            .background(Constants.BackgroundTertiary)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .inset(by: 0.5)
+                    .stroke(isFocused.isFocused ? Color.blue : Constants.GreyGrey300, lineWidth: 1)
+            ).padding(.horizontal)
+    }
+}
+
+struct textFieldSecure : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+            Font.custom("Plus Jakarta Sans", size: 12)
+            .weight(.medium)
+            )
+            .foregroundColor(Constants.LabelColorSecondary)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+    }
+}
+    
+
+
+
+   

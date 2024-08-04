@@ -97,6 +97,11 @@ struct SignUp_1: View {
                             .modifier(textFieldTitle())
                         TextField("Telefon Numaranızı Giriniz" , text: $phoneNumber)
                             .modifier(textFieldText())
+                            .font(
+                            Font.custom("Plus Jakarta Sans", size: 14)
+                            .weight(.medium)
+                            )
+                            .foregroundColor(Constants.LabelColorPrimary)
                             .keyboardType(.numberPad) // Sayısal klavye sağlar
                     }
                     .padding(.horizontal, 12)
@@ -145,6 +150,7 @@ struct SignUp_1: View {
                             .foregroundColor(Constants.LabelColorSecondary)
                             .frame(width: 286, alignment: .topLeading)
                     }
+                    .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                     .padding()
                     .padding(.horizontal)
                 
@@ -157,6 +163,7 @@ struct SignUp_1: View {
                     .font(Font.custom("Plus Jakarta Sans", size: 12))
                     .foregroundColor(Constants.LabelColorSecondary)
                 }
+                .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                 .padding()
                 .padding(.horizontal)
                     

@@ -22,6 +22,8 @@
 		9FC5E3352C5D0C510008355E /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3342C5D0C510008355E /* Webview.swift */; };
 		9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */; };
 		9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */; };
+		9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */; };
+		9FFCC0742C5FA35B009AC643 /* SecureFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCC0732C5FA35B009AC643 /* SecureFieldWithButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		9FC5E3342C5D0C510008355E /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 		9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_2.swift; sourceTree = "<group>"; };
 		9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_textField.swift; sourceTree = "<group>"; };
+		9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		9FFCC0732C5FA35B009AC643 /* SecureFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldWithButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		9FC5E2F22C5B64AA0008355E /* gedik_yatirim */ = {
 			isa = PBXGroup;
 			children = (
+				9FFCC0712C5FA32C009AC643 /* Core */,
 				9FC5E3012C5B69CA0008355E /* Views */,
 				9FC5E3042C5B850C0008355E /* Utils */,
 				9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */,
@@ -120,8 +125,25 @@
 				9FC5E3322C5D035B0008355E /* WelcomeBack.swift */,
 				9FC5E3342C5D0C510008355E /* Webview.swift */,
 				9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */,
+				9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		9FFCC0712C5FA32C009AC643 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9FFCC0722C5FA332009AC643 /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9FFCC0722C5FA332009AC643 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9FFCC0732C5FA35B009AC643 /* SecureFieldWithButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +218,9 @@
 			files = (
 				9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */,
 				9FC5E3332C5D035B0008355E /* WelcomeBack.swift in Sources */,
+				9FFCC0742C5FA35B009AC643 /* SecureFieldWithButton.swift in Sources */,
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
+				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
 				9FC5E30E2C5BADAD0008355E /* PageControl.swift in Sources */,
 				9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */,
 				9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */,
