@@ -44,6 +44,7 @@ struct SecureFieldWithButton: View {
                        
                     }
                     
+                    
                 }
             }
             .modifier(textFieldBox())

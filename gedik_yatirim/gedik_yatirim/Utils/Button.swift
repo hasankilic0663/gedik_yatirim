@@ -38,7 +38,7 @@ struct buttonStroke : ViewModifier {
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .frame(width: 361, height: 48, alignment: .center)
-            .background(Constants.FillColorFillColor600)
+            .background(Constants.ShadesWhite)
             .cornerRadius(12)
             .overlay(
             RoundedRectangle(cornerRadius: 12)

@@ -48,7 +48,7 @@ struct textFieldSmallBox : ViewModifier {
 }
 
 struct textFieldBox : ViewModifier {
-    var isFocused = LogIn() // Odak durumunu izlemek için
+     // Odak durumunu izlemek için
         
     func body(content : Content) -> some View {
         content
@@ -60,7 +60,7 @@ struct textFieldBox : ViewModifier {
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .inset(by: 0.5)
-                    .stroke(isFocused.isFocused ? Color.blue : Constants.GreyGrey300, lineWidth: 1)
+                    .stroke(Constants.GreyGrey300, lineWidth: 1)
             ).padding(.horizontal)
     }
 }
@@ -76,7 +76,8 @@ struct textFieldSecure : ViewModifier {
             .frame(maxWidth: .infinity, alignment: .topLeading)
     }
 }
-    
+
+
 
 
 

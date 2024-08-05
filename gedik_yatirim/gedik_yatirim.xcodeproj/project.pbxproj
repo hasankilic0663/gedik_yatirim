@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F814EB52C60B05B00A446F0 /* Personalinformation.swift */; };
 		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
 		9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F52C5B64AA0008355E /* ContentView.swift */; };
 		9FC5E2F82C5B64AC0008355E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F72C5B64AC0008355E /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F814EB52C60B05B00A446F0 /* Personalinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personalinformation.swift; sourceTree = "<group>"; };
 		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_yatirimApp.swift; sourceTree = "<group>"; };
 		9FC5E2F52C5B64AA0008355E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9FC5E3342C5D0C510008355E /* Webview.swift */,
 				9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */,
 				9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */,
+				9F814EB52C60B05B00A446F0 /* Personalinformation.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
+				9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
