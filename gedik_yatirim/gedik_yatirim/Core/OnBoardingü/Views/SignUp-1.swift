@@ -12,6 +12,7 @@ struct SignUp_1: View {
     @State private var tcNumber : String = ""
     @State private var permission = false
     @State private var permission2 = false
+    @State private var showTCFieldAndToggles = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -104,6 +105,7 @@ struct SignUp_1: View {
                                 )
                                 .foregroundColor(Constants.LabelColorPrimary)
                                 .keyboardType(.numberPad) // Sayısal klavye sağlar
+                                .disabled(showTCFieldAndToggles) // Devam Et butonuna basıldığında pasif yapar
                         }
                         .padding(.horizontal, 12)
                         .padding(.vertical, 8)
@@ -117,57 +119,57 @@ struct SignUp_1: View {
                         ).padding(.trailing)
                     }
                    
-                    VStack{
-                        HStack{
-                            Image("usertc")
-                            VStack{
-                                Text("TCKN")
-                                    .modifier(textFieldTitle())
-                                TextField("1234567890" , text: $tcNumber)
-                                    .modifier(textFieldText())
-                                    .keyboardType(.numberPad) // Sayısal klavye sağlar
-                            }
-                        }
-                    }
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
-                        .background(Constants.BackgroundTertiary)
-                        .cornerRadius(8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .inset(by: 0.5)
-                                .stroke(Constants.GreyGrey300, lineWidth: 1)
-                        ).padding(.horizontal)
-                    
-                    
-                    
-                        Toggle(isOn: $permission) {
-                            Text("Gedik Yatırım ürün, hizmet, kampanya ve duyurulardan haberdar olmak elektronik iletilere izin veriyorum")
-                                .font(
-                                    Font.custom("Plus Jakarta Sans", size: 11)
-                                        .weight(.semibold)
-                                )
-                                .foregroundColor(Constants.LabelColorSecondary)
-                                .frame(width: 286, alignment: .topLeading)
-                        }
-                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-                        .padding()
-                        .padding(.horizontal)
-                    
-                    Toggle(isOn: $permission2) {
-                        Text("Açık Rıza Metni ")
-                        .font(Font.custom("Plus Jakarta Sans", size: 12)
-                        .weight(.semibold))
-                        .foregroundColor(Constants.LabelColorPrimary) +
-                        Text(" şartları okudum onaylıyorum")
-                        .font(Font.custom("Plus Jakarta Sans", size: 12))
-                        .foregroundColor(Constants.LabelColorSecondary)
-                    }
-                    .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-                    .padding()
-                    .padding(.horizontal)
-                        
+                    // TCKN TextField'ı ve Toggle'lar
+                                     if showTCFieldAndToggles {
+                                         VStack {
+                                             HStack {
+                                                 Image("usertc")
+                                                 VStack {
+                                                     Text("TCKN")
+                                                         .modifier(textFieldTitle())
+                                                     TextField("1234567890", text: $tcNumber)
+                                                         .modifier(textFieldText())
+                                                         .keyboardType(.numberPad) // Sayısal klavye sağlar
+                                                 }
+                                             }
+                                         }
+                                         .padding(.horizontal, 12)
+                                         .padding(.vertical, 8)
+                                         .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
+                                         .background(Constants.BackgroundTertiary)
+                                         .cornerRadius(8)
+                                         .overlay(
+                                             RoundedRectangle(cornerRadius: 8)
+                                                 .inset(by: 0.5)
+                                                 .stroke(Constants.GreyGrey300, lineWidth: 1)
+                                         )
+                                         .padding(.horizontal)
+
+                                         Toggle(isOn: $permission) {
+                                             Text("Gedik Yatırım ürün, hizmet, kampanya ve duyurulardan haberdar olmak elektronik iletilere izin veriyorum")
+                                                 .font(
+                                                     Font.custom("Plus Jakarta Sans", size: 11)
+                                                         .weight(.semibold)
+                                                 )
+                                                 .foregroundColor(Constants.LabelColorSecondary)
+                                                 .frame(width: 286, alignment: .topLeading)
+                                         }
+                                         .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+                                         .padding()
+                                         .padding(.horizontal)
+
+                                         Toggle(isOn: $permission2) {
+                                             Text("Açık Rıza Metni ")
+                                                 .font(Font.custom("Plus Jakarta Sans", size: 12)
+                                                     .weight(.semibold)) +
+                                             Text(" şartları okudum onaylıyorum")
+                                                 .font(Font.custom("Plus Jakarta Sans", size: 12))
+                                                 .foregroundColor(Constants.LabelColorSecondary)
+                                         }
+                                         .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+                                         .padding()
+                                         .padding(.horizontal)
+                                     }
                     
                     Spacer()
                     NavigationLink {
@@ -184,7 +186,10 @@ struct SignUp_1: View {
                     }
                     
 
-                    Button {} label: {
+                    Button {
+                        
+                        showTCFieldAndToggles = true
+                    } label: {
                         Text("Devam Et")
                             .modifier(buttonBlue())
                     }

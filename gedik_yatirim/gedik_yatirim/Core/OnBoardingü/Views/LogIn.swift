@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LogIn: View {
-    @State private var tcNumber = ""
+   
     @State var password = ""
     @State var permission : Bool = false
+    @State private var tcKimlikNumarasi = ""
     @FocusState  var isFocused : Bool // Odak durumunu izlemek için
     var body: some View {
         ZStack {
@@ -30,7 +31,7 @@ struct LogIn: View {
                                 Text("TCKN")
                                     .modifier(textFieldTitle())
                                     .padding(.top,2)
-                                TextField("1234567890" , text: $tcNumber)
+                                TextField("1234567890" , text: $tcKimlikNumarasi)
                                     .font(
                                         Font.custom("Plus Jakarta Sans", size: 14)
                                             .weight(.medium)
@@ -38,7 +39,16 @@ struct LogIn: View {
                                     .foregroundColor(Constants.LabelColorPrimary)
                                     .keyboardType(.numberPad) // Sayısal klavye sağlar
                                     .focused($isFocused) // Odak durumunu takip eder
-                                
+                                    .onChange(of: tcKimlikNumarasi) { _ in
+                                                        // Harfleri ve özel karakterleri filtrele
+                                                        let filtered = tcKimlikNumarasi.filter { "0123456789".contains($0) }
+                                                        // Karakter sayısını 11 ile sınırla
+                                                        if filtered.count <= 11 {
+                                                            tcKimlikNumarasi = filtered
+                                                        } else {
+                                                            tcKimlikNumarasi = String(filtered.prefix(11))
+                                                        }
+                                                    }
                             }
                         }
                     }

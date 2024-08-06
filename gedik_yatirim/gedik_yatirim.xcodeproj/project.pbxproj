@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F814EB52C60B05B00A446F0 /* Personalinformation.swift */; };
+		9F85C7D02C620BC400ABD997 /* SignUp-1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */; };
+		9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */; };
+		9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */; };
+		9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */; };
 		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
 		9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F52C5B64AA0008355E /* ContentView.swift */; };
 		9FC5E2F82C5B64AC0008355E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F72C5B64AC0008355E /* Assets.xcassets */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		9F814EB52C60B05B00A446F0 /* Personalinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personalinformation.swift; sourceTree = "<group>"; };
+		9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-1ViewModel.swift"; sourceTree = "<group>"; };
+		9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktrougthViewModel.swift; sourceTree = "<group>"; };
+		9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinformationViewModel.swift; sourceTree = "<group>"; };
+		9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_yatirimApp.swift; sourceTree = "<group>"; };
 		9FC5E2F52C5B64AA0008355E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F85C7CE2C620B2100ABD997 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */,
+				9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */,
+				9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */,
+				9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9FC5E2E72C5B64AA0008355E = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				9FFCC0712C5FA32C009AC643 /* Core */,
-				9FC5E3012C5B69CA0008355E /* Views */,
 				9FC5E3042C5B850C0008355E /* Utils */,
 				9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */,
 				9FC5E2F52C5B64AA0008355E /* ContentView.swift */,
@@ -98,12 +116,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9FC5E3012C5B69CA0008355E /* Views */ = {
+		9FC5E3012C5B69CA0008355E /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				9FC5E32B2C5CB2A40008355E /* OnBoarding */,
+				9F85C7CE2C620B2100ABD997 /* ViewModels */,
+				9FC5E32B2C5CB2A40008355E /* Views */,
 			);
-			path = Views;
+			name = OnBoarding;
+			path = "OnBoardingü";
 			sourceTree = "<group>";
 		};
 		9FC5E3042C5B850C0008355E /* Utils */ = {
@@ -118,7 +138,7 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		9FC5E32B2C5CB2A40008355E /* OnBoarding */ = {
+		9FC5E32B2C5CB2A40008355E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9FC5E3022C5B6D740008355E /* Splash.swift */,
@@ -130,12 +150,13 @@
 				9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */,
 				9F814EB52C60B05B00A446F0 /* Personalinformation.swift */,
 			);
-			path = OnBoarding;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9FFCC0712C5FA32C009AC643 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9FC5E3012C5B69CA0008355E /* OnBoarding */,
 				9FFCC0722C5FA332009AC643 /* Components */,
 			);
 			path = Core;
@@ -224,14 +245,18 @@
 				9FFCC0742C5FA35B009AC643 /* SecureFieldWithButton.swift in Sources */,
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
 				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
+				9F85C7D02C620BC400ABD997 /* SignUp-1ViewModel.swift in Sources */,
 				9FC5E30E2C5BADAD0008355E /* PageControl.swift in Sources */,
+				9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */,
 				9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */,
 				9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */,
+				9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */,
 				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,
 				9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */,
 				9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */,
 				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
+				9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
 				9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,
