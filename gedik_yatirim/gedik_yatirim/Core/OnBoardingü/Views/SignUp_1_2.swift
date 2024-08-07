@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUp_1: View {
+struct SignUp_1_2: View {
     @Environment(\.dismiss) var dismiss
     @State private var phoneNumber : String = ""
     @State private var tcNumber : String = ""
@@ -124,7 +124,7 @@ struct SignUp_1: View {
                     }
                     
                     // TCKN TextField'ı ve Toggle'lar
-                   
+                    if showTCFieldAndToggles {
                         VStack {
                             HStack {
                                 Image("usertc")
@@ -176,7 +176,7 @@ struct SignUp_1: View {
                         .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                         .padding()
                         .padding(.horizontal)
-                    
+                    }
                     
                     Spacer()
                     NavigationLink {
@@ -192,7 +192,7 @@ struct SignUp_1: View {
                             .padding(.bottom,16)
                     }
                     
-                    
+                    if showTCFieldAndToggles {
                         NavigationLink {
                             SignUp_2()
                                 .navigationBarBackButtonHidden()
@@ -201,7 +201,15 @@ struct SignUp_1: View {
                                 .modifier(buttonBlue())
                         }
 
-                    
+                    }else{
+                        Button {
+                            showTCFieldAndToggles = true
+                        } label: {
+                            Text("Devam Et")
+                                .modifier(buttonBlue())
+                        }
+
+                    }
                 }
             }
             .background(Constants.BackgroundPrimary)
@@ -211,5 +219,5 @@ struct SignUp_1: View {
 }
 
 #Preview {
-    SignUp_1()
+    SignUp_1_2()
 }

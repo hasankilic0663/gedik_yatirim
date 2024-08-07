@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignUp_2: View {
+    
+    @Environment(\.dismiss) var dismiss
     @State private var code = ["", "", "", "", "", ""]
     var body: some View {
         VStack{
@@ -19,8 +21,12 @@ struct SignUp_2: View {
                         .frame(width: 20, height: 20)
                         .foregroundColor(.black)
                         .padding(6)
+                        .onTapGesture {
+                            dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
+                        }
                 }
                 .modifier(buttonsmall())
+                
                 Spacer()
                 
                 Button {
@@ -75,8 +81,21 @@ struct SignUp_2: View {
                     .modifier(buttonBlue())
             }
 
+//                .toolbar{
+//                    ToolbarItem( placement: .topBarLeading) {
+//                        Image(systemName: "chevron.left")
+//                            .frame(width: 20, height: 20)
+//                            .foregroundColor(.black)
+//                            .padding(6)
+//                            .modifier(buttonsmall())
+//                            .onTapGesture {
+//                                dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
+//                            }
+//                    }
+//                }
         }
         .padding(.bottom)
+
         
         
     }

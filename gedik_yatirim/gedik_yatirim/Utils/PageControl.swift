@@ -11,7 +11,7 @@ struct PageControl: View {
     var body: some View {
         
         Text("Gedix uygulamamız yeni bir sürüme güncellenmiştir. Uygulamaya devam etmek için versiyon yükseltmeniz gerekmektedir.")
-            .modifier(gedik_text())
+            .modifier(gedik_textwhitem())
         Image("walkthroug-image")
             .frame(width: 300,height: 300)
     }

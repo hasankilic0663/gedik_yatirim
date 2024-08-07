@@ -114,8 +114,9 @@ struct LogIn: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(Constants.LabelColorSecondary)
                     
-                    Button {
-                        
+                    NavigationLink {
+                        SignUp_1()
+                            .navigationBarBackButtonHidden()
                     } label: {
                         Text("Hesap oluştur")
                             .font(

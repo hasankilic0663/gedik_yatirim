@@ -12,6 +12,9 @@
 		9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */; };
 		9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */; };
 		9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */; };
+		9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */; };
+		9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A32C62628F0026350E /* Walkrought_2.swift */; };
+		9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A52C62A5E40026350E /* SignUp_1_2.swift */; };
 		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
 		9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F52C5B64AA0008355E /* ContentView.swift */; };
 		9FC5E2F82C5B64AC0008355E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F72C5B64AC0008355E /* Assets.xcassets */; };
@@ -20,7 +23,6 @@
 		9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3052C5B851C0008355E /* AppColors.swift */; };
 		9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3072C5B9A580008355E /* Walktrougth.swift */; };
 		9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E30B2C5BA9B90008355E /* gedik_text.swift */; };
-		9FC5E30E2C5BADAD0008355E /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E30D2C5BADAD0008355E /* PageControl.swift */; };
 		9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E32E2C5CB4D40008355E /* SignUp-1.swift */; };
 		9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3302C5CF2CB0008355E /* Button.swift */; };
 		9FC5E3332C5D035B0008355E /* WelcomeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3322C5D035B0008355E /* WelcomeBack.swift */; };
@@ -37,6 +39,9 @@
 		9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktrougthViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinformationViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktroughtViewModel.swift; sourceTree = "<group>"; };
+		9FA759A32C62628F0026350E /* Walkrought_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkrought_2.swift; sourceTree = "<group>"; };
+		9FA759A52C62A5E40026350E /* SignUp_1_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1_2.swift; sourceTree = "<group>"; };
 		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_yatirimApp.swift; sourceTree = "<group>"; };
 		9FC5E2F52C5B64AA0008355E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +51,6 @@
 		9FC5E3052C5B851C0008355E /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		9FC5E3072C5B9A580008355E /* Walktrougth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walktrougth.swift; sourceTree = "<group>"; };
 		9FC5E30B2C5BA9B90008355E /* gedik_text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_text.swift; sourceTree = "<group>"; };
-		9FC5E30D2C5BADAD0008355E /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		9FC5E32E2C5CB4D40008355E /* SignUp-1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-1.swift"; sourceTree = "<group>"; };
 		9FC5E3302C5CF2CB0008355E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9FC5E3322C5D035B0008355E /* WelcomeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBack.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */,
 				9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */,
 				9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */,
+				9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -131,7 +136,6 @@
 			children = (
 				9FC5E3052C5B851C0008355E /* AppColors.swift */,
 				9FC5E30B2C5BA9B90008355E /* gedik_text.swift */,
-				9FC5E30D2C5BADAD0008355E /* PageControl.swift */,
 				9FC5E3302C5CF2CB0008355E /* Button.swift */,
 				9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */,
 			);
@@ -149,6 +153,8 @@
 				9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */,
 				9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */,
 				9F814EB52C60B05B00A446F0 /* Personalinformation.swift */,
+				9FA759A32C62628F0026350E /* Walkrought_2.swift */,
+				9FA759A52C62A5E40026350E /* SignUp_1_2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,17 +252,19 @@
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
 				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
 				9F85C7D02C620BC400ABD997 /* SignUp-1ViewModel.swift in Sources */,
-				9FC5E30E2C5BADAD0008355E /* PageControl.swift in Sources */,
 				9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */,
 				9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */,
 				9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */,
 				9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */,
+				9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */,
 				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,
 				9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */,
 				9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */,
 				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
+				9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
 				9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */,
+				9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
 				9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,

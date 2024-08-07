@@ -27,6 +27,56 @@ struct buttonBlue : ViewModifier {
     
 }
 
+struct buttonOrange : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+                Font.custom("Plus Jakarta Sans", size: 16)
+                    .weight(.semibold)
+            )
+            .foregroundColor(Constants.ShadesWhite)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .frame(width: 361, height: 48, alignment: .center)
+            .background(Constants.OrangeOrange500)
+            .cornerRadius(12)
+    }
+    
+}
+struct buttonHide : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+                Font.custom("Plus Jakarta Sans", size: 16)
+                    .weight(.semibold)
+            )
+            .foregroundColor(Constants.ShadesWhite)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .frame(width: 361, height: 48, alignment: .center)
+            
+            .cornerRadius(12)
+    }
+    
+}
+
+struct buttonWhite : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+                Font.custom("Plus Jakarta Sans", size: 16)
+                    .weight(.semibold)
+            )
+            .foregroundColor(Constants.FillColorFillColor600)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .frame(width: 361, height: 48, alignment: .center)
+            .background(Constants.BackgroundTertiary)
+            .cornerRadius(12)
+    }
+    
+}
+
 struct buttonStroke : ViewModifier {
     func body(content : Content) -> some View {
         content
