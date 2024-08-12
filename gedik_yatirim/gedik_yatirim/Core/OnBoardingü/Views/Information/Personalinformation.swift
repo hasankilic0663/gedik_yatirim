@@ -110,7 +110,7 @@ struct Personalinformation: View {
                 }
                 .modifier(textFieldBox())
                 
-                VStack{
+                
                     HStack{
                         VStack{
                             Text("Doğum Tarihi")
@@ -126,7 +126,7 @@ struct Personalinformation: View {
                         }
                         Image("Date")
                     }
-                }
+                
                 .modifier(textFieldBox())
                 VStack{
                     Text("Email")

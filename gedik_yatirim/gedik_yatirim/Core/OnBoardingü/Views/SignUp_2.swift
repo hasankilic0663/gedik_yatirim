@@ -74,8 +74,9 @@ struct SignUp_2: View {
             
             
             Spacer()
-            Button {
-                
+            NavigationLink {
+                Personalinformation()
+                    .navigationBarBackButtonHidden()
             } label: {
                 Text("Onayla")
                     .modifier(buttonBlue())
