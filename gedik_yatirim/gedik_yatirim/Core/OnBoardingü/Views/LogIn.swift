@@ -37,18 +37,19 @@ struct LogIn: View {
                                             .weight(.medium)
                                     )
                                     .foregroundColor(Constants.LabelColorPrimary)
+
                                     .keyboardType(.numberPad) // Sayısal klavye sağlar
                                     .focused($isFocused) // Odak durumunu takip eder
                                     .onChange(of: tcKimlikNumarasi) { _ in
-                                                        // Harfleri ve özel karakterleri filtrele
-                                                        let filtered = tcKimlikNumarasi.filter { "0123456789".contains($0) }
-                                                        // Karakter sayısını 11 ile sınırla
-                                                        if filtered.count <= 11 {
-                                                            tcKimlikNumarasi = filtered
-                                                        } else {
-                                                            tcKimlikNumarasi = String(filtered.prefix(11))
-                                                        }
-                                                    }
+                                        // Harfleri ve özel karakterleri filtrele
+                                        let filtered = tcKimlikNumarasi.filter { "0123456789".contains($0) }
+                                        // Karakter sayısını 11 ile sınırla
+                                        if filtered.count <= 11 {
+                                            tcKimlikNumarasi = filtered
+                                        } else {
+                                            tcKimlikNumarasi = String(filtered.prefix(11))
+                                        }
+                                    }
                             }
                         }
                     }
@@ -67,7 +68,9 @@ struct LogIn: View {
                 
                 
                SecureFieldWithButton(text: $password, "********")
+                
                     .padding(.top,3)
+                
                 
                 Toggle(isOn: $permission)
                     {

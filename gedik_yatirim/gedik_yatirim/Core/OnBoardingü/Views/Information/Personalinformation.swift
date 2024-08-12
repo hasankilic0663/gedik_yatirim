@@ -53,13 +53,13 @@ struct Personalinformation: View {
                 .padding(.top)
                 .padding(.horizontal)
                 
-                HStack(alignment: .center, spacing: 10) {
+                HStack(alignment: .center,spacing: 2) {
                                 ForEach(1...totalSteps, id: \.self) { step in
                                     Rectangle()
                                         .fill(step <= currentStep ? Color.blue : Color.gray.opacity(0.3))
-                                        .frame(width: 36, height: 4, alignment: .leading)
+                                        .frame(width: 36, height: 5, alignment: .leading)
                                         .cornerRadius(2.5)
-                                        .padding(.horizontal,0)
+//                                        .padding(.horizontal,0)
                                 }
                             }
                 .padding()
@@ -146,10 +146,12 @@ struct Personalinformation: View {
                 
                 Spacer()
                 
-                Button {
-                    if currentStep < totalSteps {
-                                           currentStep += 1
-                                       }
+                NavigationLink {
+//                    if currentStep < totalSteps {
+//                                           currentStep += 1
+//                                       }
+                    PersonInf_2()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
                         .modifier(buttonBlue())

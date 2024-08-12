@@ -35,6 +35,7 @@ struct SecureFieldWithButton: View {
                                 SecureField(title,text: $text)
                                     .modifier(textFieldSecure())
                                     .keyboardType(.numberPad)
+                                
                             }else{
                                 TextField(title,text: $text)
                                     .modifier(textFieldSecure())
