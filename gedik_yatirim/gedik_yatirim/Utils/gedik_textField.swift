@@ -48,6 +48,7 @@ struct textFieldSmallBox : ViewModifier {
 }
 
 struct textFieldBox : ViewModifier {
+    
      // Odak durumunu izlemek için
         
     func body(content : Content) -> some View {

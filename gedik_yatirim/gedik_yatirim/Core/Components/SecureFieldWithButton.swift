@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct SecureFieldWithButton: View {
-    
+    @Binding var focussed : Bool
     @Binding private var text: String
     @State private var isSecured: Bool = true
     private var title : String
     
-    init(text: Binding<String>, _ title: String) {
+    init(text: Binding<String>, _ title: String , _ focussed : Binding<Bool>) {
         self._text = text
         
         self.title = title
+        self._focussed = focussed
     }
     
     var body: some View {
@@ -48,8 +49,18 @@ struct SecureFieldWithButton: View {
                     
                 }
             }
-            .modifier(textFieldBox())
-            
+//            .modifier(textFieldBox())
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
+            .background(Constants.BackgroundTertiary)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .inset(by: 0.5)
+                    .stroke(focussed ? Color.blue : Constants.GreyGrey300, lineWidth: 1)
+            ).padding(.horizontal)
+
             
             Button {
                 isSecured.toggle()//toggle ederek true ise false false ise true
@@ -68,5 +79,5 @@ struct SecureFieldWithButton: View {
 
 
 #Preview {
-    SecureFieldWithButton(text: .constant(""), "********")
+    SecureFieldWithButton(text: .constant(""), "********",.constant(false))
 }

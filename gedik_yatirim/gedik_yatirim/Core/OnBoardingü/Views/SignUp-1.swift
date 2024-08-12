@@ -124,59 +124,59 @@ struct SignUp_1: View {
                     }
                     
                     // TCKN TextField'ı ve Toggle'lar
-                   
-                        VStack {
-                            HStack {
-                                Image("usertc")
-                                VStack {
-                                    Text("TCKN")
-                                        .modifier(textFieldTitle())
-                                    TextField("1234567890", text: $tcNumber)
-                                        .modifier(textFieldText())
-                                        .keyboardType(.numberPad) // Sayısal klavye sağlar
-                                }
-                            }
-                        }
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
-                        .background(Constants.BackgroundTertiary)
-                        .cornerRadius(8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .inset(by: 0.5)
-                                .stroke(Constants.GreyGrey300, lineWidth: 1)
-                        )
-                        .padding(.horizontal)
-                        
-                        Toggle(isOn: $permission) {
-                            Text("Gedik Yatırım ürün, hizmet, kampanya ve duyurulardan haberdar olmak elektronik iletilere izin veriyorum")
-                                .font(
-                                    Font.custom("Plus Jakarta Sans", size: 11)
-                                        .weight(.semibold)
-                                )
-                                .foregroundColor(Constants.LabelColorSecondary)
-//                                .frame(width: 286, alignment: .topLeading)
-                        }
-                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-                        .padding()
-                        .padding(.horizontal)
-                        
-                        Toggle(isOn: $permission2) {
-                            Text("Açık Rıza Metni ")
-                                .font(Font.custom("Plus Jakarta Sans", size: 12)
-                                    .weight(.semibold)) +
-                            Text(" şartları okudum onaylıyorum")
-                                .font(Font.custom("Plus Jakarta Sans", size: 12))
-                                .foregroundColor(Constants.LabelColorSecondary)
-                                
-                        }
-                        .frame(maxWidth: .infinity)
-                        
-                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-                        .padding()
-                        .padding(.horizontal)
-                    
+//                   
+//                        VStack {
+//                            HStack {
+//                                Image("usertc")
+//                                VStack {
+//                                    Text("TCKN")
+//                                        .modifier(textFieldTitle())
+//                                    TextField("1234567890", text: $tcNumber)
+//                                        .modifier(textFieldText())
+//                                        .keyboardType(.numberPad) // Sayısal klavye sağlar
+//                                }
+//                            }
+//                        }
+//                        .padding(.horizontal, 12)
+//                        .padding(.vertical, 8)
+//                        .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
+//                        .background(Constants.BackgroundTertiary)
+//                        .cornerRadius(8)
+//                        .overlay(
+//                            RoundedRectangle(cornerRadius: 8)
+//                                .inset(by: 0.5)
+//                                .stroke(Constants.GreyGrey300, lineWidth: 1)
+//                        )
+//                        .padding(.horizontal)
+//                        
+//                        Toggle(isOn: $permission) {
+//                            Text("Gedik Yatırım ürün, hizmet, kampanya ve duyurulardan haberdar olmak elektronik iletilere izin veriyorum")
+//                                .font(
+//                                    Font.custom("Plus Jakarta Sans", size: 11)
+//                                        .weight(.semibold)
+//                                )
+//                                .foregroundColor(Constants.LabelColorSecondary)
+////                                .frame(width: 286, alignment: .topLeading)
+//                        }
+//                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+//                        .padding()
+//                        .padding(.horizontal)
+//                        
+//                        Toggle(isOn: $permission2) {
+//                            Text("Açık Rıza Metni ")
+//                                .font(Font.custom("Plus Jakarta Sans", size: 12)
+//                                    .weight(.semibold)) +
+//                            Text(" şartları okudum onaylıyorum")
+//                                .font(Font.custom("Plus Jakarta Sans", size: 12))
+//                                .foregroundColor(Constants.LabelColorSecondary)
+//                                
+//                        }
+//                        .frame(maxWidth: .infinity)
+//                        
+//                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+//                        .padding()
+//                        .padding(.horizontal)
+//                    
                     
                     Spacer()
                     NavigationLink {
@@ -194,7 +194,7 @@ struct SignUp_1: View {
                     
                     
                         NavigationLink {
-                            SignUp_2()
+                            SignUp_1_2()
                                 .navigationBarBackButtonHidden()
                         } label: {
                             Text("Devam Et")

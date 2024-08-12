@@ -124,7 +124,7 @@ struct SignUp_1_2: View {
                     }
                     
                     // TCKN TextField'ı ve Toggle'lar
-                    if showTCFieldAndToggles {
+//                    if showTCFieldAndToggles {
                         VStack {
                             HStack {
                                 Image("usertc")
@@ -176,7 +176,7 @@ struct SignUp_1_2: View {
                         .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                         .padding()
                         .padding(.horizontal)
-                    }
+//                    }
                     
                     Spacer()
                     NavigationLink {

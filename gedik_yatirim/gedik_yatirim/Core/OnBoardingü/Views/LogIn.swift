@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct LogIn: View {
-   
+    
+    
+    func bindingFromFocusState(_ focusBinding: FocusState<Bool>.Binding) -> Binding<Bool> {
+        Binding(
+            get: { focusBinding.wrappedValue },
+            set: { focusBinding.wrappedValue = $0 }
+        )
+    }
+    
     @State var password = ""
     @State var permission : Bool = false
     @State private var tcKimlikNumarasi = ""
     @FocusState  var isFocused : Bool // Odak durumunu izlemek için
+    @FocusState  var tcisFocused : Bool
     var body: some View {
         ZStack {
             
@@ -67,7 +76,9 @@ struct LogIn: View {
                 
                 
                 
-               SecureFieldWithButton(text: $password, "********")
+                SecureFieldWithButton(text: $password, "********", bindingFromFocusState($tcisFocused))
+                    .focused($tcisFocused)
+                   
                 
                     .padding(.top,3)
                 
