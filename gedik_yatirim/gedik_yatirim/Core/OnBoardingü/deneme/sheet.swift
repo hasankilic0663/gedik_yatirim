@@ -97,7 +97,7 @@ struct sheet: View {
                                
                                 List(1...totalSteps, id: \.self) { item in
                                     HStack {
-                                        Text("Option \(item)")
+                                        Text("Hasan \(item)")
                                         Spacer()
                                         Image(systemName: self.selectedOption == item ? "largecircle.fill.circle" : "circle")
                                             .foregroundColor(self.selectedOption == item ? .blue : .gray)
@@ -108,9 +108,10 @@ struct sheet: View {
                                                 .padding()
                                                 .background(self.selectedOption == item ? Color.blue.opacity(0.2) : Color.white)
                                                 .cornerRadius(8)
+                                                .frame(maxWidth : .infinity)
                                                 .overlay(
                                                     RoundedRectangle(cornerRadius: 8)
-                                                        .stroke(self.selectedOption == item ? Color.blue : Color.clear, lineWidth: 2)
+                                                        .stroke(self.selectedOption == item ? Color.blue : Color.clear, lineWidth: 1)
                                                 )
                                             }
                                             .listStyle(PlainListStyle()) // List stilini düz yapar, arka planı beyaz yapar
