@@ -30,6 +30,7 @@
 		9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */; };
 		9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */; };
 		9FD9D5112C69EEE600994BB2 /* PersonInf_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9D5102C69EEE600994BB2 /* PersonInf_2.swift */; };
+		9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8AC832C6A436000C78F77 /* CustomHeader.swift */; };
 		9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */; };
 		9FFCC0742C5FA35B009AC643 /* SecureFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCC0732C5FA35B009AC643 /* SecureFieldWithButton.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		9FC5E3362C5D1CAB0008355E /* SignUp_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_2.swift; sourceTree = "<group>"; };
 		9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_textField.swift; sourceTree = "<group>"; };
 		9FD9D5102C69EEE600994BB2 /* PersonInf_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInf_2.swift; sourceTree = "<group>"; };
+		9FE8AC832C6A436000C78F77 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		9FFCC06F2C5F9DD4009AC643 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		9FFCC0732C5FA35B009AC643 /* SecureFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldWithButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9FFCC0732C5FA35B009AC643 /* SecureFieldWithButton.swift */,
+				9FE8AC832C6A436000C78F77 /* CustomHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */,
 				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
 				9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */,
+				9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
 				9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */,
 				9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */,

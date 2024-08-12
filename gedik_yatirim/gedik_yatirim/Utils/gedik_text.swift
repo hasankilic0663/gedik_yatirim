@@ -74,6 +74,7 @@ struct Constants {
     static let FillColorFillColor700: Color = Color(red: 0.07, green: 0.16, blue: 0.39)
     static let LabelColorTertiary: Color = Color(red: 0.53, green: 0.56, blue: 0.64)
     static let BackgroundTertiary: Color = Color(red: 0.99, green: 0.99, blue: 1)
+    static let FillColorFillColor100: Color = Color(red: 0.9, green: 0.93, blue: 1)
     static let GreyGrey300: Color = Color(red: 0.85, green: 0.88, blue: 0.92)
     static let GreyGrey200: Color = Color(red: 0.9, green: 0.92, blue: 0.95)
     static let GreyGrey700: Color = Color(red: 0.58, green: 0.61, blue: 0.67)
