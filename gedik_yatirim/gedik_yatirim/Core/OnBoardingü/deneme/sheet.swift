@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct PersonInf_2: View {
+struct sheet: View {
     @Environment(\.dismiss) var  dismiss
     @State var sehir = ""
     @State var ilce = ""
     @State private var currentStep: Int = 2
     @State var isSheetPresendet : Bool = false
     private let totalSteps: Int = 5
+    @State private var selectedOption: Int? = nil
     var body: some View {
         ZStack{
            
@@ -85,30 +86,34 @@ struct PersonInf_2: View {
                             .ignoresSafeArea()
                         VStack{
                             Text("İl Seçimi")
-                                .padding()
+                                .padding(.top, 20)
                             .font(
                             Font.custom("Plus Jakarta Sans", size: 16)
                             .weight(.semibold)
                             )
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Constants.LabelColorPrimary) 
+                            .foregroundColor(Constants.LabelColorPrimary)
                             VStack{
                                
-                                    List{
-                                        ForEach(1...totalSteps,id:\.self){ item in
-                                        HStack{
-                                            Text("Hasan")
-                                            Spacer()
-                                        
-                                            
-                                        }
-                                        
+                                List(1...totalSteps, id: \.self) { item in
+                                    HStack {
+                                        Text("Option \(item)")
+                                        Spacer()
+                                        Image(systemName: self.selectedOption == item ? "largecircle.fill.circle" : "circle")
+                                            .foregroundColor(self.selectedOption == item ? .blue : .gray)
+                                            .onTapGesture {
+                                                self.selectedOption = item
+                                            }
                                     }
-                                    
-                                   
-                                }
-                                    .listStyle(PlainListStyle()) // List stilini düz yaparak arka plan rengini beyaz yapabiliriz
-                                    // Listenin arka plan rengini beyaz yapar
+                                                .padding()
+                                                .background(self.selectedOption == item ? Color.blue.opacity(0.2) : Color.white)
+                                                .cornerRadius(8)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 8)
+                                                        .stroke(self.selectedOption == item ? Color.blue : Color.clear, lineWidth: 2)
+                                                )
+                                            }
+                                            .listStyle(PlainListStyle()) // List stilini düz yapar, arka planı beyaz yapar
                              
                             }
                             .padding(4)
@@ -265,5 +270,5 @@ struct PersonInf_2: View {
 }
 
 #Preview {
-    PersonInf_2()
+    sheet()
 }
