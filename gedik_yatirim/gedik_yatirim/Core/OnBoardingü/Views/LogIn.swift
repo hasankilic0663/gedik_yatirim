@@ -16,7 +16,7 @@ struct LogIn: View {
             set: { focusBinding.wrappedValue = $0 }
         )
     }
-    
+    @Environment(\.dismiss) var dismiss
     @State var password = ""
     @State var permission : Bool = false
     @State private var tcKimlikNumarasi = ""
@@ -26,8 +26,26 @@ struct LogIn: View {
         ZStack {
             
             VStack{
+                HStack{
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "chevron.left") // Back simgesi
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(.black)
+                            .padding(6)
+                            .onTapGesture {
+                                dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
+                            }
+                    }
+                    .modifier(buttonsmall())
+                    
+                    Spacer()
+                }
+                .padding(.top,0)
+                .padding(.horizontal)
                 Image("Logo")
-                    .padding(.top,82)
+                    .padding(.top,52)
                 Text("Hesabınıza Giriş Yapın")
                     .modifier(gedik_text_black())
                     .padding(10)

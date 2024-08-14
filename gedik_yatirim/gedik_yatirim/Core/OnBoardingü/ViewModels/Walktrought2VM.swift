@@ -10,11 +10,11 @@ class OnboardingViewModel2: ObservableObject {
     @Published var currentPage: Int = 0
     
     let pages: [OnboardingPageData2] = [
-        OnboardingPageData2(imageName: "walkthroug-image", text: "Gedix uygulamamız yeni bir sürüme güncellenmiştir. Uygulamaya devam etmek için versiyon yükseltmeniz gerekmektedir."),
-        OnboardingPageData2(imageName: "walktrought-2", text: "Size daha iyi bir hizmet verebilmek için uygulamamızı güncelledik devam etmek için lütfen güncelleyiniz."),
-        OnboardingPageData2(imageName: "third-image", text: "Üçüncü sayfa içeriği."),
-        OnboardingPageData2(imageName: "fourth-image", text: "Dördüncü sayfa bilgisi."),
-        OnboardingPageData2(imageName: "fifth-image", text: "Beşinci ve son sayfa bilgisi.")
+        OnboardingPageData2(imageName: "ww1", text: "Hemen hesap açın, 6 ay boyunca geçerli ücretsiz veri yayını kazanın!"),
+        OnboardingPageData2(imageName: "ww2", text: "Hesabınız yoksa görüntülü görüşmeyle hızlı hesap açabilirsiniz."),
+        OnboardingPageData2(imageName: "ww3", text: "Portföyünüzü görüntüleyebilir, piyasaları kolayca takip edebilirsiniz."),
+        OnboardingPageData2(imageName: "ww4", text: "Uygulamamızın sunduğu özellikleri keşfedebilir ve deneyimleyebilirsiniz."),
+        OnboardingPageData2(imageName: "ww5", text: "Portföyünüze yeni bir yatırım ürünü ekleyebilir, bilgilerinizi güncelleyebilirsiniz.")
     ]
 }
 

@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SignUp_1: View {
     @Environment(\.dismiss) var dismiss
+    
     @State private var phoneNumber : String = ""
     @State private var tcNumber : String = ""
     @State private var permission = false
     @State private var permission2 = false
-    @State private var showTCFieldAndToggles = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -109,7 +110,16 @@ struct SignUp_1: View {
                                 )
                                 .foregroundColor(Constants.LabelColorPrimary)
                                 .keyboardType(.numberPad) // Sayısal klavye sağlar
-                                .disabled(showTCFieldAndToggles) // Devam Et butonuna basıldığında pasif yapar
+                                .onChange(of: phoneNumber) { _ in
+                                    // Harfleri ve özel karakterleri filtrele
+                                    let filtered = phoneNumber.filter { "0123456789".contains($0) }
+                                    // Karakter sayısını 11 ile sınırla
+                                    if filtered.count <= 10 {
+                                        phoneNumber = filtered
+                                    } else {
+                                        phoneNumber = String(filtered.prefix(10))
+                                    }
+                                }
                         }
                         .padding(.horizontal, 12)
                         .padding(.vertical, 8)
@@ -194,7 +204,7 @@ struct SignUp_1: View {
                     
                     
                         NavigationLink {
-                            SignUp_1_2()
+                            SignUp_1_2(phoneNumber: $phoneNumber)
                                 .navigationBarBackButtonHidden()
                         } label: {
                             Text("Devam Et")

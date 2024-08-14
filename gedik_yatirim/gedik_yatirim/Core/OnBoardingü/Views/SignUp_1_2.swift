@@ -9,9 +9,10 @@ import SwiftUI
 
 struct SignUp_1_2: View {
     @Environment(\.dismiss) var dismiss
-    @State private var phoneNumber : String = ""
-    @State private var tcNumber : String = ""
+    @Binding  var phoneNumber : String
+   
     @State private var permission = false
+    @State private var tcKimlikNumarasi = ""
     @State private var permission2 = false
     @State private var showTCFieldAndToggles = false
     var body: some View {
@@ -89,7 +90,7 @@ struct SignUp_1_2: View {
                         .padding(.horizontal, 12)
                         .padding(.vertical, 8)
                         .frame(width: 116, height: 58, alignment: .center)
-                        .background(Constants.BackgroundTertiary)
+                        .background(Constants.GreyGrey100)
                         .cornerRadius(8)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
@@ -109,12 +110,12 @@ struct SignUp_1_2: View {
                                 )
                                 .foregroundColor(Constants.LabelColorPrimary)
                                 .keyboardType(.numberPad) // Sayısal klavye sağlar
-                                .disabled(showTCFieldAndToggles) // Devam Et butonuna basıldığında pasif yapar
+                                .disabled(true) // Devam Et butonuna basıldığında pasif yapar
                         }
                         .padding(.horizontal, 12)
                         .padding(.vertical, 8)
                         .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
-                        .background(Constants.BackgroundTertiary)
+                        .background(Constants.GreyGrey100)
                         .cornerRadius(8)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
@@ -131,9 +132,19 @@ struct SignUp_1_2: View {
                                 VStack {
                                     Text("TCKN")
                                         .modifier(textFieldTitle())
-                                    TextField("1234567890", text: $tcNumber)
+                                    TextField("1234567890", text: $tcKimlikNumarasi)
                                         .modifier(textFieldText())
                                         .keyboardType(.numberPad) // Sayısal klavye sağlar
+                                        .onChange(of: tcKimlikNumarasi) { _ in
+                                            // Harfleri ve özel karakterleri filtrele
+                                            let filtered = tcKimlikNumarasi.filter { "0123456789".contains($0) }
+                                            // Karakter sayısını 11 ile sınırla
+                                            if filtered.count <= 11 {
+                                                tcKimlikNumarasi = filtered
+                                            } else {
+                                                tcKimlikNumarasi = String(filtered.prefix(11))
+                                            }
+                                        }
                                 }
                             }
                         }
@@ -192,7 +203,7 @@ struct SignUp_1_2: View {
                             .padding(.bottom,16)
                     }
                     
-                    if showTCFieldAndToggles {
+                   
                         NavigationLink {
                             SignUp_2()
                                 .navigationBarBackButtonHidden()
@@ -201,15 +212,9 @@ struct SignUp_1_2: View {
                                 .modifier(buttonBlue())
                         }
 
-                    }else{
-                        Button {
-                            showTCFieldAndToggles = true
-                        } label: {
-                            Text("Devam Et")
-                                .modifier(buttonBlue())
-                        }
+                   
 
-                    }
+                    
                 }
             }
             .background(Constants.BackgroundPrimary)
@@ -219,5 +224,5 @@ struct SignUp_1_2: View {
 }
 
 #Preview {
-    SignUp_1_2()
+    SignUp_1_2(phoneNumber: .constant(""))
 }
