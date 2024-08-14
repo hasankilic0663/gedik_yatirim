@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2641802C6C81BA00F13F59 /* sheetdeneme2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */; };
+		9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2641812C6C980700F13F59 /* Walktrought2VM.swift */; };
 		9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F814EB52C60B05B00A446F0 /* Personalinformation.swift */; };
 		9F85C7D02C620BC400ABD997 /* SignUp-1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */; };
 		9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetdeneme2.swift; sourceTree = "<group>"; };
+		9F2641812C6C980700F13F59 /* Walktrought2VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walktrought2VM.swift; sourceTree = "<group>"; };
 		9F814EB52C60B05B00A446F0 /* Personalinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personalinformation.swift; sourceTree = "<group>"; };
 		9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-1ViewModel.swift"; sourceTree = "<group>"; };
 		9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktrougthViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */,
 				9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */,
 				9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */,
+				9F2641812C6C980700F13F59 /* Walktrought2VM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			children = (
 				9FE8AC862C6A591000C78F77 /* sheet.swift */,
 				9FD5373B2C6B975A00F8CD5B /* sheetilce.swift */,
+				9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */,
 			);
 			path = deneme;
 			sourceTree = "<group>";
@@ -293,10 +299,12 @@
 				9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */,
 				9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
+				9F2641802C6C81BA00F13F59 /* sheetdeneme2.swift in Sources */,
 				9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */,
 				9FE8AC872C6A591000C78F77 /* sheet.swift in Sources */,
 				9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */,
 				9FD5373C2C6B975B00F8CD5B /* sheetilce.swift in Sources */,
+				9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
 				9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,

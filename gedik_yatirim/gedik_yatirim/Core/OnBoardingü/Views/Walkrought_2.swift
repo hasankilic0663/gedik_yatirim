@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct Walktrougth_2: View {
-    @StateObject private var viewModel = OnboardingViewModel()
+    @StateObject private var viewModel = OnboardingViewModel2()
     @State private var notificationCount: Int = 3
     var body: some View {
+        
         NavigationStack {
             ZStack {
+               
                 LinearGradient(
                     gradient: Gradient(stops: [
                         Gradient.Stop(color: Color(red: 0.07, green: 0.16, blue: 0.39), location: 0.00),
@@ -15,7 +17,10 @@ struct Walktrougth_2: View {
                     endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea() // Tüm ekranı kaplar
-                
+                ZStack{
+                    Image("GedikLogo")
+                               .padding(.bottom,60)
+                }
                 VStack {
                     HStack{
                         Spacer()

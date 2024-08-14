@@ -10,7 +10,7 @@ import SwiftUI
 struct sheetilce: View {
     @Environment(\.dismiss) var  dismiss
     @State var sehir = "İstanbul"
-    @State var ilce = ""
+    @State var ilce = "Seçiniz"
     @State var adres = ""
     @State var meslekara = ""
     @State private var currentStep: Int = 2
@@ -41,7 +41,7 @@ struct sheetilce: View {
                         .modifier(textFieldTitle())
                         .padding(.top,2)
                     HStack {
-                        Text(ilceler["Ankara"][0])
+                        Text(ilce)
                             
                             .font(
                                 Font.custom("Plus Jakarta Sans", size: 14)

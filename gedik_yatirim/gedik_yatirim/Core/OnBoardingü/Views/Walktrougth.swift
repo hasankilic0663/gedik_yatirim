@@ -15,7 +15,10 @@ struct Walktrougth: View {
                     endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea() // Tüm ekranı kaplar
-                
+                ZStack{
+                    Image("GedikLogo")
+                               .padding(.bottom,60)
+                }
                 VStack {
                     Image("gedik")
                         .padding(.top, 66)

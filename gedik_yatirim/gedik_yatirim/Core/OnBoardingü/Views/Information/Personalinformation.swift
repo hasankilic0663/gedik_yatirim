@@ -150,8 +150,8 @@ struct Personalinformation: View {
 //                    if currentStep < totalSteps {
 //                                           currentStep += 1
 //                                       }
-                    PersonInf_2()
-                        .navigationBarBackButtonHidden()
+                    gedik_yatirim.sheet()
+                    .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
                         .modifier(buttonBlue())
