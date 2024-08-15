@@ -7,180 +7,201 @@
 
 import SwiftUI
 
+//struct SheetModel : Identifiable{
+//    let id : String = UUID().uuidString
+//    
+//    
+//    let name : String = ""
+//}
+
 struct PersonInf_2: View {
     @Environment(\.dismiss) var  dismiss
-    @State var sehir = ""
-    @State var ilce = ""
-    @State private var currentStep: Int = 2
+    @State var sehir = "İstanbul"
+    @State var ilce = "Seçiniz"
+    @State var adres = ""
+    @State var meslekara = ""
+    @State var ilceara = ""
+    @State var currentStep: Int = 2
     @State var isSheetPresendet : Bool = false
+    @State var isIlceSheetPresented : Bool = false
     private let totalSteps: Int = 5
+    @State private var selectedOption: Int? = nil
+    @State private var selectedOption2: Int? = nil
+    @State var selected : Int = 0
+//    @State private var selectedIlce: Int? = nil
+//
+    // Türkiye şehirlerini içeren bir dizi
+      var sehirler = ["İstanbul", "Ankara","İzmir", "Bursa", "Antalya", "Trabzon", "Konya", "Samsun", "Kayseri","Kocaeli","Gaziantep", "Şanlıurfa", "Muğla","Manisa","Elazığ"   ]
+    
+    var sehirIlceDizisi: [[String]] = [
+        [
+            "Adalar", "Arnavutköy", "Ataşehir", "Avcılar", "Bağcılar", "Bahçelievler", "Bakırköy", "Başakşehir", "Bayrampaşa", "Beşiktaş",
+            "Beykoz", "Beylikdüzü", "Beyoğlu", "Büyükçekmece", "Çatalca", "Çekmeköy", "Esenler", "Esenyurt", "Eyüpsultan", "Fatih",
+            "Gaziosmanpaşa", "Güngören", "Kadıköy", "Kağıthane", "Kartal", "Küçükçekmece", "Maltepe", "Pendik", "Sancaktepe", "Sarıyer",
+            "Silivri", "Sultanbeyli", "Sultangazi", "Şile", "Şişli", "Tuzla", "Ümraniye", "Üsküdar", "Zeytinburnu"
+        ],
+            ["Çankaya", "Keçiören", "Mamak"],
+            ["İzmir", "Konak", "Karşıyaka", "Bornova"]
+        ]
+//
+//    // İlçeler için bir sözlük
+//      let ilceler: [String: [String]] = [
+//          "İstanbul": ["Beşiktaş", "Kadıköy", "Üsküdar", "Fatih"],
+//          "Ankara": ["Çankaya", "Keçiören", "Mamak", "Yenimahalle"],
+//          "İzmir": ["Konak", "Karşıyaka", "Bornova", "Buca"],
+//          // Diğer şehirlerin ilçelerini buraya ekleyin
+//      ]
+//
     var body: some View {
         ZStack{
-           
             VStack{
                 CustomHeader(title: "Kişisel Bilgileriniz")
-              
                 
                 // dolum barı
-                HStack(alignment: .center,spacing: 2) {
-                                ForEach(1...totalSteps, id: \.self) { step in
-                                    Rectangle()
-                                        .fill(step <= currentStep ? Color.blue : Color.gray.opacity(0.3))
-                                        .frame(width: 36, height: 5, alignment: .leading)
-                                        .cornerRadius(2.5)
-//                                        .padding(.horizontal,0)
-                                }
-                            }
-                .padding()
+                ExtractedViewBar(currentStep: $currentStep, textaciklama: "Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
                 
-                Text("\(currentStep)/\(totalSteps)")
-                    .font(
-                    Font.custom("Plus Jakarta Sans", size: 17)
-                    .weight(.semibold)
-                    )
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Constants.FillColorFillColor600)
-                
-                Text("Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
-                .font(
-                Font.custom("Plus Jakarta Sans", size: 15)
-                .weight(.semibold)
-                )
-                .multilineTextAlignment(.center)
-                .foregroundColor(Constants.LabelColorPrimary)
-                .frame(width: 345, alignment: .top)
-                .padding(.vertical,9)
-                
-                
-                Button {
-                    isSheetPresendet = true
-                } label: {
-                    HStack{
-                        VStack{
-                            Text("İl")
-                                .modifier(textFieldTitle())
-                                .padding(.top,2)
-                            HStack {
-                                Text("İstanbul")
-                                    
-                                    .font(
-                                        Font.custom("Plus Jakarta Sans", size: 14)
-                                            .weight(.medium)
-                                    )
-                                    .foregroundColor(Constants.LabelColorPrimary)
-                                .keyboardType(.numberPad)
-                                Spacer()
-                            }
-                        }
-                       Image("chevron-down-black")
-                            
-                            .padding(.top,8)
-                            
-                    }
-                    .modifier(textFieldBox())
-                }
+                // button sheet ile buton tasarım vb hepsını bı modellde topladık
+                ButtonSheet(isSheetPresendet: $isSheetPresendet, sehir: "\(sehir)", title:"İl")
                 .sheet(isPresented : $isSheetPresendet){
+                    ExtractedSheet(  selectedOption: $selectedOption,
+                                    meslekara: $meslekara,
+                                    sehir: $sehir,
+                                    ilce: $ilce,
+                                    dizi: sehirler, // Normal bir değer olarak geçiyoruz
+                                    selected: $selected,
+                                    isSheetPresendet: $isSheetPresendet) // Sheet’i sürükleme göstergesini gizler
+                    
+                }
+                //--------------------------------------------------------------------------------
+                ButtonSheet(isSheetPresendet: $isIlceSheetPresented, sehir: "\(ilce)", title: "İlçe")
+                    .sheet(isPresented : $isIlceSheetPresented) {
+                    
                     ZStack {
                         Color.white
                             .ignoresSafeArea()
                         VStack{
                             Text("İl Seçimi")
-                                .padding()
-                            .font(
-                            Font.custom("Plus Jakarta Sans", size: 16)
-                            .weight(.semibold)
+                                .padding(.top, 20)
+                                .padding(.bottom)
+                                .font(
+                                    Font.custom("Plus Jakarta Sans", size: 16)
+                                        .weight(.semibold)
+                                )
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(Constants.LabelColorPrimary)
+                            HStack() {
+                                Image("search")
+                                TextField("Şehir ara",text: $ilceara)
+                                    .font(
+                                        Font.custom("Plus Jakarta Sans", size: 12)
+                                            .weight(.medium)
+                                    )
+                                
+                                    .foregroundColor(Constants.LabelColorSecondary)
+                                Spacer()
+                                
+                            }
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 10)
+                            .frame(width: 377, height: 36, alignment: .leading)
+                            .background(Constants.GreyGrey100)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .inset(by: 0.5)
+                                    .stroke(Constants.GreyGrey200, lineWidth: 1)
                             )
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Constants.LabelColorPrimary) 
                             VStack{
-                               
-                                    List{
-                                        ForEach(1...totalSteps,id:\.self){ item in
-                                        HStack{
-                                            Text("Hasan")
+                                
+                                List(0..<sehirIlceDizisi[selected].count, id: \.self) { item in
+                                    ZStack{
+                                        HStack(alignment: .center, spacing: 5) {
+                                            Text(sehirIlceDizisi[selected][item])
+                                                .font(
+                                                    Font.custom("Plus Jakarta Sans", size: 13)
+                                                        .weight(.semibold)
+                                                )
+                                                .multilineTextAlignment(.leading)
+                                                .foregroundColor(Constants.LabelColorPrimary)
+                                                .padding(.vertical,4)
                                             Spacer()
-                                        
                                             
+                                            Image(self.selectedOption2 == item ? "RadioButtonFill" : "RadioButton")
+                                                .foregroundColor(self.selectedOption2 == item ? .blue : .gray)
+                                                .padding(.trailing,3)
+                                                .onTapGesture {
+                                                    self.selectedOption2 = item
+                                                }
                                         }
                                         
+                                        
                                     }
+                                    .padding(.horizontal, 10)
                                     
-                                   
+                                    .padding(.vertical,8)
+                                    .frame(maxWidth: .infinity, minHeight: 48, maxHeight: 68, alignment: .center)
+                                    .background(self.selectedOption2 == item ? Color.blue.opacity(0.2) : Color.white)
+                                    .cornerRadius(8)
+                                    
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                        //                                                        .frame(width: UIScreen.main.bounds.width - 20) // Genişliği artırıyoruz
+                                            .inset(by: 0.5)
+                                        
+                                            .stroke(self.selectedOption2 == item ? Color.blue : Color.clear, lineWidth: 1)
+                                        
+                                        
+                                    )
                                 }
-                                    .listStyle(PlainListStyle()) // List stilini düz yaparak arka plan rengini beyaz yapabiliriz
-                                    // Listenin arka plan rengini beyaz yapar
-                             
+                                .listStyle(PlainListStyle()) // List stilini düz yapar, arka planı beyaz yapar
+                                //                                            .padding(.leading, -20) // Listenin soldaki boşluğunu azaltıyoruz
+                                //                                            .padding(.trailing, -20)
+                                .padding(.horizontal,-20)
                             }
                             .padding(4)
                             .frame(width: 377, height: 444, alignment: .top)
                             .background(Constants.BackgroundSecondary)
                             .cornerRadius(12)
                             .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                            .inset(by: 0.5)
-                            .stroke(Constants.GreyGrey200, lineWidth: 1)
+                                RoundedRectangle(cornerRadius: 12)
+                                    .inset(by: 0.5)
+                                    .stroke(Constants.GreyGrey200, lineWidth: 1)
                             )
-
                             
-                                        
-                            Button {} label: {
+                            
+                            
+                            Button {
+                                if let selectedOption2 = selectedOption2 {
+                                    ilce = sehirIlceDizisi[selected][selectedOption2]
+                                }
+                                isIlceSheetPresented = false
+                                
+                            } label: {
                                 
                                 Text("Seçimi Uygula")
-                                .modifier(buttonBlue())
+                                    .modifier(buttonBlue())
                             }
                             Button{} label : {
                                 Text("Vazgeç")
                                     .modifier(buttonStroke())
-                                    .padding(.bottom)
+                                
                             }
-
-                            Spacer()
+                            
+                            
                         }
                      
                     }
-//                    .frame(height: 300) // Sheet’in yüksekliğini sabitler
-                        .presentationDetents([.height(600)]) // Sheet yüksekliğini orta boyutta tutar
+
+                        .presentationDetents([.height(650)]) // Sheet yüksekliğini orta boyutta tutar
                         .presentationDragIndicator(.hidden) // Sheet’i sürükleme göstergesini gizler
-                    
                 }
-                
-
-               
-                Button {
-                    
-                } label: {
-                    HStack{
-                        VStack{
-                            Text("İlçe")
-                                .modifier(textFieldTitle())
-                                .padding(.top,2)
-                            HStack {
-                                Text("Kağıthane")
-                                    
-                                    .font(
-                                        Font.custom("Plus Jakarta Sans", size: 14)
-                                            .weight(.medium)
-                                    )
-                                    .foregroundColor(Constants.LabelColorPrimary)
-                                .keyboardType(.numberPad)
-                                Spacer()
-                            } // Sayısal klavye sağlar
-                        }
-                        Image("chevron-down-black")
-                             
-                             .padding(.top,8)
-                    }
-                    .modifier(textFieldBox())
-                    
-                }
-
-                
+                           
                 HStack{
                     VStack{
                         Text("Adres")
                             .modifier(textFieldTitle())
                             .padding(.top,2)
-                        TextField("Lorem ipsum dolor sit amet consectetur",text: $sehir)
+                        TextField("Lorem ipsum dolor sit amet consectetur",text: $adres)
                             
                             .font(
                                 Font.custom("Plus Jakarta Sans", size: 14)
@@ -248,7 +269,8 @@ struct PersonInf_2: View {
                 )
                 
                 NavigationLink {
-                    
+                    IncomeInformation()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
                         .modifier(buttonBlue())
