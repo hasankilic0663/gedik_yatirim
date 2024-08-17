@@ -219,6 +219,7 @@ struct SignUp_1_2: View {
             }
             .background(Constants.BackgroundPrimary)
         }
+        .navigationBarBackButtonHidden()
         
     }
 }

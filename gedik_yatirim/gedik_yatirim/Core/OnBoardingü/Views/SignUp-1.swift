@@ -10,54 +10,16 @@ import SwiftUI
 struct SignUp_1: View {
     @Environment(\.dismiss) var dismiss
     
-    @State private var phoneNumber : String = ""
-    @State private var tcNumber : String = ""
-    @State private var permission = false
-    @State private var permission2 = false
+
+    @StateObject var viewModel = SignUp_1ViewViewModel()
+    
     
     var body: some View {
         NavigationStack {
             ZStack {
                 VStack{
-                    HStack(alignment:.center){
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "chevron.left") // Back simgesi
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.black)
-                                .padding(6)
-                                .onTapGesture {
-                                    dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
-                                }
-                        }
-                        .modifier(buttonsmall())
-                        Spacer()
-                        
-                        Button {
-                            
-                        } label: {
-                            Image("Gedixx") // Back simgesi
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.black)
-                                .padding(6)
-                        }
-                        .modifier(buttonsmall())
-                        Button {
-                            
-                        } label: {
-                            Image("LogOut") // Back simgesi
-                                .frame(width: 20, height: 20)
-                            
-                            
-                                .padding(6)
-                        }
-                        .modifier(buttonsmall())
-                        
-                        
-                    }
-                    .padding(.top)
-                    .padding(.horizontal)
+                    CustomHeader()
+                    
                     Image("Logo")
                         .padding(.top,41)
                     Text("Cep Telefonu Numaranızı Giriniz.")
@@ -102,7 +64,7 @@ struct SignUp_1: View {
                         VStack{
                             Text("Telefon Numarası")
                                 .modifier(textFieldTitle())
-                            TextField("Telefon Numaranızı Giriniz" , text: $phoneNumber)
+                            TextField("Telefon Numaranızı Giriniz" , text: $viewModel.phoneNumber)
                                 .modifier(textFieldText())
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 14)
@@ -110,15 +72,10 @@ struct SignUp_1: View {
                                 )
                                 .foregroundColor(Constants.LabelColorPrimary)
                                 .keyboardType(.numberPad) // Sayısal klavye sağlar
-                                .onChange(of: phoneNumber) { _ in
-                                    // Harfleri ve özel karakterleri filtrele
-                                    let filtered = phoneNumber.filter { "0123456789".contains($0) }
-                                    // Karakter sayısını 11 ile sınırla
-                                    if filtered.count <= 10 {
-                                        phoneNumber = filtered
-                                    } else {
-                                        phoneNumber = String(filtered.prefix(10))
-                                    }
+                                .onChange(of: viewModel.phoneNumber) { _ in
+
+                                    viewModel.filter()
+                                    
                                 }
                         }
                         .padding(.horizontal, 12)
@@ -133,90 +90,53 @@ struct SignUp_1: View {
                         ).padding(.trailing)
                     }
                     
-                    // TCKN TextField'ı ve Toggle'lar
-//                   
-//                        VStack {
-//                            HStack {
-//                                Image("usertc")
-//                                VStack {
-//                                    Text("TCKN")
-//                                        .modifier(textFieldTitle())
-//                                    TextField("1234567890", text: $tcNumber)
-//                                        .modifier(textFieldText())
-//                                        .keyboardType(.numberPad) // Sayısal klavye sağlar
-//                                }
-//                            }
-//                        }
-//                        .padding(.horizontal, 12)
-//                        .padding(.vertical, 8)
-//                        .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
-//                        .background(Constants.BackgroundTertiary)
-//                        .cornerRadius(8)
-//                        .overlay(
-//                            RoundedRectangle(cornerRadius: 8)
-//                                .inset(by: 0.5)
-//                                .stroke(Constants.GreyGrey300, lineWidth: 1)
-//                        )
-//                        .padding(.horizontal)
-//                        
-//                        Toggle(isOn: $permission) {
-//                            Text("Gedik Yatırım ürün, hizmet, kampanya ve duyurulardan haberdar olmak elektronik iletilere izin veriyorum")
-//                                .font(
-//                                    Font.custom("Plus Jakarta Sans", size: 11)
-//                                        .weight(.semibold)
-//                                )
-//                                .foregroundColor(Constants.LabelColorSecondary)
-////                                .frame(width: 286, alignment: .topLeading)
-//                        }
-//                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-//                        .padding()
-//                        .padding(.horizontal)
-//                        
-//                        Toggle(isOn: $permission2) {
-//                            Text("Açık Rıza Metni ")
-//                                .font(Font.custom("Plus Jakarta Sans", size: 12)
-//                                    .weight(.semibold)) +
-//                            Text(" şartları okudum onaylıyorum")
-//                                .font(Font.custom("Plus Jakarta Sans", size: 12))
-//                                .foregroundColor(Constants.LabelColorSecondary)
-//                                
-//                        }
-//                        .frame(maxWidth: .infinity)
-//                        
-//                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-//                        .padding()
-//                        .padding(.horizontal)
-//                    
+                    
                     
                     Spacer()
-                    NavigationLink {
-                        Webview()
-                            .navigationBarBackButtonHidden()
+//                    NavigationLink {
+//                        Webview()
+//                            .navigationBarBackButtonHidden()
+//                        
+//                    } label: {
+//                        Text("KVKK Bildirimine ve Gizlilik Politikamıza\nburadan ulaşabilirsiniz")
+//                            .font(Font.custom("Plus Jakarta Sans", size: 13))
+//                            .underline()//yazının altını çiziyor
+//                            .multilineTextAlignment(.center)
+//                            .foregroundColor(Constants.FillColorFillColor600)
+//                            .padding(.bottom,16)
+//                    }
+//                    
+                    
                         
-                    } label: {
-                        Text("KVKK Bildirimine ve Gizlilik Politikamıza\nburadan ulaşabilirsiniz")
-                            .font(Font.custom("Plus Jakarta Sans", size: 13))
-                            .underline()//yazının altını çiziyor
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Constants.FillColorFillColor600)
-                            .padding(.bottom,16)
-                    }
-                    
-                    
-                        NavigationLink {
-                            SignUp_1_2(phoneNumber: $phoneNumber)
-                                .navigationBarBackButtonHidden()
+                    NavigationLink(destination: SignUp_1_2(phoneNumber: $viewModel.phoneNumber), isActive: $viewModel.isNavigationActive) {
+                        Button {
+                        
+                            viewModel.SignUp()
+                              
                         } label: {
                             Text("Devam Et")
                                 .modifier(buttonBlue())
                         }
+                        
+                       
+                    }
 
                     
                 }
             }
             .background(Constants.BackgroundPrimary)
+            .onTapGesture {
+                        // End editing in the current window
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }
         }
-        
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("Hata"),
+                message: Text(viewModel.alertMessage),
+                dismissButton: .default(Text("Tamam"))
+            )
+        }
     }
 }
 

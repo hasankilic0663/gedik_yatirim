@@ -96,7 +96,7 @@ struct SignUp_2: View {
 //                }
         }
         .padding(.bottom)
-
+        
         
         
     }

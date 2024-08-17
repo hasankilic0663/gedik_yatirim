@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct SecureFieldWithButton: View {
-    @Binding var focussed : Bool
+    @FocusState var isfocused : Bool
     @Binding private var text: String
     @State private var isSecured: Bool = true
     private var title : String
     
-    init(text: Binding<String>, _ title: String , _ focussed : Binding<Bool>) {
+    init(text: Binding<String>, _ title: String , isfocused : Bool
+    ) {
         self._text = text
         
         self.title = title
-        self._focussed = focussed
+        
     }
     
     var body: some View {
@@ -41,7 +42,11 @@ struct SecureFieldWithButton: View {
                                 TextField(title,text: $text)
                                     .modifier(textFieldSecure())
                                     .keyboardType(.numberPad)
+                                    .onAppear{
+                                        isfocused = true
+                                    }
                             }
+                                
                         }
                        
                     }
@@ -58,9 +63,10 @@ struct SecureFieldWithButton: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .inset(by: 0.5)
-                    .stroke(focussed ? Color.blue : Constants.GreyGrey300, lineWidth: 1)
+                    .stroke(isfocused ? Color.blue :  Constants.GreyGrey300, lineWidth: 1)
             ).padding(.horizontal)
-
+        
+                .focused($isfocused)
             
             Button {
                 isSecured.toggle()//toggle ederek true ise false false ise true
@@ -79,5 +85,5 @@ struct SecureFieldWithButton: View {
 
 
 #Preview {
-    SecureFieldWithButton(text: .constant(""), "********",.constant(false))
+    SecureFieldWithButton(text: .constant(""), "********",isfocused: false)
 }

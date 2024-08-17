@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LogIn: View {
+struct LoginDeneme: View {
     
     
    
@@ -64,15 +64,14 @@ struct LogIn: View {
                                     .keyboardType(.numberPad) // Sayısal klavye sağlar
                                     .focused($isFocused) // Odak durumunu takip eder
                                     .onChange(of: viewModel.tckn) { _ in
-//                                        // Harfleri ve özel karakterleri filtrele
-//                                        let filtered = viewModel.tckn.filter { "0123456789".contains($0) }
-//                                        // Karakter sayısını 11 ile sınırla
-//                                        if filtered.count <= 11 {
-//                                            viewModel.tckn = filtered
-//                                        } else {
-//                                            viewModel.tckn = String(filtered.prefix(11))
-//                                        }
-                                        viewModel.filter()
+                                        // Harfleri ve özel karakterleri filtrele
+                                        let filtered = viewModel.tckn.filter { "0123456789".contains($0) }
+                                        // Karakter sayısını 11 ile sınırla
+                                        if filtered.count <= 11 {
+                                            viewModel.tckn = filtered
+                                        } else {
+                                            viewModel.tckn = String(filtered.prefix(11))
+                                        }
                                     }
                             }
                         }
@@ -90,7 +89,7 @@ struct LogIn: View {
                 ).padding(.horizontal)
                
                  
-                SecureFieldWithButton(text: $viewModel.password, "********",isfocused: tcisFocused)
+                SecureFieldWithButton(text: $viewModel.password, "********",isfocused: tcisFocused  )
                     .focused($tcisFocused)
                    
                 
@@ -98,7 +97,13 @@ struct LogIn: View {
             if !viewModel.errorMessage.isEmpty{
                 // Default/Medium/Label Large
                 Text("TCKN veya Şifrenizi Yanlış Girdiniz")
-                    .modifier(errorMessageText())
+                    .font(
+                        Font.custom("Plus Jakarta Sans", size: 12)
+                            .weight(.medium)
+                    )
+                    .foregroundColor(Constants.RedRed600)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .padding(.horizontal,28)
             }
                 Toggle(isOn: $permission)
                     {
@@ -167,13 +172,9 @@ struct LogIn: View {
             .padding(.bottom)
         }
         .background(Constants.BackgroundPrimary)
-        .onTapGesture { // ekranda   bos yere tıklayınca klavye kapanıyor
-                    // End editing in the current window
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }
     }
 }
 
 #Preview {
-    LogIn()
+    LoginDeneme()
 }

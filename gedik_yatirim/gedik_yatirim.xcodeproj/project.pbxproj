@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		9F2641802C6C81BA00F13F59 /* sheetdeneme2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */; };
 		9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2641812C6C980700F13F59 /* Walktrought2VM.swift */; };
+		9F3501842C6F425D0033F40B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3501832C6F425D0033F40B /* Constants.swift */; };
+		9F3501862C6F43B40033F40B /* LoginDeneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3501852C6F43B40033F40B /* LoginDeneme.swift */; };
 		9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F814EB52C60B05B00A446F0 /* Personalinformation.swift */; };
-		9F85C7D02C620BC400ABD997 /* SignUp-1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */; };
+		9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */; };
 		9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */; };
 		9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */; };
 		9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */; };
@@ -47,8 +49,10 @@
 /* Begin PBXFileReference section */
 		9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetdeneme2.swift; sourceTree = "<group>"; };
 		9F2641812C6C980700F13F59 /* Walktrought2VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walktrought2VM.swift; sourceTree = "<group>"; };
+		9F3501832C6F425D0033F40B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F3501852C6F43B40033F40B /* LoginDeneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDeneme.swift; sourceTree = "<group>"; };
 		9F814EB52C60B05B00A446F0 /* Personalinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personalinformation.swift; sourceTree = "<group>"; };
-		9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp-1ViewModel.swift"; sourceTree = "<group>"; };
+		9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1ViewViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktrougthViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinformationViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 		9F85C7CE2C620B2100ABD997 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9F85C7CF2C620BC400ABD997 /* SignUp-1ViewModel.swift */,
+				9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */,
 				9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */,
 				9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */,
 				9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */,
@@ -162,6 +166,7 @@
 				9FC5E30B2C5BA9B90008355E /* gedik_text.swift */,
 				9FC5E3302C5CF2CB0008355E /* Button.swift */,
 				9FC5E3382C5D1F4C0008355E /* gedik_textField.swift */,
+				9F3501832C6F425D0033F40B /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				9FD5373B2C6B975A00F8CD5B /* sheetilce.swift */,
 				9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */,
 				9FA1790A2C6DF9990050B224 /* dogrulamakodu.swift */,
+				9F3501852C6F43B40033F40B /* LoginDeneme.swift */,
 			);
 			path = deneme;
 			sourceTree = "<group>";
@@ -296,12 +302,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */,
+				9F3501862C6F43B40033F40B /* LoginDeneme.swift in Sources */,
+				9F3501842C6F425D0033F40B /* Constants.swift in Sources */,
 				9FC5E3332C5D035B0008355E /* WelcomeBack.swift in Sources */,
 				9FFCC0742C5FA35B009AC643 /* SecureFieldWithButton.swift in Sources */,
 				9FA179112C6E26690050B224 /* ExtractedSheet.swift in Sources */,
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
 				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
-				9F85C7D02C620BC400ABD997 /* SignUp-1ViewModel.swift in Sources */,
+				9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */,
 				9FD9D5112C69EEE600994BB2 /* PersonInf_2.swift in Sources */,
 				9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */,
 				9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */,
@@ -458,9 +466,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gedik_yatirim/Preview Content\"";
+				DEVELOPMENT_TEAM = 96S5T58B23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -475,6 +485,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hasankilic.gedik-yatirim";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,9 +497,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"gedik_yatirim/Preview Content\"";
+				DEVELOPMENT_TEAM = 96S5T58B23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -503,6 +516,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hasankilic.gedik-yatirim";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
