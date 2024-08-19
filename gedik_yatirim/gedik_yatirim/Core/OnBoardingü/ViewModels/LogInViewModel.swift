@@ -21,10 +21,20 @@ class LogInViewModel :ObservableObject{
     func  validate() -> Bool{
         errorMessage = ""
         
-        guard !tckn.trimmingCharacters(in: .whitespaces).isEmpty && tckn.count == 11
+        if !tckn.trimmingCharacters(in: .whitespaces).isEmpty && tckn.count == 11 {
+            
+        }
                 
         else{
             errorMessage  = "Lütfen tüm alanları doldurun "
+            return false
+        }
+        if !password.trimmingCharacters(in: .whitespaces).isEmpty {
+            
+        }
+                
+        else{
+            errorMessage  = "Lütfen Geçerli bişr şifre giriniz. "
             return false
         }
         return true

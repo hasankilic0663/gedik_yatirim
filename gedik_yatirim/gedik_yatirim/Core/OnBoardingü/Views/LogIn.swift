@@ -16,7 +16,7 @@ struct LogIn: View {
     @StateObject var viewModel = LogInViewModel()
     @State var permission : Bool = false
 //    @State private var tcKimlikNumarasi = ""
-    @FocusState  var isFocused : Bool // Odak durumunu izlemek için
+    @FocusState  var isFocused : Bool
     @FocusState  var tcisFocused : Bool
     var body: some View {
         ZStack {
@@ -64,14 +64,7 @@ struct LogIn: View {
                                     .keyboardType(.numberPad) // Sayısal klavye sağlar
                                     .focused($isFocused) // Odak durumunu takip eder
                                     .onChange(of: viewModel.tckn) { _ in
-//                                        // Harfleri ve özel karakterleri filtrele
-//                                        let filtered = viewModel.tckn.filter { "0123456789".contains($0) }
-//                                        // Karakter sayısını 11 ile sınırla
-//                                        if filtered.count <= 11 {
-//                                            viewModel.tckn = filtered
-//                                        } else {
-//                                            viewModel.tckn = String(filtered.prefix(11))
-//                                        }
+
                                         viewModel.filter()
                                     }
                             }
@@ -167,8 +160,7 @@ struct LogIn: View {
             .padding(.bottom)
         }
         .background(Constants.BackgroundPrimary)
-        .onTapGesture { // ekranda   bos yere tıklayınca klavye kapanıyor
-                    // End editing in the current window
+        .onTapGesture { //ekranda farklı boş yeere tıklayınca kapanıyor klavye
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
     }

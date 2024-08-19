@@ -138,7 +138,7 @@ struct Personalinformation: View {
                         .weight(.medium)
                         )
                         .foregroundColor(Constants.LabelColorPrimary)
-                        .keyboardType(.numberPad) // Sayısal klavye sağlar
+                        .keyboardType(.numberPad) //r
                 }
                 .modifier(textFieldBox())
                 

@@ -10,11 +10,12 @@ import SwiftUI
 struct SignUp_1_2: View {
     @Environment(\.dismiss) var dismiss
     @Binding  var phoneNumber : String
-   
-    @State private var permission = false
-    @State private var tcKimlikNumarasi = ""
-    @State private var permission2 = false
-    @State private var showTCFieldAndToggles = false
+//   
+    @StateObject var viewModel = SignUp_1_2ViewModel()
+//    @State private var permission = false
+//    @State private var tcKimlikNumarasi = ""
+//    @State private var permission2 = false
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -132,17 +133,17 @@ struct SignUp_1_2: View {
                                 VStack {
                                     Text("TCKN")
                                         .modifier(textFieldTitle())
-                                    TextField("1234567890", text: $tcKimlikNumarasi)
+                                    TextField("1234567890", text: $viewModel.tcKimlikNumarasi)
                                         .modifier(textFieldText())
                                         .keyboardType(.numberPad) // Sayısal klavye sağlar
-                                        .onChange(of: tcKimlikNumarasi) { _ in
+                                        .onChange(of: viewModel.tcKimlikNumarasi) { _ in
                                             // Harfleri ve özel karakterleri filtrele
-                                            let filtered = tcKimlikNumarasi.filter { "0123456789".contains($0) }
+                                            let filtered = viewModel.tcKimlikNumarasi.filter { "0123456789".contains($0) }
                                             // Karakter sayısını 11 ile sınırla
                                             if filtered.count <= 11 {
-                                                tcKimlikNumarasi = filtered
+                                                viewModel.tcKimlikNumarasi = filtered
                                             } else {
-                                                tcKimlikNumarasi = String(filtered.prefix(11))
+                                                viewModel.tcKimlikNumarasi = String(filtered.prefix(11))
                                             }
                                         }
                                 }
@@ -160,7 +161,7 @@ struct SignUp_1_2: View {
                         )
                         .padding(.horizontal)
                         
-                        Toggle(isOn: $permission) {
+                    Toggle(isOn: $viewModel.permission) {
                             Text("Gedik Yatırım ürün, hizmet, kampanya ve duyurulardan haberdar olmak elektronik iletilere izin veriyorum")
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 11)
@@ -173,7 +174,7 @@ struct SignUp_1_2: View {
                         .padding()
                         .padding(.horizontal)
                         
-                        Toggle(isOn: $permission2) {
+                    Toggle(isOn: $viewModel.permission2) {
                             Text("Açık Rıza Metni ")
                                 .font(Font.custom("Plus Jakarta Sans", size: 12)
                                     .weight(.semibold)) +
@@ -225,5 +226,5 @@ struct SignUp_1_2: View {
 }
 
 #Preview {
-    SignUp_1_2(phoneNumber: .constant(""))
+    SignUp_1_2(phoneNumber : .constant(""))
 }

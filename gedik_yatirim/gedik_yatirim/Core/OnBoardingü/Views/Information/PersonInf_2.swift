@@ -65,11 +65,12 @@ struct PersonInf_2: View {
                 .sheet(isPresented : $isSheetPresendet){
                     ExtractedSheet(  selectedOption: $selectedOption,
                                     meslekara: $meslekara,
-                                    sehir: $sehir,
-                                    ilce: $ilce,
+                                     sehir: $sehir, 
+                                     title: "İl Seçimi",
+                                    ilce: ilce,
                                     dizi: sehirler, // Normal bir değer olarak geçiyoruz
                                     selected: $selected,
-                                    isSheetPresendet: $isSheetPresendet) // Sheet’i sürükleme göstergesini gizler
+                                     isSheetPresendet: $isSheetPresendet, searchBool: true) // Sheet’i sürükleme göstergesini gizler
                     
                 }
                 //--------------------------------------------------------------------------------
@@ -153,9 +154,7 @@ struct PersonInf_2: View {
                                         
                                     )
                                 }
-                                .listStyle(PlainListStyle()) // List stilini düz yapar, arka planı beyaz yapar
-                                //                                            .padding(.leading, -20) // Listenin soldaki boşluğunu azaltıyoruz
-                                //                                            .padding(.trailing, -20)
+                                .listStyle(PlainListStyle()) // List
                                 .padding(.horizontal,-20)
                             }
                             .padding(4)

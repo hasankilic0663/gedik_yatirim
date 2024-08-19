@@ -89,7 +89,7 @@ struct SignUp_2: View {
 //                            .foregroundColor(.black)
 //                            .padding(6)
 //                            .modifier(buttonsmall())
-//                            .onTapGesture {
+//                            .onTapGesture 
 //                                dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
 //                            }
 //                    }

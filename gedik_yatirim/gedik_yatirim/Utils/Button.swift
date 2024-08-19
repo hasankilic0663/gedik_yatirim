@@ -26,6 +26,22 @@ struct buttonBlue : ViewModifier {
     }
     
 }
+struct buttonBlueSheet : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+                Font.custom("Plus Jakarta Sans", size: 16)
+                    .weight(.semibold)
+            )
+            .foregroundColor(Constants.ShadesWhite)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 40, alignment: .center)
+            .background(Constants.FillColorFillColor600)
+            .cornerRadius(10)
+    }
+    
+}
 
 struct buttonOrange : ViewModifier {
     func body(content : Content) -> some View {

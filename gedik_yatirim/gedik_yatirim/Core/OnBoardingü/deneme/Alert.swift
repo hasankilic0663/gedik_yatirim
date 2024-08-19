@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SignUp_1: View {
+struct Alertt: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = SignUp_1ViewViewModel()
 
@@ -143,5 +143,5 @@ struct CustomAlertView: View {
 }
 
 #Preview {
-   SignUp_1()
+    Alertt()
 }
