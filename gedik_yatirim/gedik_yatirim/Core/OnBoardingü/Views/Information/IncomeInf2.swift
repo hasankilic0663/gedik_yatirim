@@ -33,7 +33,8 @@ struct IncomeInf2: View {
                 Spacer()
             
                 NavigationLink {
-                    
+                    ComplianceTest()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
                         .modifier(buttonBlue())

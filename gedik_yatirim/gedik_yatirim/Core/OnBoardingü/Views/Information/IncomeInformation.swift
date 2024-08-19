@@ -57,8 +57,9 @@ struct IncomeInformation: View {
                 ButtonSheet(isSheetPresendet: $isSheetPresendetKaynak, textAuto: kaynakText , title:"Kazanç Kaynağınız")
                 ButtonSheet(isSheetPresendet: $isSheetPresendetBirikim, textAuto: birikimtext, title:"Birikiminiz")
                 Spacer()
-                Button {
-                    
+                NavigationLink {
+                    IncomeInf2()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
                         .modifier(buttonBlue())

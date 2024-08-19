@@ -15,7 +15,7 @@ import SwiftUI
 //}
 
 struct PersonInf_2: View {
-    @Environment(\.dismiss) var  dismiss
+
     @State var sehir = "İstanbul"
     @State var ilce = "Seçiniz"
     @State var adres = ""

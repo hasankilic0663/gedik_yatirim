@@ -87,7 +87,7 @@ struct buttonWhite : ViewModifier {
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .frame(width: 361, height: 48, alignment: .center)
-            .background(Constants.BackgroundTertiary)
+            .background(Constants.BackgroundPrimary)
             .cornerRadius(12)
     }
     
