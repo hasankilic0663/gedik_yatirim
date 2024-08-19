@@ -20,13 +20,14 @@ struct ComplianceTest: View {
                 
                 Spacer()
                 NavigationLink {
-                    
+                    SuitabilityTest1()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Başla")
                         .modifier(buttonBlue())
                 }
                 NavigationLink {
-                    
+                   
                 } label: {
                     Text("Testi Sonra Yap")
                         .modifier(buttonWhite())

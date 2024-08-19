@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F16BDDC2C7382EB00751D6C /* suitabilitydeneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16BDDB2C7382EB00751D6C /* suitabilitydeneme.swift */; };
+		9F16BDDE2C73928100751D6C /* SuitabilityTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16BDDD2C73928100751D6C /* SuitabilityTest2.swift */; };
+		9F2373502C739D2A009A6327 /* SuitabilityTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F23734F2C739D2A009A6327 /* SuitabilityTest3.swift */; };
+		9F2373522C739E8F009A6327 /* ExtractedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2373512C739E8F009A6327 /* ExtractedList.swift */; };
 		9F2641802C6C81BA00F13F59 /* sheetdeneme2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */; };
 		9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2641812C6C980700F13F59 /* Walktrought2VM.swift */; };
 		9F3501842C6F425D0033F40B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3501832C6F425D0033F40B /* Constants.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F16BDDB2C7382EB00751D6C /* suitabilitydeneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suitabilitydeneme.swift; sourceTree = "<group>"; };
+		9F16BDDD2C73928100751D6C /* SuitabilityTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest2.swift; sourceTree = "<group>"; };
+		9F23734F2C739D2A009A6327 /* SuitabilityTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest3.swift; sourceTree = "<group>"; };
+		9F2373512C739E8F009A6327 /* ExtractedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractedList.swift; sourceTree = "<group>"; };
 		9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetdeneme2.swift; sourceTree = "<group>"; };
 		9F2641812C6C980700F13F59 /* Walktrought2VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walktrought2VM.swift; sourceTree = "<group>"; };
 		9F3501832C6F425D0033F40B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -112,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				9F4B9A5B2C73736A0082E50C /* SuitabilityTest1.swift */,
+				9F16BDDD2C73928100751D6C /* SuitabilityTest2.swift */,
+				9F23734F2C739D2A009A6327 /* SuitabilityTest3.swift */,
 			);
 			path = SuitabilityTest;
 			sourceTree = "<group>";
@@ -228,6 +238,7 @@
 				9F26417F2C6C81BA00F13F59 /* sheetdeneme2.swift */,
 				9FA1790A2C6DF9990050B224 /* dogrulamakodu.swift */,
 				9F3501852C6F43B40033F40B /* LoginDeneme.swift */,
+				9F16BDDB2C7382EB00751D6C /* suitabilitydeneme.swift */,
 			);
 			path = deneme;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 				9FA179102C6E26690050B224 /* ExtractedSheet.swift */,
 				9FA179122C6E26830050B224 /* ExtractedViewVBar.swift */,
 				9FDB3FC42C7367A800E8436F /* CustomTextField.swift */,
+				9F2373512C739E8F009A6327 /* ExtractedList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -332,6 +344,7 @@
 				9FFCC0742C5FA35B009AC643 /* SecureFieldWithButton.swift in Sources */,
 				9FE2D0BA2C72979D00D2804F /* SignUp_1_2ViewModel.swift in Sources */,
 				9FA179112C6E26690050B224 /* ExtractedSheet.swift in Sources */,
+				9F16BDDE2C73928100751D6C /* SuitabilityTest2.swift in Sources */,
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
 				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
 				9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */,
@@ -344,10 +357,12 @@
 				9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */,
 				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,
 				9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */,
+				9F2373502C739D2A009A6327 /* SuitabilityTest3.swift in Sources */,
 				9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */,
 				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
 				9FA179132C6E26830050B224 /* ExtractedViewVBar.swift in Sources */,
 				9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */,
+				9F2373522C739E8F009A6327 /* ExtractedList.swift in Sources */,
 				9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */,
 				9FDB3FC32C73623400E8436F /* IncomeInf2.swift in Sources */,
 				9FDB3FC52C7367A800E8436F /* CustomTextField.swift in Sources */,
@@ -362,6 +377,7 @@
 				9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
 				9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */,
+				9F16BDDC2C7382EB00751D6C /* suitabilitydeneme.swift in Sources */,
 				9FA179152C6E2D170050B224 /* ButtonSheet.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,
 			);
@@ -501,11 +517,12 @@
 				DEVELOPMENT_TEAM = 96S5T58B23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gedik Yatırım        Mobile ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,11 +549,12 @@
 				DEVELOPMENT_TEAM = 96S5T58B23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gedik Yatırım        Mobile ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

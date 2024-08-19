@@ -288,3 +288,17 @@ struct PersonInf_2: View {
 #Preview {
     PersonInf_2()
 }
+
+//.frame(maxWidth: .infinity, minHeight: 38, maxHeight: 48, alignment: .center)
+//.background(selectedOption == item ? Constants.FillColorFillColor600.opacity(0.2) : Color.white)
+//.cornerRadius(8)
+//
+//.overlay(
+//    RoundedRectangle(cornerRadius: 8)
+//    //                                                        .frame(width: UIScreen.main.bounds.width - 20) // Genişliği artırıyoruz
+//        .inset(by: 0.5)
+//    
+//        .stroke(selectedOption == item ? Color.blue : Color.clear, lineWidth: 1)
+//    
+//
+//)
