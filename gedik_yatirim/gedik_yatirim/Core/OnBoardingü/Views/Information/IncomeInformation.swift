@@ -32,7 +32,7 @@ struct IncomeInformation: View {
                 CustomHeader(title: "Kişisel Bilgileriniz")
                 ExtractedViewBar(currentStep: $currentStep, textaciklama: "Toplam gelir bilgilerinizi eklemek, size uygun finansal çözümler sunmamıza yardımcı olacaktır.")
                     .padding(.bottom)
-                ButtonSheet(isSheetPresendet: $isSheetPresendetmeslek, sehir: meslekText, title:"Mesleğiniz")
+                ButtonSheet(isSheetPresendet: $isSheetPresendetmeslek, textAuto : meslekText, title:"Mesleğiniz")
                     .sheet(isPresented : $isSheetPresendetmeslek){
                         ExtractedSheet(  selectedOption: $selectedOptionjob,
                                         meslekara: $meslekara,
@@ -43,7 +43,7 @@ struct IncomeInformation: View {
                                          isSheetPresendet: $isSheetPresendetmeslek, searchBool: true) // Sheet’i sürükleme göstergesini gizler
                         
                     }
-                ButtonSheet(isSheetPresendet: $isSheetPresendetgelir, sehir: gelirText, title:"Aylık Geliriniz")
+                ButtonSheet(isSheetPresendet: $isSheetPresendetgelir, textAuto: gelirText, title:"Aylık Geliriniz")
                     .sheet(isPresented : $isSheetPresendetgelir){
                         ExtractedSheetSmall(selectedOption: $selectedOptionjob,
                                             selection: $gelirText,
@@ -54,8 +54,8 @@ struct IncomeInformation: View {
                                             isSheetPresendet: $isSheetPresendetgelir,
                                             searchBool: false)
                     }
-                ButtonSheet(isSheetPresendet: $isSheetPresendetKaynak, sehir: kaynakText , title:"Kazanç Kaynağınız")
-                ButtonSheet(isSheetPresendet: $isSheetPresendetBirikim, sehir: birikimtext, title:"Birikiminiz")
+                ButtonSheet(isSheetPresendet: $isSheetPresendetKaynak, textAuto: kaynakText , title:"Kazanç Kaynağınız")
+                ButtonSheet(isSheetPresendet: $isSheetPresendetBirikim, textAuto: birikimtext, title:"Birikiminiz")
                 Spacer()
                 Button {
                     
@@ -68,18 +68,15 @@ struct IncomeInformation: View {
 
             }
         }
-        .sheet(isPresented : $isSheetPresendetmeslek){
-            Text("meslekler")
-        }
+        .background(Constants.BackgroundPrimary)
+       
         .sheet(isPresented : $isSheetPresendetKaynak){
             Text("Kaynaklar")
         }
         .sheet(isPresented : $isSheetPresendetBirikim){
             Text("Birikim")
         }
-        .sheet(isPresented : $isSheetPresendetgelir){
-            Text("Gelir")
-        }
+        
 //            ZStack {
 //                Color.white
 //                    .ignoresSafeArea()

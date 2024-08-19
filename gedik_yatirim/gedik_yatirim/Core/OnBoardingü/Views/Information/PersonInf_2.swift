@@ -61,7 +61,7 @@ struct PersonInf_2: View {
                 ExtractedViewBar(currentStep: $currentStep, textaciklama: "Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
                 
                 // button sheet ile buton tasarım vb hepsını bı modellde topladık
-                ButtonSheet(isSheetPresendet: $isSheetPresendet, sehir: "\(sehir)", title:"İl")
+                ButtonSheet(isSheetPresendet: $isSheetPresendet, textAuto: "\(sehir)", title:"İl")
                 .sheet(isPresented : $isSheetPresendet){
                     ExtractedSheet(  selectedOption: $selectedOption,
                                     meslekara: $meslekara,
@@ -74,7 +74,7 @@ struct PersonInf_2: View {
                     
                 }
                 //--------------------------------------------------------------------------------
-                ButtonSheet(isSheetPresendet: $isIlceSheetPresented, sehir: "\(ilce)", title: "İlçe")
+                ButtonSheet(isSheetPresendet: $isIlceSheetPresented, textAuto: "\(ilce)", title: "İlçe")
                     .sheet(isPresented : $isIlceSheetPresented) {
                     
                     ZStack {

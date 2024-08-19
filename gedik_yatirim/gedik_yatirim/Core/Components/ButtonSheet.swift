@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ButtonSheet: View {
     @Binding var isSheetPresendet : Bool
-    var sehir : String
+    var textAuto : String
     var title : String
     var body: some View {
         Button {
@@ -22,7 +22,7 @@ struct ButtonSheet: View {
                         .padding(.top,2)
                         .padding(.bottom,2)
                     
-                        Text(sehir)
+                        Text(textAuto)
                             
                             .font(
                                 Font.custom("Plus Jakarta Sans", size: 14)

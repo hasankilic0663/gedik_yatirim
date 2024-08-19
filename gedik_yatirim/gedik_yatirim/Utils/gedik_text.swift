@@ -80,3 +80,19 @@ struct errorMessageText : ViewModifier {
     }
 }
 
+
+struct gedikInfotext : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+            Font.custom("Plus Jakarta Sans", size: 12)
+            .weight(.medium)
+            )
+            .foregroundColor(Constants.LabelColorSecondary)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+            .padding(.horizontal,28)
+    }
+}
+
+
+    
