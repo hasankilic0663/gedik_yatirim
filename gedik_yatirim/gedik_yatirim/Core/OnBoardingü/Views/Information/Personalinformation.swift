@@ -17,42 +17,7 @@ struct Personalinformation: View {
     var body: some View {
         ZStack {
             VStack{
-                HStack(alignment:.center){
-                   
-                    Spacer()
-                    Text("Kişisel Bilgileriniz")
-                        .font(
-                        Font.custom("Plus Jakarta Sans", size: 17)
-                        .weight(.semibold)
-                        )
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Constants.FillColorFillColor600)
-                        .padding(.trailing,35)
-                    Button {
-                        
-                    } label: {
-                        Image("Gedixx") // Back simgesi
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(.black)
-                            .padding(6)
-                    }
-                    .modifier(buttonsmall())
-                    Button {
-                        
-                    } label: {
-                        Image("LogOut") // Back simgesi
-                            .frame(width: 20, height: 20)
-                            
-                            
-                            .padding(6)
-                    }
-                    .modifier(buttonsmall())
-
-                    
-                }
-                .padding(.top)
-                .padding(.horizontal)
-                
+               CustomHeader(title: "Kişisel Bilgileriniz")
                 HStack(alignment: .center,spacing: 2) {
                                 ForEach(1...totalSteps, id: \.self) { step in
                                     Rectangle()
@@ -92,7 +57,7 @@ struct Personalinformation: View {
                         .weight(.medium)
                         )
                         .foregroundColor(Constants.LabelColorPrimary)
-                        .keyboardType(.numberPad) // Sayısal klavye sağlar
+                        // Sayısal klavye sağlar
                 }
                 .modifier(textFieldBox())
                 .padding(.top)
@@ -106,7 +71,7 @@ struct Personalinformation: View {
                         .weight(.medium)
                         )
                         .foregroundColor(Constants.LabelColorPrimary)
-                        .keyboardType(.numberPad) // Sayısal klavye sağlar
+                       
                 }
                 .modifier(textFieldBox())
                 
@@ -115,7 +80,7 @@ struct Personalinformation: View {
                         VStack{
                             Text("Doğum Tarihi")
                                 .modifier(textFieldTitle())
-                            TextField("GG/AA/YY" , text: $firstName)
+                            TextField("GG/AA/YY" , text: $birthDate)
                                 .modifier(textFieldText())
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 14)
@@ -131,14 +96,14 @@ struct Personalinformation: View {
                 VStack{
                     Text("Email")
                         .modifier(textFieldTitle())
-                    TextField("email@ adres.com" , text: $lastName)
+                    TextField("email@ adres.com" , text: $email)
                         .modifier(textFieldText())
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
                         )
                         .foregroundColor(Constants.LabelColorPrimary)
-                        .keyboardType(.numberPad) //r
+                         //r
                 }
                 .modifier(textFieldBox())
                 
@@ -150,7 +115,10 @@ struct Personalinformation: View {
 //                    if currentStep < totalSteps {
 //                                           currentStep += 1
 //                                       }
-                    PersonInf_2()
+                    
+                    
+//                    PersonInf_2()
+                    denemeperson()
                     .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")

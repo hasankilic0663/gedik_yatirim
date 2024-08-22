@@ -16,11 +16,12 @@ struct SuitabilityTest3: View {
             VStack {
                 CustomHeader(title: "Uygunluk Testi   ")
                 ExtractedViewBar(currentStep: $currentStep, textaciklama: "Yatırımlarınızı Ne Kadar Süreyle Değerlendirmeyi Planlıyorsunuz?")
-                ExtractedList(selectedOption: $selectedOption , array: tercih)
+                ExtractedList(selectedOption: $selectedOption, radiobutton: true , array: tercih)
                 
                 Spacer()
                 NavigationLink {
-                    
+                    SuitabilityTest4()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
                         .modifier(buttonBlue())

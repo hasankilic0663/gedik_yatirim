@@ -36,12 +36,12 @@ struct SecureFieldWithButton: View {
                             if isSecured{
                                 SecureField(title,text: $text)
                                     .modifier(textFieldSecure())
-                                    .keyboardType(.numberPad)
+                                    
                                 
                             }else{
                                 TextField(title,text: $text)
                                     .modifier(textFieldSecure())
-                                    .keyboardType(.numberPad)
+                                   
                                     .onAppear{
                                         isfocused = true
                                     }

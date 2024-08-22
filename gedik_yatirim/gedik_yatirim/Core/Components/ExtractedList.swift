@@ -11,6 +11,7 @@ import SwiftUI
 struct ExtractedList: View {
     @Binding var selectedOption: String?  // String? olarak tanımlandı
 
+     var radiobutton : Bool
     var array  : [String]
     var body: some View {
         VStack(alignment: .center, spacing: 4) {
@@ -30,11 +31,14 @@ struct ExtractedList: View {
                         .foregroundColor(selectedOption == item ? Constants.FillColorFillColor600 : Constants.LabelColorSecondary)
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                     Spacer()
-                    Image( selectedOption == item ? "RadioButtonFill" : "RadioButton") // SF Symbols kullanıldı
-                        .foregroundColor(selectedOption == item ? .blue : .gray)
-                        .onTapGesture {
-                            selectedOption = item
-                        }
+                    if radiobutton{
+                        Image( selectedOption == item ? "RadioButtonFill" : "RadioButton") // SF Symbols kullanıldı
+                            .foregroundColor(selectedOption == item ? .blue : .gray)
+                            .onTapGesture {
+                                selectedOption = item
+                            }
+                    }
+                    
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)

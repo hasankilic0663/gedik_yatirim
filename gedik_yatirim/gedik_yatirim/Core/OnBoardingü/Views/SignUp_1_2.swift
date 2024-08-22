@@ -10,13 +10,15 @@ import SwiftUI
 struct SignUp_1_2: View {
     @Environment(\.dismiss) var dismiss
     @Binding  var phoneNumber : String
-//   
     @StateObject var viewModel = SignUp_1_2ViewModel()
 //    @State private var permission = false
 //    @State private var tcKimlikNumarasi = ""
 //    @State private var permission2 = false
 
+   
     var body: some View {
+        
+       
         NavigationStack {
             ZStack {
                 VStack{
@@ -192,7 +194,7 @@ struct SignUp_1_2: View {
                     
                     Spacer()
                     NavigationLink {
-                        Webview()
+                        WebviewContainer()
                             .navigationBarBackButtonHidden()
                         
                     } label: {
@@ -204,17 +206,27 @@ struct SignUp_1_2: View {
                             .padding(.bottom,16)
                     }
                     
-                   
-                        NavigationLink {
-                            SignUp_2()
-                                .navigationBarBackButtonHidden()
+                    NavigationLink(destination: SignUp_2(), isActive: $viewModel.isNavigationActive) {
+                        Button {
+                            
+                            viewModel.validate()
+                            
                         } label: {
                             Text("Devam Et")
                                 .modifier(buttonBlue())
+                                .padding(.bottom)
                         }
+                    }
+                       
+                    .navigationBarBackButtonHidden()
 
-                   
-
+                    
+                }
+                .onAppear {
+                            viewModel.phoneNumber = phoneNumber
+                        }
+                if viewModel.showAlert {
+                    CustomAlertView2(viewModel: viewModel)
                     
                 }
             }
@@ -227,4 +239,40 @@ struct SignUp_1_2: View {
 
 #Preview {
     SignUp_1_2(phoneNumber : .constant(""))
+}
+struct CustomAlertView2: View {
+    @ObservedObject var viewModel: SignUp_1_2ViewModel
+
+    var body: some View {
+        
+            Color.black.opacity(0.3)
+                .ignoresSafeArea()
+
+            VStack(spacing: 13) {
+                Text("Uyarı")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                    .padding(.top,12)
+
+                Text(viewModel.alertMessage)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .padding()
+
+                Button(action: {
+                    viewModel.showAlert = false
+                }) {
+                    Text("TAMAM")
+                        .modifier(buttonBlueSheet())
+                }
+            }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(20)
+            .shadow(radius: 10)
+            .frame(maxWidth: 350)
+            .padding()
+        
+    }
 }

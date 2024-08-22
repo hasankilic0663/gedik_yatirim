@@ -56,7 +56,7 @@ struct sheet: View {
         ZStack{
            
             VStack{
-                CustomHeader(title: "Kişisel Bilgileriniz")
+                CustomHeader(title: "Kişisel Bilgileriniz" )
               
                 
                 // dolum barı

@@ -35,6 +35,20 @@ struct gedik_textwhitem : ViewModifier {
     }
 }
 
+struct gedik_textBlackAciklama : ViewModifier {
+    func body(content : Content) -> some View {
+        content
+            .font(
+            Font.custom("Plus Jakarta Sans", size: 15)
+            .weight(.semibold)
+            )
+            .multilineTextAlignment(.center)
+            .foregroundColor(Constants.LabelColorPrimary)
+            .frame(width: 345, alignment: .top)    }
+}
+
+
+
 
 
 
@@ -52,7 +66,7 @@ struct gedik_text_black : ViewModifier {
 }
 
 
-struct gedik_text_semibold : ViewModifier {
+struct gedik_text_Blue_semibold : ViewModifier {
     func body(content : Content) -> some View {
         content
             .font(

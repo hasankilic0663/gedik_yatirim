@@ -29,11 +29,13 @@ struct ExtractedViewBar: View {
                     Font.custom("Plus Jakarta Sans", size: 15)
                         .weight(.semibold)
                 )
-                .multilineTextAlignment(.center)
-                .foregroundColor(Constants.LabelColorPrimary)
+                .fixedSize(horizontal: false, vertical: true) // Metni dikeyde sabitler, yatayda taşma yapmaz
                 .frame(width: 345, alignment: .top)
-                .padding(.vertical,9)
+                    .multilineTextAlignment(.center)
+                    .padding()
+//                .padding(.vertical,3)
             
         }
+        .padding(.bottom)
     }
 }

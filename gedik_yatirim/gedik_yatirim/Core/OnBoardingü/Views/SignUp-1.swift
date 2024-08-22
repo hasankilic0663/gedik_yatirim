@@ -82,6 +82,7 @@ struct SignUp_1: View {
 
                     NavigationLink(destination: SignUp_1_2(phoneNumber: $viewModel.phoneNumber), isActive: $viewModel.isNavigationActive) {
                         Button {
+                            
                             viewModel.SignUp()
                         } label: {
                             Text("Devam Et")
@@ -92,6 +93,7 @@ struct SignUp_1: View {
                 // Özelleştirilmiş Alert
                 if viewModel.showAlert {
                     CustomAlertView(viewModel: viewModel)
+                    
                 }
             }
             .background(Constants.BackgroundPrimary)

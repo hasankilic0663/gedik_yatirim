@@ -1,64 +1,57 @@
-//
-//  Webview.swift
-//  gedik_yatirim
-//
-//  Created by Hasan on 2.08.2024.
-//
-
 import SwiftUI
+import WebKit
 
-struct Webview: View {
-    @Environment(\.dismiss) var dismiss // buradakı gerı butonunu aktıf etme .    Dİsmis fonksıyonunu eklemeden calsımaz
+struct Webview: UIViewRepresentable {
+    let url: URL
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.scrollView.alwaysBounceHorizontal = false // Yatay kaydırmayı devre dışı bırakıyoruz
+        let request = URLRequest(url: url)
+        webView.load(request)
+        return webView
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+//        let request = URLRequest(url: url)
+//        uiView.load(request)
+    }
+}
+
+struct WebviewContainer: View {
+    @Environment(\.dismiss) var dismiss // dismiss fonksiyonunu eklemek için
+    
     var body: some View {
         NavigationStack {
-            ZStack {
-                VStack{
-    //                HStack{
-    //                    Button {
-    //
-    //                    } label: {
-    //                        Image(systemName: "chevron.left") // Back simgesi
-    //                            .frame(width: 20, height: 20)
-    //                            .foregroundColor(.black)
-    //                            .padding(6)
-    //                    }
-    //                    .modifier(buttonsmall())
-    //                    Spacer()
-    //                }
-    //                .padding()
-                    ScrollView{
-                        Image("imageWebview1")
-                        Image("imageWebview2")
-                        Image("image48")
-                    }
+            VStack {
+                HStack{
                     Button {
                         
                     } label: {
-                        Text("Onaylıyorum")
-                            .modifier(buttonBlue())
+                        Image(systemName: "chevron.left") // Back simgesi
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(.black)
+                            .padding(6)
+                            .onTapGesture {
+                                dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
+                            }
                     }
-
-                    .toolbar{
-                        ToolbarItem( placement: .topBarLeading) {
-                            Image(systemName: "chevron.left")
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.black)
-                                .padding(6)
-                                .modifier(buttonsmall())
-                                .onTapGesture {
-                                    dismiss()//butona tıklandıgında dısmıss gelıcek ve kapatılcak burası dismiss olacak yok edılcek
-                                }
-                        }
-                    }
-                    
+                    .modifier(buttonsmall())
+                    Spacer()
                 }
-                .padding(.bottom)
+                .padding(.horizontal)
+                
+                Webview(url: URL(string: "https://gedik.com/bizi-taniyin/hakkimizda/kvkk-ve-gizlilik-politikamiz")!)
+                    .navigationBarBackButtonHidden(true)
+                                                    
             }
-            .background(Constants.BackgroundPrimary)
+            .padding(.bottom)
+            
+            
         }
     }
 }
 
 #Preview {
-    Webview()
+    WebviewContainer()
 }

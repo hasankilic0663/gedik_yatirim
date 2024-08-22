@@ -69,11 +69,11 @@ struct ExtractedSheet: View {
                                 Image(self.selectedOption == item ? "RadioButtonFill" : "RadioButton")
                                     .foregroundColor(self.selectedOption == item ? .blue : .gray)
                                     .padding(.trailing,3)
-                                    .onTapGesture {
-                                        self.selectedOption = item
-                                    }
+                                    
                             }
-                            
+                            .onTapGesture {
+                                self.selectedOption = item
+                            }
                             
                         }
                         .padding(.horizontal, 10)

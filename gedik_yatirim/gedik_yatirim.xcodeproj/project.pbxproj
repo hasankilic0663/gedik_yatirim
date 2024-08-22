@@ -22,6 +22,11 @@
 		9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */; };
 		9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */; };
 		9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */; };
+		9F9DD5C12C748F08005C30BF /* CompletedTestNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DD5C02C748F08005C30BF /* CompletedTestNot.swift */; };
+		9F9DD5C32C750DD1005C30BF /* SuitabilityTest4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DD5C22C750DD1005C30BF /* SuitabilityTest4.swift */; };
+		9F9DD5C52C750DD9005C30BF /* SuitabilityTest5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DD5C42C750DD9005C30BF /* SuitabilityTest5.swift */; };
+		9F9DD5C72C750DE5005C30BF /* SuitabilityTest6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DD5C62C750DE5005C30BF /* SuitabilityTest6.swift */; };
+		9F9DD5C92C750E16005C30BF /* ExtractedGroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DD5C82C750E16005C30BF /* ExtractedGroupList.swift */; };
 		9FA1790B2C6DF9990050B224 /* dogrulamakodu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA1790A2C6DF9990050B224 /* dogrulamakodu.swift */; };
 		9FA1790D2C6E0B310050B224 /* IncomeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA1790C2C6E0B310050B224 /* IncomeInformation.swift */; };
 		9FA179112C6E26690050B224 /* ExtractedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA179102C6E26690050B224 /* ExtractedSheet.swift */; };
@@ -29,6 +34,8 @@
 		9FA179152C6E2D170050B224 /* ButtonSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA179142C6E2D170050B224 /* ButtonSheet.swift */; };
 		9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A32C62628F0026350E /* Walkrought_2.swift */; };
 		9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A52C62A5E40026350E /* SignUp_1_2.swift */; };
+		9FBEF1652C77666600FC98A8 /* ComplianceTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */; };
+		9FBEF1672C7788A000FC98A8 /* denemeperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEF1662C7788A000FC98A8 /* denemeperson.swift */; };
 		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
 		9FC5E2F62C5B64AA0008355E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F52C5B64AA0008355E /* ContentView.swift */; };
 		9FC5E2F82C5B64AC0008355E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F72C5B64AC0008355E /* Assets.xcassets */; };
@@ -48,6 +55,10 @@
 		9FDB3FC32C73623400E8436F /* IncomeInf2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB3FC22C73623400E8436F /* IncomeInf2.swift */; };
 		9FDB3FC52C7367A800E8436F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB3FC42C7367A800E8436F /* CustomTextField.swift */; };
 		9FDB3FC72C736ADC00E8436F /* ComplianceTest .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB3FC62C736ADC00E8436F /* ComplianceTest .swift */; };
+		9FE27AB82C75E08D00C1AE1E /* SuitabilityTest7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE27AB72C75E08D00C1AE1E /* SuitabilityTest7.swift */; };
+		9FE27ABA2C75E09600C1AE1E /* SuitabilityTest8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE27AB92C75E09600C1AE1E /* SuitabilityTest8.swift */; };
+		9FE27ABC2C760D7C00C1AE1E /* sheetrizametni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE27ABB2C760D7C00C1AE1E /* sheetrizametni.swift */; };
+		9FE27ABF2C7617CC00C1AE1E /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE27ABE2C7617CC00C1AE1E /* Contracts.swift */; };
 		9FE2D0BA2C72979D00D2804F /* SignUp_1_2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2D0B92C72979D00D2804F /* SignUp_1_2ViewModel.swift */; };
 		9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8AC832C6A436000C78F77 /* CustomHeader.swift */; };
 		9FE8AC872C6A591000C78F77 /* sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8AC862C6A591000C78F77 /* sheet.swift */; };
@@ -71,6 +82,11 @@
 		9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinformationViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktroughtViewModel.swift; sourceTree = "<group>"; };
+		9F9DD5C02C748F08005C30BF /* CompletedTestNot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTestNot.swift; sourceTree = "<group>"; };
+		9F9DD5C22C750DD1005C30BF /* SuitabilityTest4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest4.swift; sourceTree = "<group>"; };
+		9F9DD5C42C750DD9005C30BF /* SuitabilityTest5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest5.swift; sourceTree = "<group>"; };
+		9F9DD5C62C750DE5005C30BF /* SuitabilityTest6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest6.swift; sourceTree = "<group>"; };
+		9F9DD5C82C750E16005C30BF /* ExtractedGroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractedGroupList.swift; sourceTree = "<group>"; };
 		9FA1790A2C6DF9990050B224 /* dogrulamakodu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogrulamakodu.swift; sourceTree = "<group>"; };
 		9FA1790C2C6E0B310050B224 /* IncomeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeInformation.swift; sourceTree = "<group>"; };
 		9FA179102C6E26690050B224 /* ExtractedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractedSheet.swift; sourceTree = "<group>"; };
@@ -78,6 +94,8 @@
 		9FA179142C6E2D170050B224 /* ButtonSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSheet.swift; sourceTree = "<group>"; };
 		9FA759A32C62628F0026350E /* Walkrought_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkrought_2.swift; sourceTree = "<group>"; };
 		9FA759A52C62A5E40026350E /* SignUp_1_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1_2.swift; sourceTree = "<group>"; };
+		9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceTestViewModel.swift; sourceTree = "<group>"; };
+		9FBEF1662C7788A000FC98A8 /* denemeperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = denemeperson.swift; sourceTree = "<group>"; };
 		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gedik_yatirimApp.swift; sourceTree = "<group>"; };
 		9FC5E2F52C5B64AA0008355E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +116,10 @@
 		9FDB3FC22C73623400E8436F /* IncomeInf2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeInf2.swift; sourceTree = "<group>"; };
 		9FDB3FC42C7367A800E8436F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9FDB3FC62C736ADC00E8436F /* ComplianceTest .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComplianceTest .swift"; sourceTree = "<group>"; };
+		9FE27AB72C75E08D00C1AE1E /* SuitabilityTest7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest7.swift; sourceTree = "<group>"; };
+		9FE27AB92C75E09600C1AE1E /* SuitabilityTest8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest8.swift; sourceTree = "<group>"; };
+		9FE27ABB2C760D7C00C1AE1E /* sheetrizametni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheetrizametni.swift; sourceTree = "<group>"; };
+		9FE27ABE2C7617CC00C1AE1E /* Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contracts.swift; sourceTree = "<group>"; };
 		9FE2D0B92C72979D00D2804F /* SignUp_1_2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1_2ViewModel.swift; sourceTree = "<group>"; };
 		9FE8AC832C6A436000C78F77 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		9FE8AC862C6A591000C78F77 /* sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheet.swift; sourceTree = "<group>"; };
@@ -122,6 +144,12 @@
 				9F4B9A5B2C73736A0082E50C /* SuitabilityTest1.swift */,
 				9F16BDDD2C73928100751D6C /* SuitabilityTest2.swift */,
 				9F23734F2C739D2A009A6327 /* SuitabilityTest3.swift */,
+				9F9DD5C02C748F08005C30BF /* CompletedTestNot.swift */,
+				9F9DD5C22C750DD1005C30BF /* SuitabilityTest4.swift */,
+				9F9DD5C42C750DD9005C30BF /* SuitabilityTest5.swift */,
+				9F9DD5C62C750DE5005C30BF /* SuitabilityTest6.swift */,
+				9FE27AB72C75E08D00C1AE1E /* SuitabilityTest7.swift */,
+				9FE27AB92C75E09600C1AE1E /* SuitabilityTest8.swift */,
 			);
 			path = SuitabilityTest;
 			sourceTree = "<group>";
@@ -136,6 +164,7 @@
 				9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */,
 				9F2641812C6C980700F13F59 /* Walktrought2VM.swift */,
 				9FE2D0B92C72979D00D2804F /* SignUp_1_2ViewModel.swift */,
+				9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -203,6 +232,7 @@
 		9FC5E32B2C5CB2A40008355E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FE27ABD2C7617B300C1AE1E /* Contracts */,
 				9F4B9A5D2C73742B0082E50C /* SuitabilityTest */,
 				9FD9D50F2C69EC6B00994BB2 /* Information */,
 				9FC5E3022C5B6D740008355E /* Splash.swift */,
@@ -230,6 +260,14 @@
 			path = Information;
 			sourceTree = "<group>";
 		};
+		9FE27ABD2C7617B300C1AE1E /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				9FE27ABE2C7617CC00C1AE1E /* Contracts.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
 		9FE8AC852C6A590400C78F77 /* deneme */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +277,8 @@
 				9FA1790A2C6DF9990050B224 /* dogrulamakodu.swift */,
 				9F3501852C6F43B40033F40B /* LoginDeneme.swift */,
 				9F16BDDB2C7382EB00751D6C /* suitabilitydeneme.swift */,
+				9FE27ABB2C760D7C00C1AE1E /* sheetrizametni.swift */,
+				9FBEF1662C7788A000FC98A8 /* denemeperson.swift */,
 			);
 			path = deneme;
 			sourceTree = "<group>";
@@ -262,6 +302,7 @@
 				9FA179122C6E26830050B224 /* ExtractedViewVBar.swift */,
 				9FDB3FC42C7367A800E8436F /* CustomTextField.swift */,
 				9F2373512C739E8F009A6327 /* ExtractedList.swift */,
+				9F9DD5C82C750E16005C30BF /* ExtractedGroupList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -346,6 +387,7 @@
 				9FA179112C6E26690050B224 /* ExtractedSheet.swift in Sources */,
 				9F16BDDE2C73928100751D6C /* SuitabilityTest2.swift in Sources */,
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
+				9F9DD5C72C750DE5005C30BF /* SuitabilityTest6.swift in Sources */,
 				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
 				9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */,
 				9FD9D5112C69EEE600994BB2 /* PersonInf_2.swift in Sources */,
@@ -358,26 +400,36 @@
 				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,
 				9FC5E3082C5B9A580008355E /* Walktrougth.swift in Sources */,
 				9F2373502C739D2A009A6327 /* SuitabilityTest3.swift in Sources */,
+				9F9DD5C32C750DD1005C30BF /* SuitabilityTest4.swift in Sources */,
 				9FC5E3062C5B851C0008355E /* AppColors.swift in Sources */,
 				9FC5E32F2C5CB4D40008355E /* SignUp-1.swift in Sources */,
 				9FA179132C6E26830050B224 /* ExtractedViewVBar.swift in Sources */,
 				9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */,
 				9F2373522C739E8F009A6327 /* ExtractedList.swift in Sources */,
+				9FBEF1652C77666600FC98A8 /* ComplianceTestViewModel.swift in Sources */,
 				9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */,
 				9FDB3FC32C73623400E8436F /* IncomeInf2.swift in Sources */,
+				9FE27ABC2C760D7C00C1AE1E /* sheetrizametni.swift in Sources */,
 				9FDB3FC52C7367A800E8436F /* CustomTextField.swift in Sources */,
+				9F9DD5C92C750E16005C30BF /* ExtractedGroupList.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
 				9FA1790D2C6E0B310050B224 /* IncomeInformation.swift in Sources */,
+				9FE27ABA2C75E09600C1AE1E /* SuitabilityTest8.swift in Sources */,
 				9F2641802C6C81BA00F13F59 /* sheetdeneme2.swift in Sources */,
+				9F9DD5C12C748F08005C30BF /* CompletedTestNot.swift in Sources */,
 				9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */,
+				9FE27ABF2C7617CC00C1AE1E /* Contracts.swift in Sources */,
+				9FBEF1672C7788A000FC98A8 /* denemeperson.swift in Sources */,
 				9FA1790B2C6DF9990050B224 /* dogrulamakodu.swift in Sources */,
 				9FE8AC872C6A591000C78F77 /* sheet.swift in Sources */,
 				9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */,
 				9FD5373C2C6B975B00F8CD5B /* sheetilce.swift in Sources */,
 				9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
+				9F9DD5C52C750DD9005C30BF /* SuitabilityTest5.swift in Sources */,
 				9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */,
 				9F16BDDC2C7382EB00751D6C /* suitabilitydeneme.swift in Sources */,
+				9FE27AB82C75E08D00C1AE1E /* SuitabilityTest7.swift in Sources */,
 				9FA179152C6E2D170050B224 /* ButtonSheet.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,
 			);
@@ -517,7 +569,7 @@
 				DEVELOPMENT_TEAM = 96S5T58B23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Gedik Yatırım        Mobile ";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gedik Yatırım Mobile ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -549,7 +601,7 @@
 				DEVELOPMENT_TEAM = 96S5T58B23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Gedik Yatırım        Mobile ";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gedik Yatırım Mobile ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

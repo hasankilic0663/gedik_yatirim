@@ -10,6 +10,8 @@ import SwiftUI
 struct CustomHeader: View {
     @Environment(\.dismiss) var  dismiss
     var title : String = "" 
+    var logoutDestination: AnyView? // Çıkış butonu için yönlendirme
+  
     var body: some View {
         HStack(alignment:.center){
             Button {
@@ -33,8 +35,8 @@ struct CustomHeader: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(Constants.FillColorFillColor600)
                 .padding(.trailing,35)
-            Button {
-                
+            NavigationLink{
+                logoutDestination
             } label: {
                 Image("Gedixx") // Back simgesi
                     .frame(width: 20, height: 20)
@@ -42,8 +44,8 @@ struct CustomHeader: View {
                     .padding(6)
             }
             .modifier(buttonsmall())
-            Button {
-                
+            NavigationLink {
+                logoutDestination
             } label: {
                 Image("LogOut") // Back simgesi
                     .frame(width: 20, height: 20)
@@ -62,5 +64,6 @@ struct CustomHeader: View {
 }
 
 #Preview {
-    CustomHeader()
+    CustomHeader( logoutDestination: AnyView(Text("Çıkış Sayfası")) )
+    
 }

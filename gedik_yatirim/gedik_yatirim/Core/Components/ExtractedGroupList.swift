@@ -1,32 +1,22 @@
+//
+//  ExtractedGroupList.swift
+//  gedik_yatirim
+//
+//  Created by Hasan on 20.08.2024.
+//
+
 import SwiftUI
 
-struct Suitabilitydeneme: View {
-    @State var selectedOptions: [Int?] = Array(repeating: nil, count: 5) // 5 satır için seçim
-    @State var currentStep : Int = 3
-    let riskGroups = ["Çok Düşük Riskli", "Düşük Riskli", "Orta Riskli", "Yüksek Riskli", "Çok Yüksek Riskli"]
-    let options = ["Bilgim Yok", "Bilgim\nKısıtlı",  "Bilgim\nYeterli"]
-    
-    var body: some View {
-        VStack {
-            CustomHeader(title: "Uygunluk Testi   ")
-            ExtractedViewBar(currentStep: $currentStep, textaciklama: "Yatırım Araçlarında Ne Sıklıkla İşlem Yapıyorsunuz?")
-            
-            ExtractedView(riskGroups: riskGroups, options: options)
-        }
-    }
-}
-
-#Preview {
-    Suitabilitydeneme()
-}
-
-struct ExtractedView: View {
+struct ExtractedGroupList : View {
     @State var selectedOptions: [Int?] = Array(repeating: nil, count: 5) // 5 satır için seçim
     var riskGroups : [String]
     var options : [String]
+   
     var body: some View {
+        
         VStack{
             // Başlıklar
+            
             HStack {
                 Text("Risk Grupları")
                     .font(
@@ -46,7 +36,8 @@ struct ExtractedView: View {
                             )
                             .multilineTextAlignment(.center)
                             .foregroundColor(Constants.LabelColorSecondary)
-                        
+                            .frame(maxWidth: .infinity, alignment: .top)
+                           
                         Spacer()
                         if header  != options.last{
                             Divider()
@@ -62,15 +53,16 @@ struct ExtractedView: View {
                 .frame(width: 200, alignment: .center)
                 
             }
+            
             .padding(.top,4)
-            .padding(.bottom, 4)
+            .padding(.bottom, 2)
             
             .padding(.horizontal,7)
             
             // Risk Grupları ve Seçenekler
             ForEach(0..<riskGroups.count, id: \.self) { index in
                 Divider()
-                HStack {
+                HStack() {
                     Text(riskGroups[index])
                         .font(
                             Font.custom("Plus Jakarta Sans", size: 13)
@@ -95,7 +87,7 @@ struct ExtractedView: View {
                     }
                     .padding(.trailing,40)
                 }
-                .padding(.vertical, 8)
+                .padding(.vertical, 10)
             }
         }
         .padding(4)
@@ -107,5 +99,14 @@ struct ExtractedView: View {
                 .inset(by: 0.5)
                 .stroke(Constants.GreyGrey200, lineWidth: 1)
         )
+        
+        .fixedSize(horizontal: false, vertical: true) // Metni dikeyde sabitler, yatayda taşma yapmaz
+        
     }
 }
+
+#Preview {
+    ExtractedGroupList(riskGroups: riskGroups, options: optionss)
+}
+var optionss = ["Bilgim Yok", "Bilgim\nKısıtlı",  "Bilgim\nYeterli"]
+var riskGroups = ["Bilgim Yok", "Bilgim Kısıtlı",  "Bilgim Yeterli"]

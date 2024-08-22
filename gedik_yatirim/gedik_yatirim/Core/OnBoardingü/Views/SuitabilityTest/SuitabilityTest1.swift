@@ -11,7 +11,7 @@ struct SuitabilityTest1: View {
     @State var currentStep : Int = 3
     var egitim  = ["İlköğretim / Ortaöğretim","Lise","Lisans ve üstü"]
     @State var selectedOption: String? = nil
-   
+
     var body: some View {
         
         ZStack{
@@ -20,7 +20,7 @@ struct SuitabilityTest1: View {
                 // dolum barı
                 ExtractedViewBar(currentStep: $currentStep, textaciklama: "Eğitim Bilginiz?")
                     .padding(.bottom)
-                ExtractedList(selectedOption: $selectedOption , array: egitim)
+                ExtractedList(selectedOption: $selectedOption, radiobutton: true, array: egitim)
 
                 Spacer()
                 NavigationLink {

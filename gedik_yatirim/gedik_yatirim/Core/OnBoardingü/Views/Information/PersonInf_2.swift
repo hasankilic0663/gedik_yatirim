@@ -188,7 +188,7 @@ struct PersonInf_2: View {
                             
                             
                         }
-                     
+                        .ignoresSafeArea(.keyboard)
                     }
 
                         .presentationDetents([.height(650)]) // Sheet yüksekliğini orta boyutta tutar

@@ -13,17 +13,11 @@ struct WelcomeBack: View {
             VStack{
                 Spacer()
                 Text("Kayıtlı Bir Hesabınız Var!")
-                    .modifier(gedik_text_semibold())
+                    .modifier(gedik_text_Blue_semibold())
                     .padding()
                 
                 Text("Girmiş olduğunuz TCKN veya Telefon Numarası bilgileri ile oluşturulmuş hesabınız olduğunu görüntülüyoruz. Daha önceden bir kayıt oluşturmadıysanız lütfen bizimle iletişime geçin.")
-                .font(
-                Font.custom("Plus Jakarta Sans", size: 15)
-                .weight(.semibold)
-                )
-                .multilineTextAlignment(.center)
-                .foregroundColor(Constants.LabelColorPrimary)
-                .frame(width: 345, alignment: .top)
+                    .modifier(gedik_textBlackAciklama())
                 VStack(alignment: .center, spacing: 10){
                     Image("SOSMEDVERIFIEDACCOUNT3")
                 }

@@ -8,9 +8,10 @@ struct SuitabilityTest2: View {
     var body: some View {
         ZStack {
             VStack {
-                CustomHeader(title: "Uygunluk Testi   ")
+                CustomHeader(title: "Uygunluk Testi   ", logoutDestination: AnyView(CompletedTestNot()))
+                    
                 ExtractedViewBar(currentStep: $currentStep, textaciklama: "Yatırımlarınızı Ne Kadar Süreyle Değerlendirmeyi Planlıyorsunuz?")
-                ExtractedList(selectedOption: $selectedOption , array: vade)
+                ExtractedList(selectedOption: $selectedOption, radiobutton: true , array: vade)
                 
                 Spacer()
                 NavigationLink {
