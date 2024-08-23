@@ -15,34 +15,36 @@ import SwiftUI
 //}
 
 struct PersonInf_2: View {
-
-    @State var sehir = "İstanbul"
-    @State var ilce = "Seçiniz"
-    @State var adres = ""
-    @State var meslekara = ""
-    @State var ilceara = ""
-    @State var currentStep: Int = 2
-    @State var isSheetPresendet : Bool = false
-    @State var isIlceSheetPresented : Bool = false
-    private let totalSteps: Int = 5
-    @State private var selectedOption: Int? = nil
-    @State private var selectedOption2: Int? = nil
-    @State var selected : Int = 0
-//    @State private var selectedIlce: Int? = nil
-//
-    // Türkiye şehirlerini içeren bir dizi
-      var sehirler = ["İstanbul", "Ankara","İzmir", "Bursa", "Antalya", "Trabzon", "Konya", "Samsun", "Kayseri","Kocaeli","Gaziantep", "Şanlıurfa", "Muğla","Manisa","Elazığ"   ]
     
-    var sehirIlceDizisi: [[String]] = [
-        [
-            "Adalar", "Arnavutköy", "Ataşehir", "Avcılar", "Bağcılar", "Bahçelievler", "Bakırköy", "Başakşehir", "Bayrampaşa", "Beşiktaş",
-            "Beykoz", "Beylikdüzü", "Beyoğlu", "Büyükçekmece", "Çatalca", "Çekmeköy", "Esenler", "Esenyurt", "Eyüpsultan", "Fatih",
-            "Gaziosmanpaşa", "Güngören", "Kadıköy", "Kağıthane", "Kartal", "Küçükçekmece", "Maltepe", "Pendik", "Sancaktepe", "Sarıyer",
-            "Silivri", "Sultanbeyli", "Sultangazi", "Şile", "Şişli", "Tuzla", "Ümraniye", "Üsküdar", "Zeytinburnu"
-        ],
-            ["Çankaya", "Keçiören", "Mamak"],
-            ["İzmir", "Konak", "Karşıyaka", "Bornova"]
-        ]
+    @StateObject var viewModel = PersonInf_2ViewModel()
+
+//    @State var sehir = "İstanbul"
+//    @State var ilce = "Seçiniz"
+//    @State var adres = ""
+//    @State var meslekara = ""
+//    @State var ilceara = ""
+//    @State var currentStep: Int = 2
+//    @State var isSheetPresendet : Bool = false
+//    @State var isIlceSheetPresented : Bool = false
+//    private let totalSteps: Int = 5
+//    @State private var selectedOption: Int? = nil
+//    @State private var selectedOption2: Int? = nil
+//    @State var selected : Int = 0
+////    @State private var selectedIlce: Int? = nil
+////
+//    // Türkiye şehirlerini içeren bir dizi
+//      var sehirler = ["İstanbul", "Ankara","İzmir", "Bursa", "Antalya", "Trabzon", "Konya", "Samsun", "Kayseri","Kocaeli","Gaziantep", "Şanlıurfa", "Muğla","Manisa","Elazığ"   ]
+//    
+//    var sehirIlceDizisi: [[String]] = [
+//        [
+//            "Adalar", "Arnavutköy", "Ataşehir", "Avcılar", "Bağcılar", "Bahçelievler", "Bakırköy", "Başakşehir", "Bayrampaşa", "Beşiktaş",
+//            "Beykoz", "Beylikdüzü", "Beyoğlu", "Büyükçekmece", "Çatalca", "Çekmeköy", "Esenler", "Esenyurt", "Eyüpsultan", "Fatih",
+//            "Gaziosmanpaşa", "Güngören", "Kadıköy", "Kağıthane", "Kartal", "Küçükçekmece", "Maltepe", "Pendik", "Sancaktepe", "Sarıyer",
+//            "Silivri", "Sultanbeyli", "Sultangazi", "Şile", "Şişli", "Tuzla", "Ümraniye", "Üsküdar", "Zeytinburnu"
+//        ],
+//            ["Çankaya", "Keçiören", "Mamak"],
+//            ["İzmir", "Konak", "Karşıyaka", "Bornova"]
+//        ]
 //
 //    // İlçeler için bir sözlük
 //      let ilceler: [String: [String]] = [
@@ -58,24 +60,24 @@ struct PersonInf_2: View {
                 CustomHeader(title: "Kişisel Bilgileriniz")
                 
                 // dolum barı
-                ExtractedViewBar(currentStep: $currentStep, textaciklama: "Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
+                ExtractedViewBar(currentStep: $viewModel.currentStep, textaciklama: "Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
                 
                 // button sheet ile buton tasarım vb hepsını bı modellde topladık
-                ButtonSheet(isSheetPresendet: $isSheetPresendet, textAuto: "\(sehir)", title:"İl")
-                .sheet(isPresented : $isSheetPresendet){
-                    ExtractedSheet(  selectedOption: $selectedOption,
-                                    meslekara: $meslekara,
-                                     sehir: $sehir, 
+                ButtonSheet(isSheetPresendet: $viewModel.isSheetPresendet, textAuto: "\(viewModel.sehir)", title:"İl")
+                    .sheet(isPresented : $viewModel.isSheetPresendet){
+                        ExtractedSheet(  selectedOption: $viewModel.selectedOption,
+                                         meslekara: $viewModel.meslekara,
+                                         sehir: $viewModel.sehir,
                                      title: "İl Seçimi",
-                                    ilce: ilce,
-                                    dizi: sehirler, // Normal bir değer olarak geçiyoruz
-                                    selected: $selected,
-                                     isSheetPresendet: $isSheetPresendet, searchBool: true) // Sheet’i sürükleme göstergesini gizler
+                                         ilce: viewModel.ilce,
+                                         dizi: viewModel.sehirler, // Normal bir değer olarak geçiyoruz
+                                         selected: $viewModel.selected,
+                                         isSheetPresendet: $viewModel.isSheetPresendet, searchBool: true) // Sheet’i sürükleme göstergesini gizler
                     
                 }
                 //--------------------------------------------------------------------------------
-                ButtonSheet(isSheetPresendet: $isIlceSheetPresented, textAuto: "\(ilce)", title: "İlçe")
-                    .sheet(isPresented : $isIlceSheetPresented) {
+                ButtonSheet(isSheetPresendet: $viewModel.isIlceSheetPresented, textAuto: "\(viewModel.ilce)", title: "İlçe")
+                    .sheet(isPresented : $viewModel.isIlceSheetPresented) {
                     
                     ZStack {
                         Color.white
@@ -92,7 +94,7 @@ struct PersonInf_2: View {
                                 .foregroundColor(Constants.LabelColorPrimary)
                             HStack() {
                                 Image("search")
-                                TextField("Şehir ara",text: $ilceara)
+                                TextField("Şehir ara",text: $viewModel.ilceara)
                                     .font(
                                         Font.custom("Plus Jakarta Sans", size: 12)
                                             .weight(.medium)
@@ -114,10 +116,10 @@ struct PersonInf_2: View {
                             )
                             VStack{
                                 
-                                List(0..<sehirIlceDizisi[selected].count, id: \.self) { item in
+                                List(0..<viewModel.sehirIlceDizisi[viewModel.selected].count, id: \.self) { item in
                                     ZStack{
                                         HStack(alignment: .center, spacing: 5) {
-                                            Text(sehirIlceDizisi[selected][item])
+                                            Text(viewModel.sehirIlceDizisi[viewModel.selected][item])
                                                 .font(
                                                     Font.custom("Plus Jakarta Sans", size: 13)
                                                         .weight(.semibold)
@@ -127,11 +129,11 @@ struct PersonInf_2: View {
                                                 .padding(.vertical,4)
                                             Spacer()
                                             
-                                            Image(self.selectedOption2 == item ? "RadioButtonFill" : "RadioButton")
-                                                .foregroundColor(self.selectedOption2 == item ? .blue : .gray)
+                                            Image(self.viewModel.selectedOption2 == item ? "RadioButtonFill" : "RadioButton")
+                                                .foregroundColor(self.viewModel.selectedOption2 == item ? .blue : .gray)
                                                 .padding(.trailing,3)
                                                 .onTapGesture {
-                                                    self.selectedOption2 = item
+                                                    self.viewModel.selectedOption2 = item
                                                 }
                                         }
                                         
@@ -141,7 +143,7 @@ struct PersonInf_2: View {
                                     
                                     .padding(.vertical,8)
                                     .frame(maxWidth: .infinity, minHeight: 48, maxHeight: 68, alignment: .center)
-                                    .background(self.selectedOption2 == item ? Color.blue.opacity(0.2) : Color.white)
+                                    .background(self.viewModel.selectedOption2 == item ? Color.blue.opacity(0.2) : Color.white)
                                     .cornerRadius(8)
                                     
                                     .overlay(
@@ -149,7 +151,7 @@ struct PersonInf_2: View {
                                         //                                                        .frame(width: UIScreen.main.bounds.width - 20) // Genişliği artırıyoruz
                                             .inset(by: 0.5)
                                         
-                                            .stroke(self.selectedOption2 == item ? Color.blue : Color.clear, lineWidth: 1)
+                                            .stroke(self.viewModel.selectedOption2 == item ? Color.blue : Color.clear, lineWidth: 1)
                                         
                                         
                                     )
@@ -170,10 +172,10 @@ struct PersonInf_2: View {
                             
                             
                             Button {
-                                if let selectedOption2 = selectedOption2 {
-                                    ilce = sehirIlceDizisi[selected][selectedOption2]
+                                if let selectedOption2 = viewModel.selectedOption2 {
+                                    viewModel.ilce = viewModel.sehirIlceDizisi[viewModel.selected][selectedOption2]
                                 }
-                                isIlceSheetPresented = false
+                                viewModel.isIlceSheetPresented = false
                                 
                             } label: {
                                 
@@ -200,7 +202,7 @@ struct PersonInf_2: View {
                         Text("Adres")
                             .modifier(textFieldTitle())
                             .padding(.top,2)
-                        TextField("Lorem ipsum dolor sit amet consectetur",text: $adres)
+                        TextField("Lorem ipsum dolor sit amet consectetur",text: $viewModel.adres)
                             
                             .font(
                                 Font.custom("Plus Jakarta Sans", size: 14)
@@ -289,16 +291,3 @@ struct PersonInf_2: View {
     PersonInf_2()
 }
 
-//.frame(maxWidth: .infinity, minHeight: 38, maxHeight: 48, alignment: .center)
-//.background(selectedOption == item ? Constants.FillColorFillColor600.opacity(0.2) : Color.white)
-//.cornerRadius(8)
-//
-//.overlay(
-//    RoundedRectangle(cornerRadius: 8)
-//    //                                                        .frame(width: UIScreen.main.bounds.width - 20) // Genişliği artırıyoruz
-//        .inset(by: 0.5)
-//    
-//        .stroke(selectedOption == item ? Color.blue : Color.clear, lineWidth: 1)
-//    
-//
-//)

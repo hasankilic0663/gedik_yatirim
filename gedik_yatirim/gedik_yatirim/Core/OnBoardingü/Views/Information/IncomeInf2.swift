@@ -8,26 +8,19 @@
 import SwiftUI
 
 struct IncomeInf2: View {
-    @State var currentStep : Int = 2
-    @State var isSheetNema : Bool = false 
-    @State var isSheetEkstre : Bool = false
-    @State var nematext = "İstiyorum"
-    @State var ekstreText = "Posta"
-    @State var textIban = ""
-    
-    
+    @StateObject var viewModel = IncomeInf_2ViewModel()
     var body: some View {
         ZStack{
             VStack{
                 CustomHeader(title: "Gelir Bilgileriniz")
-                ExtractedViewBar(currentStep: $currentStep, textaciklama: "Nema, yatırımcının alacak bakiyesinde kalan paranın faiz  getirisi ile değerlendirilmesidir.")
+                ExtractedViewBar(currentStep: $viewModel.currentStep, textaciklama: "Nema, yatırımcının alacak bakiyesinde kalan paranın faiz  getirisi ile değerlendirilmesidir.")
                     .padding(.bottom)
-                ButtonSheet(isSheetPresendet: $isSheetNema, textAuto: nematext , title: "Nema")
-                ButtonSheet(isSheetPresendet: $isSheetEkstre, textAuto: ekstreText , title: "Ekstre")
+                ButtonSheet(isSheetPresendet: $viewModel.isSheetNema, textAuto: viewModel.nematext , title: "Nema")
+                ButtonSheet(isSheetPresendet: $viewModel.isSheetEkstre, textAuto: viewModel.ekstreText , title: "Ekstre")
                 Text("E-posta tercihiniz, kağıt israfını önler ve doğayı korur. Posta tercih ederseniz, ücretlendirme yapılacaktır.")
                     .modifier(gedikInfotext())
                     
-                CustomTextField(inputText: textIban , title: "IBAN (Opsiyonel)", text: "TR__ ____ ____ ____ ____ ____ __")
+                CustomTextField(inputText: viewModel.textIban , title: "IBAN (Opsiyonel)", text: "TR__ ____ ____ ____ ____ ____ __")
                 Text("Hesap açılış işlemleriniz sonrasında Hesabım Var alanından giriş yaparak düzenleme yapabilirsiniz.")
                     .modifier(gedikInfotext())
                 Spacer()

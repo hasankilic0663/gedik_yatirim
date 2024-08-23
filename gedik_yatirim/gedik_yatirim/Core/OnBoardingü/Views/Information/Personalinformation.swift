@@ -8,49 +8,16 @@
 import SwiftUI
 
 struct Personalinformation: View {
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
-    @State private var birthDate: String = ""
-    @State private var email: String = ""
-    @State private var currentStep: Int = 1
-    private let totalSteps: Int = 5
+    @StateObject var viewModel = PersonInfViewModel()
     var body: some View {
         ZStack {
             VStack{
                CustomHeader(title: "Kişisel Bilgileriniz")
-                HStack(alignment: .center,spacing: 2) {
-                                ForEach(1...totalSteps, id: \.self) { step in
-                                    Rectangle()
-                                        .fill(step <= currentStep ? Color.blue : Color.gray.opacity(0.3))
-                                        .frame(width: 36, height: 5, alignment: .leading)
-                                        .cornerRadius(2.5)
-//                                        .padding(.horizontal,0)
-                                }
-                            }
-                .padding()
-                
-                Text("\(currentStep)/\(totalSteps)")
-                    .font(
-                    Font.custom("Plus Jakarta Sans", size: 17)
-                    .weight(.semibold)
-                    )
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Constants.FillColorFillColor600)
-                
-                Text("Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
-                .font(
-                Font.custom("Plus Jakarta Sans", size: 15)
-                .weight(.semibold)
-                )
-                .multilineTextAlignment(.center)
-                .foregroundColor(Constants.LabelColorPrimary)
-                .frame(width: 345, alignment: .top)
-                .padding(.top,5)
-                
+                ExtractedViewBar(currentStep: $viewModel.currentStep, textaciklama: "Sizi daha yakından tanıyabilmemiz ve ihtiyaçlarınıza özel çözümler sunabilmemiz için lütfen kişisel bilgilerinizi bizimle paylaşın.")
                 VStack{
                     Text("Adınız")
                         .modifier(textFieldTitle())
-                    TextField("Ahmet" , text: $firstName)
+                    TextField("Ahmet" , text: $viewModel.firstName)
                         .modifier(textFieldText())
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
@@ -60,11 +27,11 @@ struct Personalinformation: View {
                         // Sayısal klavye sağlar
                 }
                 .modifier(textFieldBox())
-                .padding(.top)
+//                .padding(.top)
                 VStack{
                     Text("Soyadınız")
                         .modifier(textFieldTitle())
-                    TextField("Soyadınızı Giriniz" , text: $lastName)
+                    TextField("Soyadınızı Giriniz" , text: $viewModel.lastName)
                         .modifier(textFieldText())
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
@@ -80,7 +47,7 @@ struct Personalinformation: View {
                         VStack{
                             Text("Doğum Tarihi")
                                 .modifier(textFieldTitle())
-                            TextField("GG/AA/YY" , text: $birthDate)
+                            TextField("GG/AA/YY" , text: $viewModel.birthDate)
                                 .modifier(textFieldText())
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 14)
@@ -96,7 +63,7 @@ struct Personalinformation: View {
                 VStack{
                     Text("Email")
                         .modifier(textFieldTitle())
-                    TextField("email@ adres.com" , text: $email)
+                    TextField("email@ adres.com" , text: $viewModel.email)
                         .modifier(textFieldText())
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
@@ -117,8 +84,8 @@ struct Personalinformation: View {
 //                                       }
                     
                     
-//                    PersonInf_2()
-                    denemeperson()
+                    PersonInf_2()
+//                    denemeperson()
                     .navigationBarBackButtonHidden()
                 } label: {
                     Text("Devam Et")
