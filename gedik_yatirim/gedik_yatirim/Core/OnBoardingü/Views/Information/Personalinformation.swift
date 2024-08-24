@@ -19,7 +19,7 @@ struct Personalinformation: View {
                     Text("Adınız")
                         .modifier(textFieldTitle())
                     TextField("Ahmet" , text: $viewModel.firstName)
-                        .modifier(textFieldTextPerson(errortext: $viewModel.errorActive ))
+                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive , errortextfield: viewModel.firstName.isEmpty ))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -27,13 +27,13 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                         // Sayısal klavye sağlar
                 }
-                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.firstName.isEmpty))
 //                .padding(.top)
                 VStack{
                     Text("Soyadınız")
                         .modifier(textFieldTitle())
                     TextField("Soyadınızı Giriniz" , text: $viewModel.lastName)
-                        .modifier(textFieldTextPerson(errortext: $viewModel.errorActive))
+                        .modifier(textFieldTextPerson(errortext: viewModel.lastName.isEmpty,  errortextfield: viewModel.errorActive))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -41,7 +41,7 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                        
                 }
-                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.lastName.isEmpty))
                 
                 
                     HStack{
@@ -49,7 +49,7 @@ struct Personalinformation: View {
                             Text("Doğum Tarihi")
                                 .modifier(textFieldTitle())
                             TextField("GG/AA/YY" , text: $viewModel.birthDate)
-                                .modifier(textFieldTextPerson(errortext: $viewModel.errorActive))
+                                .modifier(textFieldTextPerson(errortext: viewModel.errorActive, errortextfield: viewModel.birthDate.isEmpty))
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 14)
                                         .weight(.medium)
@@ -60,12 +60,12 @@ struct Personalinformation: View {
                         Image("Date")
                     }
                 
-                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.birthDate.isEmpty))
                 VStack{
                     Text("Email")
                         .modifier(textFieldTitle())
                     TextField("email@ adres.com" , text: $viewModel.email)
-                        .modifier(textFieldTextPerson(errortext: $viewModel.errorActive))
+                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive, errortextfield: viewModel.email.isEmpty))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -73,12 +73,13 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                          //r
                 }
-                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.email.isEmpty))
                 if !viewModel.errorMessage.isEmpty{
                     // Default/Medium/Label Large
                     Text(viewModel.errorMessage)
                         .modifier(errorMessageText())
                 }
+                
             
                 
                 Spacer()

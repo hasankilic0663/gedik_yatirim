@@ -20,14 +20,15 @@ struct textFieldTitle : ViewModifier {
 
 
 struct textFieldTextPerson : ViewModifier {
-    @Binding var errortext : Bool
+     var errortext : Bool
+     var errortextfield : Bool
     func body(content : Content) -> some View {
         content
             .font(
             Font.custom("Plus Jakarta Sans", size: 12)
             .weight(.medium)
             )
-            .foregroundColor(errortext ? Constants.BackgroundPrimary : Constants.RedRed400)
+            .foregroundColor(errortext && errortextfield ?  Constants.RedRed400 : Constants.BackgroundPrimary )
             .frame(maxWidth: .infinity, alignment: .topLeading)
     }
 }
@@ -78,7 +79,7 @@ struct textFieldBox : ViewModifier {
     }
 }
 struct textFieldBoxPerson : ViewModifier {
-    @Binding var error : Bool
+     var error : Bool
      // Odak durumunu izlemek için
         
     func body(content : Content) -> some View {
