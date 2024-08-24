@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class SuitabilityTestViewModel : ObservableObject{
+    
+    
+    
+    
+    
+    init(){}
+}

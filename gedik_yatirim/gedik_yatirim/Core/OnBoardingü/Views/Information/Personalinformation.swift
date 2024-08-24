@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Personalinformation: View {
     @StateObject var viewModel = PersonInfViewModel()
+    
     var body: some View {
         ZStack {
             VStack{
@@ -18,7 +19,7 @@ struct Personalinformation: View {
                     Text("Adınız")
                         .modifier(textFieldTitle())
                     TextField("Ahmet" , text: $viewModel.firstName)
-                        .modifier(textFieldText())
+                        .modifier(textFieldTextPerson(errortext: $viewModel.errorActive ))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -26,13 +27,13 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                         // Sayısal klavye sağlar
                 }
-                .modifier(textFieldBox())
+                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
 //                .padding(.top)
                 VStack{
                     Text("Soyadınız")
                         .modifier(textFieldTitle())
                     TextField("Soyadınızı Giriniz" , text: $viewModel.lastName)
-                        .modifier(textFieldText())
+                        .modifier(textFieldTextPerson(errortext: $viewModel.errorActive))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -40,7 +41,7 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                        
                 }
-                .modifier(textFieldBox())
+                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
                 
                 
                     HStack{
@@ -48,7 +49,7 @@ struct Personalinformation: View {
                             Text("Doğum Tarihi")
                                 .modifier(textFieldTitle())
                             TextField("GG/AA/YY" , text: $viewModel.birthDate)
-                                .modifier(textFieldText())
+                                .modifier(textFieldTextPerson(errortext: $viewModel.errorActive))
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 14)
                                         .weight(.medium)
@@ -59,12 +60,12 @@ struct Personalinformation: View {
                         Image("Date")
                     }
                 
-                .modifier(textFieldBox())
+                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
                 VStack{
                     Text("Email")
                         .modifier(textFieldTitle())
                     TextField("email@ adres.com" , text: $viewModel.email)
-                        .modifier(textFieldText())
+                        .modifier(textFieldTextPerson(errortext: $viewModel.errorActive))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -72,26 +73,28 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                          //r
                 }
-                .modifier(textFieldBox())
-                
+                .modifier(textFieldBoxPerson(error: $viewModel.errorActive))
+                if !viewModel.errorMessage.isEmpty{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage)
+                        .modifier(errorMessageText())
+                }
             
                 
                 Spacer()
                 
-                NavigationLink {
-//                    if currentStep < totalSteps {
-//                                           currentStep += 1
-//                                       }
+                NavigationLink(destination : PersonInf_2(), isActive: $viewModel.errorActive) {
                     
-                    
-                    PersonInf_2()
-//                    denemeperson()
-                    .navigationBarBackButtonHidden()
-                } label: {
-                    Text("Devam Et")
-                        .modifier(buttonBlue())
-                    
+                    Button{
+                        viewModel.validationPerson()
+                           
+                    } label: {
+                        Text("Devam Et")
+                            .modifier(buttonBlue())
+                        
+                    }
                 }
+                .navigationBarBackButtonHidden()
 
             }
             .padding(.bottom)

@@ -19,18 +19,30 @@ struct textFieldTitle : ViewModifier {
 }
 
 
-struct textFieldText : ViewModifier {
+struct textFieldTextPerson : ViewModifier {
+    @Binding var errortext : Bool
     func body(content : Content) -> some View {
         content
             .font(
             Font.custom("Plus Jakarta Sans", size: 12)
             .weight(.medium)
             )
-            .foregroundColor(Constants.GreyGrey700)
+            .foregroundColor(errortext ? Constants.BackgroundPrimary : Constants.RedRed400)
             .frame(maxWidth: .infinity, alignment: .topLeading)
     }
 }
-
+struct textFieldText : ViewModifier {
+   
+    func body(content : Content) -> some View {
+        content
+            .font(
+            Font.custom("Plus Jakarta Sans", size: 12)
+            .weight(.medium)
+            )
+            .foregroundColor(Color.black )
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+    }
+}
 
 struct textFieldSmallBox : ViewModifier {
     func body(content : Content) -> some View {
@@ -62,6 +74,24 @@ struct textFieldBox : ViewModifier {
                 RoundedRectangle(cornerRadius: 8)
                     .inset(by: 0.5)
                     .stroke(Constants.GreyGrey300, lineWidth: 1)
+            ).padding(.horizontal)
+    }
+}
+struct textFieldBoxPerson : ViewModifier {
+    @Binding var error : Bool
+     // Odak durumunu izlemek için
+        
+    func body(content : Content) -> some View {
+        content
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .frame(maxWidth: .infinity, minHeight: 58, maxHeight: 58, alignment: .topLeading)
+            .background(Constants.BackgroundTertiary)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .inset(by: 0.5)
+                    .stroke(error ? Constants.GreyGrey300 : Constants.RedRed400, lineWidth: 1)
             ).padding(.horizontal)
     }
 }

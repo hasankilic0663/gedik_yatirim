@@ -24,7 +24,6 @@
 		9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F814EB52C60B05B00A446F0 /* Personalinformation.swift */; };
 		9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */; };
 		9F85C7D22C620C4200ABD997 /* WalktrougthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */; };
-		9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */; };
 		9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */; };
 		9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */; };
 		9F9DD5C12C748F08005C30BF /* CompletedTestNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DD5C02C748F08005C30BF /* CompletedTestNot.swift */; };
@@ -89,7 +88,6 @@
 		9F814EB52C60B05B00A446F0 /* Personalinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personalinformation.swift; sourceTree = "<group>"; };
 		9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1ViewViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktrougthViewModel.swift; sourceTree = "<group>"; };
-		9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalinformationViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalktroughtViewModel.swift; sourceTree = "<group>"; };
 		9F9DD5C02C748F08005C30BF /* CompletedTestNot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTestNot.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				9F27B4F92C78BC3900930BD5 /* InformationViewModel */,
 				9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */,
 				9F85C7D12C620C4200ABD997 /* WalktrougthViewModel.swift */,
-				9F85C7D32C62138200ABD997 /* PersonalinformationViewModel.swift */,
 				9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */,
 				9F85C7D72C623D5100ABD997 /* WalktroughtViewModel.swift */,
 				9F2641812C6C980700F13F59 /* Walktrought2VM.swift */,
@@ -427,7 +424,6 @@
 				9FC5E3372C5D1CAB0008355E /* SignUp_2.swift in Sources */,
 				9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */,
 				9F27B5042C78BD3000930BD5 /* IncomeInf_2ViewModel.swift in Sources */,
-				9F85C7D42C62138200ABD997 /* PersonalinformationViewModel.swift in Sources */,
 				9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */,
 				9F27B5002C78BCD900930BD5 /* PersonInf_2ViewModel.swift in Sources */,
 				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,

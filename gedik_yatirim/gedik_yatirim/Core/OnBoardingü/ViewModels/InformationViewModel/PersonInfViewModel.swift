@@ -13,6 +13,27 @@ class PersonInfViewModel : ObservableObject{
     @Published  var birthDate: String = ""
     @Published  var email: String = ""
     @Published  var currentStep: Int = 1
+    @Published var errorActive : Bool = true
+    @Published var errorMessage = ""
+    func validationPerson(){
+        
+        if !email.trimmingCharacters(in: .whitespaces).isEmpty {
+            errorMessage = "Geçerli bir Email adresi giriniz."
+            errorActive = false
+        }
+        if email.contains("@") && email.contains(".") {
+            errorMessage = "Geçerli bir Email adresi giriniz."
+            errorActive = false
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+    }
     
     init(){
 
