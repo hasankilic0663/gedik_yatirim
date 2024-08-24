@@ -21,14 +21,14 @@ struct textFieldTitle : ViewModifier {
 
 struct textFieldTextPerson : ViewModifier {
      var errortext : Bool
-     var errortextfield : Bool
+     
     func body(content : Content) -> some View {
         content
             .font(
             Font.custom("Plus Jakarta Sans", size: 12)
             .weight(.medium)
             )
-            .foregroundColor(errortext && errortextfield ?  Constants.RedRed400 : Constants.BackgroundPrimary )
+            .foregroundColor(errortext ?  Constants.RedRed400 : Color.black )
             .frame(maxWidth: .infinity, alignment: .topLeading)
     }
 }
@@ -92,7 +92,7 @@ struct textFieldBoxPerson : ViewModifier {
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .inset(by: 0.5)
-                    .stroke(error ? Constants.GreyGrey300 : Constants.RedRed400, lineWidth: 1)
+                    .stroke(error ? Constants.RedRed400 : Constants.GreyGrey300  , lineWidth: 1)
             ).padding(.horizontal)
     }
 }

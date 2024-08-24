@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+ 
 struct Personalinformation: View {
     @StateObject var viewModel = PersonInfViewModel()
     
@@ -19,7 +20,7 @@ struct Personalinformation: View {
                     Text("Adınız")
                         .modifier(textFieldTitle())
                     TextField("Ahmet" , text: $viewModel.firstName)
-                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive , errortextfield: viewModel.firstName.isEmpty ))
+                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive[0] ))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -27,13 +28,18 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                         // Sayısal klavye sağlar
                 }
-                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.firstName.isEmpty))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive[0]))
+                if viewModel.errorActive[0]{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage[0])
+                        .modifier(errorMessageText())
+                }
 //                .padding(.top)
                 VStack{
                     Text("Soyadınız")
                         .modifier(textFieldTitle())
                     TextField("Soyadınızı Giriniz" , text: $viewModel.lastName)
-                        .modifier(textFieldTextPerson(errortext: viewModel.lastName.isEmpty,  errortextfield: viewModel.errorActive))
+                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive[1]))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -41,7 +47,12 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                        
                 }
-                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.lastName.isEmpty))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive[1]))
+                if viewModel.errorActive[1]{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage[1])
+                        .modifier(errorMessageText())
+                }
                 
                 
                     HStack{
@@ -49,23 +60,28 @@ struct Personalinformation: View {
                             Text("Doğum Tarihi")
                                 .modifier(textFieldTitle())
                             TextField("GG/AA/YY" , text: $viewModel.birthDate)
-                                .modifier(textFieldTextPerson(errortext: viewModel.errorActive, errortextfield: viewModel.birthDate.isEmpty))
+                                .modifier(textFieldTextPerson(errortext: viewModel.errorActive[2]))
                                 .font(
                                     Font.custom("Plus Jakarta Sans", size: 14)
                                         .weight(.medium)
                                 )
                                 .foregroundColor(Constants.LabelColorPrimary)
-                                .keyboardType(.numberPad) // Sayısal klavye sağlar
+                                
                         }
                         Image("Date")
                     }
                 
-                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.birthDate.isEmpty))
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive[2]))
+                if viewModel.errorActive[2]{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage[2])
+                        .modifier(errorMessageText())
+                }
                 VStack{
                     Text("Email")
                         .modifier(textFieldTitle())
                     TextField("email@ adres.com" , text: $viewModel.email)
-                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive, errortextfield: viewModel.email.isEmpty))
+                        .modifier(textFieldTextPerson(errortext: viewModel.errorActive[3]))
                         .font(
                         Font.custom("Plus Jakarta Sans", size: 14)
                         .weight(.medium)
@@ -73,18 +89,17 @@ struct Personalinformation: View {
                         .foregroundColor(Constants.LabelColorPrimary)
                          //r
                 }
-                .modifier(textFieldBoxPerson(error: viewModel.errorActive && viewModel.email.isEmpty))
-                if !viewModel.errorMessage.isEmpty{
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive[3]))
+                if viewModel.errorActive[3]{
                     // Default/Medium/Label Large
-                    Text(viewModel.errorMessage)
+                    Text(viewModel.errorMessage[3])
                         .modifier(errorMessageText())
                 }
-                
             
                 
                 Spacer()
                 
-                NavigationLink(destination : PersonInf_2(), isActive: $viewModel.errorActive) {
+                NavigationLink(destination : PersonInf_2(), isActive:.constant(!viewModel.errorActive.contains(true))) {
                     
                     Button{
                         viewModel.validationPerson()
@@ -100,6 +115,7 @@ struct Personalinformation: View {
             }
             .padding(.bottom)
         }
+        .navigationBarBackButtonHidden()
         .background(Constants.BackgroundPrimary)
     }
 }

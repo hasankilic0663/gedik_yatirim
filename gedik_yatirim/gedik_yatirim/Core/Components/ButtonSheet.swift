@@ -11,6 +11,7 @@ struct ButtonSheet: View {
     @Binding var isSheetPresendet : Bool
     var textAuto : String
     var title : String
+    
     var body: some View {
         Button {
             isSheetPresendet = true

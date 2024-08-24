@@ -15,6 +15,7 @@ class IncomeInf_2ViewModel : ObservableObject {
     @Published var nematext = "İstiyorum"
     @Published var ekstreText = "Posta"
     @Published var textIban = ""
-    
+    @Published var errorActive: [Bool] = [false, false, false, false] //
+
     init( ){ }
 }

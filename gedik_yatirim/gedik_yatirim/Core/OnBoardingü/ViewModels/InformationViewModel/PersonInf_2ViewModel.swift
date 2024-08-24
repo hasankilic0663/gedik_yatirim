@@ -21,6 +21,7 @@ class PersonInf_2ViewModel : ObservableObject {
     @Published  var selectedOption: Int? = nil
     @Published var selectedOption2: Int? = nil
     @Published var selected : Int = 0
+    @Published var errorActive: [Bool] = [false, false, false, false] //
 //    @State private var selectedIlce: Int? = nil
 //
     // Türkiye şehirlerini içeren bir dizi

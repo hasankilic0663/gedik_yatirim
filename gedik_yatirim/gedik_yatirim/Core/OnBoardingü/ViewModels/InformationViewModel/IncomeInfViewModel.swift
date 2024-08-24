@@ -22,7 +22,7 @@ class IncomeInfViewModel : ObservableObject {
     @Published var kaynakText = "Maaş"
     @Published var birikimtext = "₺0 - 150.0000"
     @Published var selected : Int = 0
-    
+    @Published var errorActive: [Bool] = [false, false, false, false] //
     @Published var meslekara = ""
     
     var meslekler = ["Akademisyen/Öğr.Gör.","Analist/Programcı" ,"Astsubay","Aşçı/Garson/Barmen" ,"Avukat","Bankacı",  "Büyük Sanayici","Çalışmayan"]

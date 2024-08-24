@@ -45,8 +45,8 @@ struct IncomeInformation: View {
                                          isSheetPresendet: $viewModel.isSheetPresendetmeslek, searchBool: true) // Sheet’i sürükleme göstergesini gizler
                         
                     }
-                ButtonSheet(isSheetPresendet: $viewModel.isSheetPresendetgelir, textAuto: viewModel.gelirText, title:"Aylık Geliriniz")
-                    .sheet(isPresented : $viewModel.isSheetPresendetgelir){
+                ButtonSheet(isSheetPresendet: $viewModel.isSheetPresendetgelir, textAuto: viewModel.gelirText, title:"Aylık Geliriniz"
+)                    .sheet(isPresented : $viewModel.isSheetPresendetgelir){
                         ExtractedSheetSmall(selectedOption: $viewModel.selectedOptionjob,
                                             selection: $viewModel.gelirText,
                                             title:  "Aylık Geliriniz",

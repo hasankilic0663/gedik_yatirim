@@ -13,7 +13,7 @@ struct denemeperson: View {
     @State private var selectedOption: Int? = nil
     @State private var selectedOption2: Int? = nil
     @State var selected : Int = 0
-
+    var errorActive: [Bool] = [false, false, false, false] //
     var sehirler = ["İstanbul", "Ankara", "İzmir", "Bursa", "Antalya", "Trabzon", "Konya", "Samsun", "Kayseri", "Kocaeli", "Gaziantep", "Şanlıurfa", "Muğla", "Manisa", "Elazığ"]
 
     var sehirIlceDizisi: [[String]] = [
