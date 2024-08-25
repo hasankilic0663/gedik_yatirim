@@ -21,7 +21,9 @@ class PersonInf_2ViewModel : ObservableObject {
     @Published  var selectedOption: Int? = nil
     @Published var selectedOption2: Int? = nil
     @Published var selected : Int = 0
-    @Published var errorActive: [Bool] = [false, false, false, false] //
+    @Published var errorActive: [Bool] = [false, false, false, false] // Hata durumları
+    @Published var errorMessage: [String] = ["", "", "", ""] // Hata mesajları
+
 //    @State private var selectedIlce: Int? = nil
 //
     // Türkiye şehirlerini içeren bir dizi
@@ -38,6 +40,30 @@ class PersonInf_2ViewModel : ObservableObject {
             ["İzmir", "Konak", "Karşıyaka", "Bornova"]
         ]
     
+    func validation(){
+        if selectedOption == nil {
+            errorMessage[0] = "Seçim Yapmanız Gerekmektedir ! "
+            errorActive[0] = true
+        }
+        else{
+            errorActive[0] = false
+        }
+        if selectedOption2 == nil {
+            errorMessage[1] = "Seçim Yapmanız Gerekmektedir ! "
+            errorActive[1] = true
+        }
+        else{
+            errorActive[1] = false
+        }
+        if adres.isEmpty{
+            errorMessage[2] = "Adres Kısmı Boş Bırakılamaz ! "
+            errorActive[2] = true
+        }
+        else{
+            errorActive[2] = false
+        }
+        
+    }
     
     init(){}
 }

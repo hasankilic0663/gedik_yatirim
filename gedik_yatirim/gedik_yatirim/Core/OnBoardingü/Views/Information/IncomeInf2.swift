@@ -15,7 +15,7 @@ struct IncomeInf2: View {
                 CustomHeader(title: "Gelir Bilgileriniz")
                 ExtractedViewBar(currentStep: $viewModel.currentStep, textaciklama: "Nema, yatırımcının alacak bakiyesinde kalan paranın faiz  getirisi ile değerlendirilmesidir.")
                     .padding(.bottom)
-                ButtonSheet(isSheetPresendet: $viewModel.isSheetNema, textAuto: viewModel.nematext , title: "Nema")
+                ButtonSheet(isSheetPresendet: $viewModel.isSheetNema, textAuto: viewModel.nemaText , title: "Nema")
                 ButtonSheet(isSheetPresendet: $viewModel.isSheetEkstre, textAuto: viewModel.ekstreText , title: "Ekstre")
                 Text("E-posta tercihiniz, kağıt israfını önler ve doğayı korur. Posta tercih ederseniz, ücretlendirme yapılacaktır.")
                     .modifier(gedikInfotext())
@@ -36,6 +36,28 @@ struct IncomeInf2: View {
             }
         }
         .background(Constants.BackgroundPrimary)
+        
+        .sheet(isPresented : $viewModel.isSheetNema){
+ExtractedSheetSmall(selectedOption: $viewModel.selectedOption,
+                selection: $viewModel.nemaText,
+                title:  "Aylık Geliriniz",
+                dizi: viewModel.nema,
+                
+                selected: $viewModel.selected,//değişti
+                isSheetPresendet: $viewModel.isSheetNema,
+                searchBool: false)
+}
+        .sheet(isPresented : $viewModel.isSheetEkstre){
+ExtractedSheetSmall(selectedOption: $viewModel.selectedOption2,
+                selection: $viewModel.ekstreText,
+                title:  "Aylık Geliriniz",
+                dizi: viewModel.ekstre,
+                
+                selected: $viewModel.selected,//değişti
+                isSheetPresendet: $viewModel.isSheetEkstre,
+                searchBool: false)
+}
+
     }
 }
 

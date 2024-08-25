@@ -17,7 +17,7 @@ struct SuitabilityTest7: View {
             Constants.BackgroundPrimary
                 .ignoresSafeArea()
             VStack{
-                CustomHeader(title: "Uygunluk Testi")
+                CustomHeader(title: "Uygunluk Testi", logoutDestination: AnyView(CompletedTestNot()))
                 ScrollView{
                     ExtractedViewBar(currentStep: $currentStep, textaciklama: "Risk Grubunuza Uygun Olan Ürünler")
                     ExtractedList(selectedOption: .constant(nil), radiobutton: false, array: urun )

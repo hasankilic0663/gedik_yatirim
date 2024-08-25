@@ -18,7 +18,7 @@ struct SuitabilityTest4: View {
             Constants.BackgroundPrimary
                 .ignoresSafeArea()
         VStack{
-            CustomHeader(title: "Uygunluk Testi   ")
+            CustomHeader(title: "Uygunluk Testi   ", logoutDestination: AnyView(CompletedTestNot()))
             ExtractedViewBar(currentStep: $currentStep, textaciklama: "Yatırımlarınızı Ne Kadar Süreyle Değerlendirmeyi Planlıyorsunuz?")
             
             ExtractedGroupList(riskGroups: riskGroups, options: optionse)

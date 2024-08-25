@@ -26,6 +26,8 @@ struct buttonBlue : ViewModifier {
     }
     
 }
+
+
 struct buttonBlueToggleStyle : ViewModifier {
     var isToggle : Bool = false
     func body(content : Content) -> some View {

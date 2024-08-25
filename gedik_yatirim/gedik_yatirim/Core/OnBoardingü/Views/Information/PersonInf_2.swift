@@ -75,6 +75,11 @@ struct PersonInf_2: View {
                                          isSheetPresendet: $viewModel.isSheetPresendet, searchBool: true) // Sheet’i sürükleme göstergesini gizler
                     
                 }
+                if viewModel.errorActive[0]{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage[0])
+                        .modifier(errorMessageText())
+                }
                 //--------------------------------------------------------------------------------
                 ButtonSheet(isSheetPresendet: $viewModel.isIlceSheetPresented, textAuto: "\(viewModel.ilce)", title: "İlçe")
                     .sheet(isPresented : $viewModel.isIlceSheetPresented) {
@@ -196,6 +201,11 @@ struct PersonInf_2: View {
                         .presentationDetents([.height(650)]) // Sheet yüksekliğini orta boyutta tutar
                         .presentationDragIndicator(.hidden) // Sheet’i sürükleme göstergesini gizler
                 }
+                if viewModel.errorActive[1]{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage[1])
+                        .modifier(errorMessageText())
+                }
                            
                 HStack{
                     VStack{
@@ -213,7 +223,12 @@ struct PersonInf_2: View {
                     }
                     
                 }
-                .modifier(textFieldBox())
+                .modifier(textFieldBoxPerson(error: viewModel.errorActive[2] ))
+                if viewModel.errorActive[2]{
+                    // Default/Medium/Label Large
+                    Text(viewModel.errorMessage[2])
+                        .modifier(errorMessageText())
+                }
                 
                 HStack{
                     Image("information-circle")
@@ -269,21 +284,22 @@ struct PersonInf_2: View {
                 .stroke(Constants.GreyGrey200, lineWidth: 1)
                 )
                 
-                NavigationLink {
-                    IncomeInformation()
-                        .navigationBarBackButtonHidden()
-                } label: {
-                    Text("Devam Et")
-                        .modifier(buttonBlue())
-                        .padding(.top,5)
+                NavigationLink(destination : IncomeInformation(), isActive:.constant(!viewModel.errorActive.contains(true))) {
+                    Button{
+                        viewModel.validation()
+                    } label: {
+                        Text("Devam Et")
+                            .modifier(buttonBlue())
+                            .padding(.top,5)
+                    }
                 }
-
+                
             }
             .padding(.bottom)
         }
         .background(Constants.BackgroundPrimary)
         
-        
+        .navigationBarBackButtonHidden()
     }
 }
 
