@@ -71,7 +71,7 @@ struct IncomeInformation: View {
             }
         }
         .background(Constants.BackgroundPrimary)
-       
+        .navigationBarBackButtonHidden()
         .sheet(isPresented : $viewModel.isSheetPresendetKaynak){
             Text("Kaynaklar")
                 .presentationDetents([.height(440)]) // Sheet yüksekliğini orta boyutta tutar
