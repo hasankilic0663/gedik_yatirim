@@ -18,6 +18,7 @@
 		9F27B5002C78BCD900930BD5 /* PersonInf_2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27B4FF2C78BCD900930BD5 /* PersonInf_2ViewModel.swift */; };
 		9F27B5022C78BD1500930BD5 /* IncomeInfViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27B5012C78BD1500930BD5 /* IncomeInfViewModel.swift */; };
 		9F27B5042C78BD3000930BD5 /* IncomeInf_2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27B5032C78BD3000930BD5 /* IncomeInf_2ViewModel.swift */; };
+		9F34B23D2C7B6FD100F345CD /* NFCNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34B23C2C7B6FD100F345CD /* NFCNotFound.swift */; };
 		9F3501842C6F425D0033F40B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3501832C6F425D0033F40B /* Constants.swift */; };
 		9F3501862C6F43B40033F40B /* LoginDeneme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3501852C6F43B40033F40B /* LoginDeneme.swift */; };
 		9F4B9A5C2C73736A0082E50C /* SuitabilityTest1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B9A5B2C73736A0082E50C /* SuitabilityTest1.swift */; };
@@ -83,6 +84,7 @@
 		9F27B4FF2C78BCD900930BD5 /* PersonInf_2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInf_2ViewModel.swift; sourceTree = "<group>"; };
 		9F27B5012C78BD1500930BD5 /* IncomeInfViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeInfViewModel.swift; sourceTree = "<group>"; };
 		9F27B5032C78BD3000930BD5 /* IncomeInf_2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeInf_2ViewModel.swift; sourceTree = "<group>"; };
+		9F34B23C2C7B6FD100F345CD /* NFCNotFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCNotFound.swift; sourceTree = "<group>"; };
 		9F3501832C6F425D0033F40B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F3501852C6F43B40033F40B /* LoginDeneme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDeneme.swift; sourceTree = "<group>"; };
 		9F4B9A5B2C73736A0082E50C /* SuitabilityTest1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest1.swift; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 				9F27B4FB2C78BCBB00930BD5 /* SuitabilityTestViewModel.swift */,
 			);
 			path = SuitabilityViewModel;
+			sourceTree = "<group>";
+		};
+		9F34B23B2C7B6F7F00F345CD /* NFCViews */ = {
+			isa = PBXGroup;
+			children = (
+				9F34B23C2C7B6FD100F345CD /* NFCNotFound.swift */,
+			);
+			path = NFCViews;
 			sourceTree = "<group>";
 		};
 		9F4B9A5D2C73742B0082E50C /* SuitabilityTest */ = {
@@ -261,6 +271,7 @@
 		9FC5E32B2C5CB2A40008355E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F34B23B2C7B6F7F00F345CD /* NFCViews */,
 				9FE27ABD2C7617B300C1AE1E /* Contracts */,
 				9F4B9A5D2C73742B0082E50C /* SuitabilityTest */,
 				9FD9D50F2C69EC6B00994BB2 /* Information */,
@@ -418,6 +429,7 @@
 				9FA179112C6E26690050B224 /* ExtractedSheet.swift in Sources */,
 				9F16BDDE2C73928100751D6C /* SuitabilityTest2.swift in Sources */,
 				9FC5E3352C5D0C510008355E /* Webview.swift in Sources */,
+				9F34B23D2C7B6FD100F345CD /* NFCNotFound.swift in Sources */,
 				9F9DD5C72C750DE5005C30BF /* SuitabilityTest6.swift in Sources */,
 				9FFCC0702C5F9DD4009AC643 /* LogIn.swift in Sources */,
 				9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */,

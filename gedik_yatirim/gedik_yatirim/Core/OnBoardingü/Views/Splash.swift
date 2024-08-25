@@ -31,18 +31,7 @@ struct Splash: View {
                 
                     
             }.padding(.bottom, 40)
-//            .padding(.horizontal, 47)
-//
-//            .padding(.top, 406)
-//
-//            .padding(.bottom, 68)
-//
-//            .frame(width: 393, alignment: .bottomLeading)
-            
-//            HStack(alignment: .center, spacing: 0) { Text("sadas")}
-//            .padding(.horizontal, 127)
-//            .padding(.vertical, 0)
-//            .frame(width: 393, height: 21, alignment: .center)
+
         }
     }
 }
