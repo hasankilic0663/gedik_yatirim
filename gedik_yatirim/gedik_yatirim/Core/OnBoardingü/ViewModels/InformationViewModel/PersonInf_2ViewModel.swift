@@ -21,11 +21,10 @@ class PersonInf_2ViewModel : ObservableObject {
     @Published  var selectedOption: Int? = nil
     @Published var selectedOption2: Int? = nil
     @Published var selected : Int = 0
-    @Published var errorActive: [Bool] = [false, false, false, false] // Hata durumları
-    @Published var errorMessage: [String] = ["", "", "", ""] // Hata mesajları
+    @Published var errorActive: [Bool] = [false, false, false, false]
+    @Published var errorMessage: [String] = ["", "", "", ""]
 
-//    @State private var selectedIlce: Int? = nil
-//
+
     // Türkiye şehirlerini içeren bir dizi
       var sehirler = ["İstanbul", "Ankara","İzmir", "Bursa", "Antalya", "Trabzon", "Konya", "Samsun", "Kayseri","Kocaeli","Gaziantep", "Şanlıurfa", "Muğla","Manisa","Elazığ"   ]
     

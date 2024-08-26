@@ -13,35 +13,14 @@ class PersonInfViewModel : ObservableObject{
     @Published  var birthDate: String = ""
     @Published  var email: String = ""
     @Published  var currentStep: Int = 1
-    @Published var errorActive: [Bool] = [false, false, false, false] // Hata durumları
-    @Published var errorMessage: [String] = ["", "", "", ""] // Hata mesajları
+    @Published var errorActive: [Bool] = [false, false, false, false]
+    @Published var errorMessage: [String] = ["", "", "", ""] 
 
-//    
-//    // Doğum tarihini "dd/MM/yyyy" formatında olacak şekilde düzenleyen fonksiyon
-//         func formatBirthDate() {
-//            // Boşlukları kaldır
-//            var digitsOnly = birthDate.filter { $0.isNumber }
-//            
-//            if digitsOnly.count > 8 {
-//                digitsOnly = String(digitsOnly.prefix(8))
-//            }
-//            
-//            if digitsOnly.count > 4 {
-//                digitsOnly.insert("/", at: digitsOnly.index(digitsOnly.startIndex, offsetBy: 4))
-//            }
-//            
-//            if digitsOnly.count > 2 {
-//                digitsOnly.insert("/", at: digitsOnly.index(digitsOnly.startIndex, offsetBy: 2))
-//            }
-//            
-//            birthDate = digitsOnly
-//        }
-    
     
     
     func validationPerson(){
        
-        if firstName.trimmingCharacters(in: .whitespaces).isEmpty || containsUnicodeCharacters(in: firstName) {
+        if firstName.trimmingCharacters(in: .whitespaces).isEmpty || containsInvalidCharacters(in: firstName) {
             errorMessage[0] = "İsim Alanına Unicode Karakterler Girilemez"
             errorActive[0] = true
         }
@@ -50,7 +29,7 @@ class PersonInfViewModel : ObservableObject{
         }
 
                 // Soyad doğrulaması
-        if lastName.trimmingCharacters(in: .whitespaces).isEmpty || containsNumericCharacters(in: lastName) {
+        if lastName.trimmingCharacters(in: .whitespaces).isEmpty || containsInvalidCharacters(in: lastName) {
             
             errorMessage[1] = "Soyad Alanına Sayısal Karakterler Girilemez"
             errorActive[1] = true
@@ -80,23 +59,26 @@ class PersonInfViewModel : ObservableObject{
     
     
     
-    // Unicode karakter içerip içermediğini kontrol eden fonksiyon
-        private func containsUnicodeCharacters(in text: String) -> Bool {
-            for scalar in text.unicodeScalars {
-                if scalar.isASCII == false {
-                    return true
-                }
+    
+    private func containsInvalidCharacters(in text: String) -> Bool {
+        let allowedCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzçğıöşüABCDEFGHIJKLMNOPQRSTUVWXYZÇĞİÖŞÜ ")
+        let decimalCharacters = CharacterSet.decimalDigits
+        
+        // Türkçe karakterler ve İngilizce harfler dışında veya sayı varsa true döner
+        for scalar in text.unicodeScalars {
+            if !allowedCharacterSet.contains(scalar) || decimalCharacters.contains(scalar) {
+                return true
             }
-            return false
         }
+        return false
+    }
         
-        // Sayısal karakter içerip içermediğini kontrol eden fonksiyon
-        private func containsNumericCharacters(in text: String) -> Bool {
-            let decimalCharacters = CharacterSet.decimalDigits
-            return text.rangeOfCharacter(from: decimalCharacters) != nil
-        }
+//        private func containsNumericCharacters(in text: String) -> Bool {
+//            let decimalCharacters = CharacterSet.decimalDigits
+//            return text.rangeOfCharacter(from: decimalCharacters) != nil
+//        }
         
-        // Doğum tarihi formatının "dd/mm/yyyy" olup olmadığını kontrol eden fonksiyon
+    
         private func isValidDateFormat(dateString: String) -> Bool {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy"

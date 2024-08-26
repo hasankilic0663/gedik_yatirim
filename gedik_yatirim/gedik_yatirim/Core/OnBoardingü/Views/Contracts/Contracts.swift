@@ -90,7 +90,7 @@ struct Contracts: View {
 
                 Spacer()
                
-                NavigationLink(destination:SignUp_1()) {
+                NavigationLink(destination:NFCNotFound()) {
                     Text("Devam Et")
                         .modifier(buttonBlueToggleStyle(isToggle: selectedOption && selectedOption2))
                         .padding(.bottom)

@@ -20,9 +20,8 @@ class SignUp_1ViewViewModel : ObservableObject {
         validatePhoneNumber()
     }
     func filter(){
-        // Harfleri ve özel karakterleri filtrele
         let filtered = phoneNumber.filter { "0123456789".contains($0) }
-        // Karakter sayısını 11 ile sınırla
+  
         if filtered.count <= 10 {
             phoneNumber = filtered
         } else {
