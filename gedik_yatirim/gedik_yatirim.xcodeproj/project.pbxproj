@@ -40,6 +40,8 @@
 		9FA179152C6E2D170050B224 /* ButtonSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA179142C6E2D170050B224 /* ButtonSheet.swift */; };
 		9FA759A42C62628F0026350E /* Walkrought_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A32C62628F0026350E /* Walkrought_2.swift */; };
 		9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A52C62A5E40026350E /* SignUp_1_2.swift */; };
+		9FB2AAFD2C7EF5A20056639E /* dogrulamachat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB2AAFC2C7EF5A20056639E /* dogrulamachat.swift */; };
+		9FB2AAFF2C7EF6740056639E /* dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB2AAFE2C7EF6740056639E /* dog.swift */; };
 		9FBEF1652C77666600FC98A8 /* ComplianceTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */; };
 		9FBEF1672C7788A000FC98A8 /* denemeperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEF1662C7788A000FC98A8 /* denemeperson.swift */; };
 		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
@@ -106,6 +108,8 @@
 		9FA179142C6E2D170050B224 /* ButtonSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSheet.swift; sourceTree = "<group>"; };
 		9FA759A32C62628F0026350E /* Walkrought_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkrought_2.swift; sourceTree = "<group>"; };
 		9FA759A52C62A5E40026350E /* SignUp_1_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1_2.swift; sourceTree = "<group>"; };
+		9FB2AAFC2C7EF5A20056639E /* dogrulamachat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogrulamachat.swift; sourceTree = "<group>"; };
+		9FB2AAFE2C7EF6740056639E /* dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog.swift; sourceTree = "<group>"; };
 		9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceTestViewModel.swift; sourceTree = "<group>"; };
 		9FBEF1662C7788A000FC98A8 /* denemeperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = denemeperson.swift; sourceTree = "<group>"; };
 		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,6 +324,8 @@
 				9FE27ABB2C760D7C00C1AE1E /* sheetrizametni.swift */,
 				9FBEF1662C7788A000FC98A8 /* denemeperson.swift */,
 				9F66DECF2C7B227200A10D48 /* geometry.swift */,
+				9FB2AAFC2C7EF5A20056639E /* dogrulamachat.swift */,
+				9FB2AAFE2C7EF6740056639E /* dog.swift */,
 			);
 			path = deneme;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				9F27B4FE2C78BCCE00930BD5 /* PersonInfViewModel.swift in Sources */,
 				9FD5373C2C6B975B00F8CD5B /* sheetilce.swift in Sources */,
 				9F66DED02C7B227200A10D48 /* geometry.swift in Sources */,
+				9FB2AAFD2C7EF5A20056639E /* dogrulamachat.swift in Sources */,
 				9F2641822C6C980800F13F59 /* Walktrought2VM.swift in Sources */,
 				9F27B4FC2C78BCBB00930BD5 /* SuitabilityTestViewModel.swift in Sources */,
 				9FC5E3312C5CF2CC0008355E /* Button.swift in Sources */,
@@ -479,6 +486,7 @@
 				9F16BDDC2C7382EB00751D6C /* suitabilitydeneme.swift in Sources */,
 				9FE27AB82C75E08D00C1AE1E /* SuitabilityTest7.swift in Sources */,
 				9FA179152C6E2D170050B224 /* ButtonSheet.swift in Sources */,
+				9FB2AAFF2C7EF6740056639E /* dog.swift in Sources */,
 				9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
