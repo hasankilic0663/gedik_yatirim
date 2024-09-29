@@ -28,7 +28,11 @@ struct Constants {
     static let BackgroundPrimary: Color = Color(red: 0.96, green: 0.98, blue: 0.99)
     static let RedRed400: Color = Color(red: 0.82, green: 0.29, blue: 0.29)
     static let RedRed500: Color = Color(red: 0.75, green: 0, blue: 0)
+    static let OrangeOrange200: Color = Color(red: 1, green: 0.87, blue: 0.75)
+    static let OrangeOrange300: Color = Color(red: 1, green: 0.78, blue: 0.57)
+    static let OrangeOrange400: Color = Color(red: 1, green: 0.66, blue: 0.35)
     static let OrangeOrange500: Color = Color(red: 1, green: 0.59, blue: 0.21)
+    static let OrangeOrange600: Color = Color(red: 1, green: 0.48, blue: 0)
     static let BackgroundSecondary: Color = Color(red: 0.98, green: 0.98, blue: 0.99)
 }
 

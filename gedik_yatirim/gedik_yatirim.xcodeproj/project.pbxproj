@@ -24,6 +24,7 @@
 		9F4B9A5C2C73736A0082E50C /* SuitabilityTest1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B9A5B2C73736A0082E50C /* SuitabilityTest1.swift */; };
 		9F66DED02C7B227200A10D48 /* geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66DECF2C7B227200A10D48 /* geometry.swift */; };
 		9F66DED22C7B40F700A10D48 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F66DED12C7B40F700A10D48 /* KeyboardAdaptive.swift */; };
+		9F7613812CA813F00008088B /* NFCIdCardUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7613802CA813F00008088B /* NFCIdCardUploading.swift */; };
 		9F814EB62C60B05B00A446F0 /* Personalinformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F814EB52C60B05B00A446F0 /* Personalinformation.swift */; };
 		9F85C7D02C620BC400ABD997 /* SignUp_1ViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */; };
 		9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */; };
@@ -42,6 +43,8 @@
 		9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA759A52C62A5E40026350E /* SignUp_1_2.swift */; };
 		9FB2AAFD2C7EF5A20056639E /* dogrulamachat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB2AAFC2C7EF5A20056639E /* dogrulamachat.swift */; };
 		9FB2AAFF2C7EF6740056639E /* dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB2AAFE2C7EF6740056639E /* dog.swift */; };
+		9FBA93F22CA968B10004F2B6 /* NFCFrame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA93F12CA968B10004F2B6 /* NFCFrame2.swift */; };
+		9FBA93F42CA970750004F2B6 /* FaceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA93F32CA970750004F2B6 /* FaceRecognition.swift */; };
 		9FBEF1652C77666600FC98A8 /* ComplianceTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */; };
 		9FBEF1672C7788A000FC98A8 /* denemeperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEF1662C7788A000FC98A8 /* denemeperson.swift */; };
 		9FC5E2F42C5B64AA0008355E /* gedik_yatirimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5E2F32C5B64AA0008355E /* gedik_yatirimApp.swift */; };
@@ -92,6 +95,7 @@
 		9F4B9A5B2C73736A0082E50C /* SuitabilityTest1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitabilityTest1.swift; sourceTree = "<group>"; };
 		9F66DECF2C7B227200A10D48 /* geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometry.swift; sourceTree = "<group>"; };
 		9F66DED12C7B40F700A10D48 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
+		9F7613802CA813F00008088B /* NFCIdCardUploading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCIdCardUploading.swift; sourceTree = "<group>"; };
 		9F814EB52C60B05B00A446F0 /* Personalinformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personalinformation.swift; sourceTree = "<group>"; };
 		9F85C7CF2C620BC400ABD997 /* SignUp_1ViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1ViewViewModel.swift; sourceTree = "<group>"; };
 		9F85C7D52C6213A000ABD997 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 		9FA759A52C62A5E40026350E /* SignUp_1_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_1_2.swift; sourceTree = "<group>"; };
 		9FB2AAFC2C7EF5A20056639E /* dogrulamachat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogrulamachat.swift; sourceTree = "<group>"; };
 		9FB2AAFE2C7EF6740056639E /* dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog.swift; sourceTree = "<group>"; };
+		9FBA93F12CA968B10004F2B6 /* NFCFrame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCFrame2.swift; sourceTree = "<group>"; };
+		9FBA93F32CA970750004F2B6 /* FaceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognition.swift; sourceTree = "<group>"; };
 		9FBEF1642C77666600FC98A8 /* ComplianceTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceTestViewModel.swift; sourceTree = "<group>"; };
 		9FBEF1662C7788A000FC98A8 /* denemeperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = denemeperson.swift; sourceTree = "<group>"; };
 		9FC5E2F02C5B64AA0008355E /* gedik_yatirim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gedik_yatirim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				9F34B23C2C7B6FD100F345CD /* NFCNotFound.swift */,
+				9F7613802CA813F00008088B /* NFCIdCardUploading.swift */,
+				9FBA93F12CA968B10004F2B6 /* NFCFrame2.swift */,
+				9FBA93F32CA970750004F2B6 /* FaceRecognition.swift */,
 			);
 			path = NFCViews;
 			sourceTree = "<group>";
@@ -445,6 +454,7 @@
 				9FC5E3392C5D1F4C0008355E /* gedik_textField.swift in Sources */,
 				9F27B5042C78BD3000930BD5 /* IncomeInf_2ViewModel.swift in Sources */,
 				9F85C7D82C623D5100ABD997 /* WalktroughtViewModel.swift in Sources */,
+				9F7613812CA813F00008088B /* NFCIdCardUploading.swift in Sources */,
 				9F27B5002C78BCD900930BD5 /* PersonInf_2ViewModel.swift in Sources */,
 				9F66DED22C7B40F700A10D48 /* KeyboardAdaptive.swift in Sources */,
 				9FC5E30C2C5BA9BA0008355E /* gedik_text.swift in Sources */,
@@ -460,6 +470,7 @@
 				9FE8AC842C6A436000C78F77 /* CustomHeader.swift in Sources */,
 				9FDB3FC32C73623400E8436F /* IncomeInf2.swift in Sources */,
 				9FE27ABC2C760D7C00C1AE1E /* sheetrizametni.swift in Sources */,
+				9FBA93F22CA968B10004F2B6 /* NFCFrame2.swift in Sources */,
 				9FDB3FC52C7367A800E8436F /* CustomTextField.swift in Sources */,
 				9F9DD5C92C750E16005C30BF /* ExtractedGroupList.swift in Sources */,
 				9FC5E3032C5B6D740008355E /* Splash.swift in Sources */,
@@ -471,6 +482,7 @@
 				9F85C7D62C6213A000ABD997 /* LogInViewModel.swift in Sources */,
 				9FE27ABF2C7617CC00C1AE1E /* Contracts.swift in Sources */,
 				9FBEF1672C7788A000FC98A8 /* denemeperson.swift in Sources */,
+				9FBA93F42CA970750004F2B6 /* FaceRecognition.swift in Sources */,
 				9FA1790B2C6DF9990050B224 /* dogrulamakodu.swift in Sources */,
 				9FE8AC872C6A591000C78F77 /* sheet.swift in Sources */,
 				9FA759A62C62A5E40026350E /* SignUp_1_2.swift in Sources */,

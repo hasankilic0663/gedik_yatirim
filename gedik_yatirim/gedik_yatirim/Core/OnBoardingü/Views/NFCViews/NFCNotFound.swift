@@ -15,6 +15,7 @@ struct NFCNotFound: View {
             VStack{
                 CustomHeadernotchevron()
                 Spacer()
+                
             }
         }
    

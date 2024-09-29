@@ -80,6 +80,9 @@ struct ExtractedSheet: View {
                         
                         .padding(.vertical,8)
                         .frame(maxWidth: .infinity, minHeight: 48, maxHeight: 68, alignment: .center)
+                       // .frame(width:UIScreen.main.bounds.width * 0.9 ,height : 58)
+                        //.frame(width: UIScreen.main.bounds.width * 0.95,height: 68)
+                        //.frame(maxWidth: UIScreen.main.bounds.maxWidth * 1 ,minHeight: 48, maxHeight: 68, alignment: .center)
                         .background(self.selectedOption == item ? Color.blue.opacity(0.2) : Color.white)
                         .cornerRadius(8)
                         
